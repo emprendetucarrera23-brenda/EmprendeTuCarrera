@@ -1,11 +1,785 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emprende Tu Carrera - Transformación Profesional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-rocket" style="color: white;"></i>
+          </div>
+          <span class="text-gradient" style="font-size: 20px;">Emprende Tu Carrera</span>
+        </div>
+        
+        <ul class="nav-menu">
+          <li><a href="#programas">Programas</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#comunidad">Comunidad</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <button class="btn btn-primary"><span>Comenzar Ahora</span></button>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon" style="font-size: 24px;"></i>
+          <i class="fas fa-times" id="closeIcon" style="font-size: 24px; display: none;"></i>
+        </button>
+      </div>
+    </div>
     
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#programas">Programas</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#testimonios">Testimonios</a>
+      <button class="btn btn-primary"><span>Comenzar Ahora</span></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Fondo animado -->
+    <div class="hero-background">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Líneas de conexión -->
+    <div class="connection-lines">
+      <div class="line-animated"></div>
+      <div class="line-animated"></div>
+      <div class="line-animated"></div>
+    </div>
+
+    <!-- Partículas flotantes -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="pulse-dot"></div>
+        <span>Transformación Profesional</span>
+      </div>
+      
+      <div class="hero-title-wrapper">
+        <h1 class="hero-title">
+          <span class="line">
+            <span class="word" style="color: white;">Potencia</span>
+            <span class="word" style="color: white;">tu</span>
+          </span>
+          <span class="line">
+            <span class="word gradient-text">Futuro</span>
+            <span class="word gradient-text">Profesional</span>
+          </span>
+        </h1>
+      </div>
+      
+      <p class="hero-description">
+        Formación de élite, mentoría personalizada y comunidad global. 
+        Diseñamos experiencias que transforman carreras.
+      </p>
+      
+      <div class="hero-buttons">
+        <button class="btn btn-primary">
+          <span>Explorar Programas</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="btn btn-secondary">
+          <i class="fas fa-play"></i>
+          Ver Demo
+        </button>
+      </div>
+
+      <!-- Estadísticas flotantes -->
+      <div class="floating-stats">
+        <div class="stat-item">
+          <div class="stat-value">12K+</div>
+          <div class="stat-label">Graduados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">98%</div>
+          <div class="stat-label">Éxito</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">4.9/5</div>
+          <div class="stat-label">Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section -->
+  <section class="metrics">
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value text-gradient glow-text-pink">12K+</div>
+        <div class="metric-label">Graduados Exitosos</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value text-gradient glow-text-pink">98%</div>
+        <div class="metric-label">Tasa de Éxito</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value text-gradient glow-text-pink">4.9/5</div>
+        <div class="metric-label">Rating Promedio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programas" class="programs">
+    <div class="section-header">
+      <div class="section-badge">
+        <span style="color: #9ca3af;">Programas Premium</span>
+      </div>
+      <h2 class="text-gradient">Formación diseñada para resultados</h2>
+      <p style="font-size: 20px; color: #9ca3af; margin-top: 32px; line-height: 1.8;">
+        Programas intensivos que combinan teoría, práctica y mentoría personalizada 
+        para acelerar tu crecimiento profesional.
+      </p>
+    </div>
+    
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(255, 25, 112, 0.4);">
+          <i class="fas fa-code" style="color: #FF1970; font-size: 32px;"></i>
+        </div>
+        <h3 class="program-title">Tech Mastery</h3>
+        <p class="program-description">
+          Domina las tecnologías que transforman industrias y construye productos de impacto global
+        </p>
+        <div class="program-features">
+          <div class="program-feature" style="--dot-color: #FF1970;">Full Stack Development</div>
+          <div class="program-feature" style="--dot-color: #FF1970;">AI & Machine Learning</div>
+          <div class="program-feature" style="--dot-color: #FF1970;">Cloud Native Architecture</div>
+        </div>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(219, 18, 175, 0.4);">
+          <i class="fas fa-briefcase" style="color: #DB12AF; font-size: 32px;"></i>
+        </div>
+        <h3 class="program-title">Business Elite</h3>
+        <p class="program-description">
+          Desarrolla habilidades de liderazgo estratégico y gestión de alto rendimiento
+        </p>
+        <div class="program-features">
+          <div class="program-feature" style="--dot-color: #DB12AF;">Strategic Management</div>
+          <div class="program-feature" style="--dot-color: #DB12AF;">Executive Leadership</div>
+          <div class="program-feature" style="--dot-color: #DB12AF;">Business Analytics</div>
+        </div>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(162, 0, 250, 0.4);">
+          <i class="fas fa-rocket" style="color: #A200FA; font-size: 32px;"></i>
+        </div>
+        <h3 class="program-title">Startup Accelerator</h3>
+        <p class="program-description">
+          Construye y escala negocios digitales con metodologías probadas en Silicon Valley
+        </p>
+        <div class="program-features">
+          <div class="program-feature" style="--dot-color: #A200FA;">Product Validation</div>
+          <div class="program-feature" style="--dot-color: #A200FA;">Growth Hacking</div>
+          <div class="program-feature" style="--dot-color: #A200FA;">Fundraising Strategy</div>
+        </div>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(60, 23, 219, 0.4);">
+          <i class="fas fa-graduation-cap" style="color: #3C17DB; font-size: 32px;"></i>
+        </div>
+        <h3 class="program-title">Executive Program</h3>
+        <p class="program-description">
+          Certificación premium para líderes que buscan reconocimiento internacional
+        </p>
+        <div class="program-features">
+          <div class="program-feature" style="--dot-color: #3C17DB;">1:1 Mentorship</div>
+          <div class="program-feature" style="--dot-color: #3C17DB;">Global Network</div>
+          <div class="program-feature" style="--dot-color: #3C17DB;">Industry Recognition</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Section -->
+  <section id="servicios" class="showcase">
+    <div class="showcase-header">
+      <h2 class="text-gradient">Experiencia inmersiva</h2>
+      <p style="font-size: 20px; color: #9ca3af; max-width: 700px; margin: 32px auto; line-height: 1.8;">
+        Entornos de aprendizaje diseñados para maximizar tu potencial
+      </p>
+    </div>
+    
+    <div class="showcase-grid">
+      <div class="showcase-column">
+        <div class="showcase-item">
+          <img src="https://images.unsplash.com/photo-1745847768367-8a29b2937288?w=1080&q=80" alt="Innovation">
+          <div class="showcase-overlay"></div>
+          <div class="showcase-content">
+            <div class="showcase-tag">Innovación</div>
+            <h3 class="showcase-title">Metodología Avanzada</h3>
+            <p class="showcase-desc">Frameworks probados en empresas líderes globales</p>
+          </div>
+        </div>
+        
+        <div class="showcase-item">
+          <img src="https://images.unsplash.com/photo-1603219950587-b4f3f7ee87e7?w=1080&q=80" alt="Technology">
+          <div class="showcase-overlay"></div>
+          <div class="showcase-content">
+            <div class="showcase-tag">Tecnología</div>
+            <h3 class="showcase-title">Infraestructura Premium</h3>
+            <p class="showcase-desc">Acceso a herramientas profesionales de última generación</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="showcase-column">
+        <div class="showcase-item">
+          <img src="https://images.unsplash.com/photo-1759150467548-5a97257e583a?w=1080&q=80" alt="Mentorship">
+          <div class="showcase-overlay"></div>
+          <div class="showcase-content">
+            <div class="showcase-tag">Creatividad</div>
+            <h3 class="showcase-title">Mentoría Personalizada</h3>
+            <p class="showcase-desc">Acompañamiento 1:1 con expertos de la industria</p>
+          </div>
+        </div>
+        
+        <div class="stats-card">
+          <h3 style="color: white; margin-bottom: 24px;">Resultados Medibles</h3>
+          <p style="color: #9ca3af; font-size: 18px; margin-bottom: 40px; line-height: 1.7;">
+            Sistema de tracking que monitorea tu progreso en tiempo real
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item-showcase">
+              <div class="stat-value-showcase text-gradient">85%</div>
+              <div class="stat-label-showcase">Promoción laboral</div>
+            </div>
+            <div class="stat-item-showcase">
+              <div class="stat-value-showcase text-gradient">3x</div>
+              <div class="stat-label-showcase">Aumento salarial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonios" class="testimonials">
+    <div class="testimonials-header">
+      <h2 class="text-gradient">Historias de Éxito</h2>
+      <p style="color: #9ca3af; max-width: 700px; margin: 32px auto; text-align: center;">
+        Descubre cómo nuestros estudiantes han transformado sus carreras 
+        y alcanzado sus objetivos profesionales.
+      </p>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left" style="font-size: 40px; color: #FF1970;"></i>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star" style="color: #FF1970;"></i>
+          <i class="fas fa-star" style="color: #FF1970;"></i>
+          <i class="fas fa-star" style="color: #FF1970;"></i>
+          <i class="fas fa-star" style="color: #FF1970;"></i>
+          <i class="fas fa-star" style="color: #FF1970;"></i>
+        </div>
+        <p class="testimonial-text">
+          Emprende Tu Carrera transformó completamente mi trayectoria profesional. Las mentorías personalizadas me dieron las herramientas exactas que necesitaba para dar el salto a liderazgo.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-name">María González</div>
+          <div class="author-role">Senior Product Manager</div>
+          <div class="author-company" style="color: #FF1970;">Tech Innovators</div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left" style="font-size: 40px; color: #BF09D5;"></i>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star" style="color: #BF09D5;"></i>
+          <i class="fas fa-star" style="color: #BF09D5;"></i>
+          <i class="fas fa-star" style="color: #BF09D5;"></i>
+          <i class="fas fa-star" style="color: #BF09D5;"></i>
+          <i class="fas fa-star" style="color: #BF09D5;"></i>
+        </div>
+        <p class="testimonial-text">
+          Los programas de emprendimiento digital son excepcionales. En 6 meses lancé mi startup y conseguí mis primeros clientes. La comunidad es increíblemente valiosa.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-name">Carlos Ramírez</div>
+          <div class="author-role">Founder & CEO</div>
+          <div class="author-company" style="color: #BF09D5;">StartUp Digital</div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left" style="font-size: 40px; color: #6500E9;"></i>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star" style="color: #6500E9;"></i>
+          <i class="fas fa-star" style="color: #6500E9;"></i>
+          <i class="fas fa-star" style="color: #6500E9;"></i>
+          <i class="fas fa-star" style="color: #6500E9;"></i>
+          <i class="fas fa-star" style="color: #6500E9;"></i>
+        </div>
+        <p class="testimonial-text">
+          La formación técnica es de primer nivel. Pasé de conocimientos básicos a dominar tecnologías avanzadas. Ahora trabajo en proyectos que antes consideraba imposibles.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-name">Ana Martínez</div>
+          <div class="author-role">Full Stack Developer</div>
+          <div class="author-company" style="color: #6500E9;">Global Tech Solutions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="cta-gradient"></div>
+    <div class="cta-container">
+      <div class="cta-box">
+        <div class="cta-icon">
+          <i class="fas fa-sparkles" style="color: white; font-size: 48px;"></i>
+        </div>
+        
+        <h2 class="cta-title text-gradient glow-text-pink">
+          Da el salto a tu mejor versión
+        </h2>
+        
+        <p class="cta-description">
+          Únete a miles de profesionales que ya están construyendo carreras 
+          extraordinarias. Tu transformación comienza hoy.
+        </p>
+        
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check" style="color: white; font-size: 16px;"></i>
+            </div>
+            <span class="benefit-text">Acceso inmediato a todo el contenido</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check" style="color: white; font-size: 16px;"></i>
+            </div>
+            <span class="benefit-text">Mentoría personalizada 1:1</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check" style="color: white; font-size: 16px;"></i>
+            </div>
+            <span class="benefit-text">Certificación reconocida globalmente</span>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check" style="color: white; font-size: 16px;"></i>
+            </div>
+            <span class="benefit-text">Comunidad exclusiva de profesionales</span>
+          </div>
+        </div>
+        
+        <div class="cta-buttons">
+          <button class="btn btn-primary">
+            <span>Comenzar Ahora</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="btn btn-secondary">
+            Agendar Consulta Gratuita
+          </button>
+        </div>
+        
+        <div class="trust-badges">
+          <div class="badge">
+            <div class="badge-label">Garantía</div>
+            <div class="badge-value">30 días</div>
+          </div>
+          <div class="badge">
+            <div class="badge-label">Estudiantes</div>
+            <div class="badge-value">12K+</div>
+          </div>
+          <div class="badge">
+            <div class="badge-label">Rating</div>
+            <div class="badge-value">4.9/5</div>
+          </div>
+          <div class="badge">
+            <div class="badge-label">Éxito</div>
+            <div class="badge-value">98%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="comunidad">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <i class="fas fa-rocket" style="color: white;"></i>
+          </div>
+          <span class="text-gradient" style="font-size: 20px;">Emprende Tu Carrera</span>
+        </div>
+        <p class="footer-description">
+          Transformamos profesionales ambiciosos en líderes de industria a través 
+          de formación premium y mentoría de clase mundial.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 16px; color: #6b7280;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-envelope"></i>
+            <span>hola@emprendetucarrera.com</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Global • Remote First</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Programas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Tech Mastery</a></li>
+          <li><a href="#">Business Elite</a></li>
+          <li><a href="#">Startup Accelerator</a></li>
+          <li><a href="#">Executive Program</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Recursos</h4>
+        <ul class="footer-links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Casos de Éxito</a></li>
+          <li><a href="#">Webinars</a></li>
+          <li><a href="#">Documentación</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Carreras</a></li>
+          <li><a href="#">Prensa</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p style="color: #6b7280;">© 2025 Emprende Tu Carrera. Todos los derechos reservados.</p>
+      <div style="display: flex; gap: 32px;">
+        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.3s;">Preferencias de Cookies</a>
+        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.3s;">Mapa del Sitio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ============================================
+    // MOBILE MENU TOGGLE
+    // ============================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      
+      if (mobileMenu.classList.contains('active')) {
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      } else {
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      }
+    });
+
+    // Close mobile menu when clicking links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ============================================
+    // PARALLAX EFFECT WITH MOUSE
+    // ============================================
+    document.addEventListener('mousemove', (e) => {
+      const floatingElements = document.querySelectorAll('.floating-element');
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+      
+      floatingElements.forEach((element, index) => {
+        const speed = (index + 1) * 20;
+        const x = (mouseX - 0.5) * speed;
+        const y = (mouseY - 0.5) * speed;
+        element.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+
+    // ============================================
+    // HERO TITLE ANIMATION
+    // ============================================
+    const words = document.querySelectorAll('.hero-title .word');
+    words.forEach((word, index) => {
+      setTimeout(() => {
+        word.style.opacity = '1';
+        word.style.transform = 'translateY(0)';
+      }, 300 + (index * 100));
+    });
+
+    // ============================================
+    // SCROLL ANIMATIONS FOR SECTIONS
+    // ============================================
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards and sections
+    document.querySelectorAll('.metric-card, .program-card, .showcase-item, .testimonial-card, .stats-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+
+    // ============================================
+    // PROGRAM CARDS STAGGER ANIMATION
+    // ============================================
+    const programCards = document.querySelectorAll('.program-card');
+    programCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // ============================================
+    // TESTIMONIAL CARDS HOVER EFFECT
+    // ============================================
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // ============================================
+    // BUTTON RIPPLE EFFECT
+    // ============================================
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // ============================================
+    // COUNTER ANIMATION FOR STATS
+    // ============================================
+    function animateCounter(element, target, duration = 2000) {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 16);
+    }
+
+    // Observe stats for counter animation
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const value = entry.target.textContent;
+          if (value.includes('K')) {
+            const num = parseInt(value.replace('K+', ''));
+            entry.target.textContent = '0';
+            animateCounter(entry.target, num);
+            setTimeout(() => {
+              entry.target.textContent = value;
+            }, 2000);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-value').forEach(stat => {
+      statsObserver.observe(stat);
+    });
+
+    // ============================================
+    // SHOWCASE ITEMS REVEAL ANIMATION
+    // ============================================
+    const showcaseItems = document.querySelectorAll('.showcase-item');
+    const showcaseObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0) scale(1)';
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    showcaseItems.forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(60px) scale(0.95)';
+      item.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      showcaseObserver.observe(item);
+    });
+
+    // ============================================
+    // CURSOR TRAIL EFFECT (Optional)
+    // ============================================
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // ============================================
+    // SECTION HEADER ANIMATIONS
+    // ============================================
+    const sectionHeaders = document.querySelectorAll('.section-header, .showcase-header, .testimonials-header');
+    const headerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sectionHeaders.forEach(header => {
+      header.style.opacity = '0';
+      header.style.transform = 'translateY(30px)';
+      header.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+      headerObserver.observe(header);
+    });
+
+    // ============================================
+    // PERFORMANCE OPTIMIZATION
+    // ============================================
+    // Reduce animations on low-end devices
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    if (prefersReducedMotion.matches) {
+      document.querySelectorAll('*').forEach(el => {
+        el.style.animation = 'none';
+        el.style.transition = 'none';
+      });
+    }
+  </script>
 </body>
 </html>
