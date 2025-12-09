@@ -3,48 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emprende Tu Carrera - Transformación Profesional</title>
+  <title>Inicio - Emprende Tu Carrera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <div class="nav-content">
-        <div class="logo">
-          <div class="logo-icon">
-            <i class="fas fa-rocket" style="color: white;"></i>
+    <body>
+      <!-- Navbar -->
+      <nav id="navbar">
+        <div class="nav-container">
+          <div class="nav-content">
+            <a href="index.html" class="logo">
+              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu">
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+            </div>
+            
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+              <i class="fas fa-bars" id="menuIcon"></i>
+              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+            </button>
           </div>
-          <span class="text-gradient" style="font-size: 20px;">Emprende Tu Carrera</span>
         </div>
         
-        <ul class="nav-menu">
-          <li><a href="#programas">Programas</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#comunidad">Comunidad</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-        </ul>
-        
-        <div class="nav-cta">
-          <button class="btn btn-primary"><span>Comenzar Ahora</span></button>
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="conocenos.html">Conócenos</a>
+          <a href="programas.html">Programas</a>
+          <a href="directorio.html">Directorio</a>
+          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
         </div>
-        
-        <button class="mobile-menu-button" id="mobileMenuBtn">
-          <i class="fas fa-bars" id="menuIcon" style="font-size: 24px;"></i>
-          <i class="fas fa-times" id="closeIcon" style="font-size: 24px; display: none;"></i>
-        </button>
+      </nav>
+      <!-- Modal -->
+      <div id="modal" class="custom-modal">
+        <div class="custom-modal-content">
+
+          <span class="custom-close">&times;</span>
+
+          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+          <h1 class="modal-title">Inicia tu viaje profesional</h1>
+
+          <p class="modal-text">
+            Completa el formulario y un especialista se pondrá en contacto
+            contigo en menos de 24 horas.
+          </p>
+
+          <form class="modal-form">
+
+            <label>Nombre completo *</label>
+            <input type="text" placeholder="Tu nombre completo" required>
+
+            <div class="modal-row">
+              <div>
+                <label>Email *</label>
+                <input type="email" placeholder="tu@mail.com" required>
+              </div>
+              <div>
+                <label>Teléfono *</label>
+                <input type="tel" placeholder="+57 300 000 0000" required>
+              </div>
+            </div>
+
+            <div class="modal-row">
+              <div>
+                <label>Profesión actual *</label>
+                <input type="text" placeholder="Ej: Desarrollador" required>
+              </div>
+              <div>
+                <label>Programa de interés *</label>
+                <select required>
+                  <option value="">Selecciona un programa</option>
+                  <option>Transformación Profesional</option>
+                  <option>Programas de liderazgo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <label>Cuéntanos sobre tus objetivos</label>
+            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+
+            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+
+            <p class="modal-footer">
+              Al enviar este formulario, aceptas nuestra política de privacidad.
+            </p>
+
+          </form>
+
+        </div>
       </div>
-    </div>
-    
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#programas">Programas</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#comunidad">Comunidad</a>
-      <a href="#testimonios">Testimonios</a>
-      <button class="btn btn-primary"><span>Comenzar Ahora</span></button>
-    </div>
-  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -436,86 +494,111 @@
   </section>
 
   <!-- Footer -->
-  <footer id="comunidad">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="logo-icon">
-            <i class="fas fa-rocket" style="color: white;"></i>
+
+    <footer id="comunidad">
+      <div class="footer-wrapper">
+        <!-- Versión Desktop -->
+        <div class="footer-content desktop-footer">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+            </div>
           </div>
-          <span class="text-gradient" style="font-size: 20px;">Emprende Tu Carrera</span>
-        </div>
-        <p class="footer-description">
-          Transformamos profesionales ambiciosos en líderes de industria a través 
-          de formación premium y mentoría de clase mundial.
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 16px; color: #6b7280;">
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <i class="fas fa-envelope"></i>
-            <span>hola@emprendetucarrera.com</span>
+          
+          <div class="footer-column">
+            <h4 class="footer-heading">Empresa</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
           </div>
-          <div style="display: flex; align-items: center; gap: 12px;">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Global • Remote First</span>
+          
+          <div class="footer-column">
+            <h4 class="footer-heading">Marco Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#">Políticas</a></li>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Correo corporativo</a></li>
+            </ul>
           </div>
         </div>
-        <div class="social-links">
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+
+        <!-- Versión Mobile con Acordeones -->
+        <div class="footer-mobile mobile-footer">
+          <div class="footer-accordion">
+            <button class="accordion-button" data-accordion="empresa">
+              <span>Empresa</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content" id="empresa">
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conocenos.html">Conócenos</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="directorio.html">Directorio</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-accordion">
+            <button class="accordion-button" data-accordion="legal">
+              <span>Marco Legal</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content" id="legal">
+              <ul class="footer-links">
+                <li><a href="#">Políticas</a></li>
+                <li><a href="#">PQRS</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Correo corporativo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo Central (Mobile) -->
+        <div class="footer-logo-mobile mobile-only">
+          <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom-section">
+          <div class="social-links-footer">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Threads">
+              <i class="fab fa-threads"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Discord">
+              <i class="fab fa-discord"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter/X">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          
+          <div class="footer-legal">
+            <p>© 2025 Todos los derechos reservados — Emprende Tu Carrera</p>
+          </div>
         </div>
       </div>
-      
-      <div class="footer-column">
-        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Programas</h4>
-        <ul class="footer-links">
-          <li><a href="#">Tech Mastery</a></li>
-          <li><a href="#">Business Elite</a></li>
-          <li><a href="#">Startup Accelerator</a></li>
-          <li><a href="#">Executive Program</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Recursos</h4>
-        <ul class="footer-links">
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Casos de Éxito</a></li>
-          <li><a href="#">Webinars</a></li>
-          <li><a href="#">Documentación</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Empresa</h4>
-        <ul class="footer-links">
-          <li><a href="#">Sobre Nosotros</a></li>
-          <li><a href="#">Equipo</a></li>
-          <li><a href="#">Carreras</a></li>
-          <li><a href="#">Prensa</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h4 style="color: white; text-transform: uppercase; font-size: 14px; margin-bottom: 24px;">Legal</h4>
-        <ul class="footer-links">
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">Compliance</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p style="color: #6b7280;">© 2025 Emprende Tu Carrera. Todos los derechos reservados.</p>
-      <div style="display: flex; gap: 32px;">
-        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.3s;">Preferencias de Cookies</a>
-        <a href="#" style="color: #6b7280; text-decoration: none; transition: color 0.3s;">Mapa del Sitio</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <script>
     // ============================================
@@ -529,6 +612,24 @@
         navbar.classList.remove('scrolled');
       }
     });
+    // ============================================
+    // MODAL mas informacion
+    // ============================================
+      const modal = document.getElementById("modal");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.querySelector(".custom-close");
+
+      openModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
 
     // ============================================
     // MOBILE MENU TOGGLE
@@ -780,6 +881,35 @@
         el.style.transition = 'none';
       });
     }
+
+    // ============================================
+    // FOOTER ACCORDIONS (MOBILE)
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          // Cerrar todos los acordeones
+          document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(cnt => {
+            cnt.classList.remove('active');
+          });
+          
+          // Si no estaba activo, abrirlo
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

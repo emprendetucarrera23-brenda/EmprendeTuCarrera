@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programas - Emprende Tu Carrera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
+    .content-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, #FF1970, #DB12AF, #A200FA, #3C17DB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .program-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 25, 112, 0.3);
+      box-shadow: 0 20px 60px rgba(255, 25, 112, 0.2);
+    }
+
+    .program-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .program-card h3 {
+      color: #fff;
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+
+    .program-card p {
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .program-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .program-features li {
+      color: #9ca3af;
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .program-features li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: #FF1970;
+    }
+  </style>
+</head>
+<body>
+      <!-- Navbar -->
+      <nav id="navbar">
+        <div class="nav-container">
+          <div class="nav-content">
+            <a href="index.html" class="logo">
+              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu">
+              <li><a href="index.html" class="active">Inicio</a></li>
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+            </div>
+            
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+              <i class="fas fa-bars" id="menuIcon"></i>
+              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="conocenos.html">Conócenos</a>
+          <a href="programas.html">Programas</a>
+          <a href="directorio.html">Directorio</a>
+          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+        </div>
+      </nav>
+      <!-- Modal -->
+      <div id="modal" class="custom-modal">
+        <div class="custom-modal-content">
+
+          <span class="custom-close">&times;</span>
+
+          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+          <h1 class="modal-title">Inicia tu viaje profesional</h1>
+
+          <p class="modal-text">
+            Completa el formulario y un especialista se pondrá en contacto
+            contigo en menos de 24 horas.
+          </p>
+
+          <form class="modal-form">
+
+            <label>Nombre completo *</label>
+            <input type="text" placeholder="Tu nombre completo" required>
+
+            <div class="modal-row">
+              <div>
+                <label>Email *</label>
+                <input type="email" placeholder="tu@mail.com" required>
+              </div>
+              <div>
+                <label>Teléfono *</label>
+                <input type="tel" placeholder="+57 300 000 0000" required>
+              </div>
+            </div>
+
+            <div class="modal-row">
+              <div>
+                <label>Profesión actual *</label>
+                <input type="text" placeholder="Ej: Desarrollador" required>
+              </div>
+              <div>
+                <label>Programa de interés *</label>
+                <select required>
+                  <option value="">Selecciona un programa</option>
+                  <option>Transformación Profesional</option>
+                  <option>Programas de liderazgo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <label>Cuéntanos sobre tus objetivos</label>
+            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+
+            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+
+            <p class="modal-footer">
+              Al enviar este formulario, aceptas nuestra política de privacidad.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+
+  <!-- Content -->
+  <div class="content-section">
+    <h1>Nuestros Programas</h1>
+    <p>
+      Descubre nuestros programas intensivos diseñados para transformar tu carrera profesional 
+      y llevarte al siguiente nivel.
+    </p>
+
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-code" style="color: #FF1970; font-size: 32px;"></i>
+        </div>
+        <h3>Tech Mastery</h3>
+        <p>Domina las tecnologías que transforman industrias y construye productos de impacto global.</p>
+        <ul class="program-features">
+          <li>Full Stack Development</li>
+          <li>AI & Machine Learning</li>
+          <li>Cloud Native Architecture</li>
+          <li>DevOps & CI/CD</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-briefcase" style="color: #DB12AF; font-size: 32px;"></i>
+        </div>
+        <h3>Business Elite</h3>
+        <p>Desarrolla habilidades de liderazgo estratégico y gestión de alto rendimiento.</p>
+        <ul class="program-features">
+          <li>Strategic Management</li>
+          <li>Executive Leadership</li>
+          <li>Business Analytics</li>
+          <li>Change Management</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-rocket" style="color: #A200FA; font-size: 32px;"></i>
+        </div>
+        <h3>Startup Accelerator</h3>
+        <p>Construye y escala negocios digitales con metodologías probadas en Silicon Valley.</p>
+        <ul class="program-features">
+          <li>Product Validation</li>
+          <li>Growth Hacking</li>
+          <li>Fundraising Strategy</li>
+          <li>Market Expansion</li>
+        </ul>
+      </div>
+
+      <div class="program-card">
+        <div class="program-icon">
+          <i class="fas fa-graduation-cap" style="color: #3C17DB; font-size: 32px;"></i>
+        </div>
+        <h3>Executive Program</h3>
+        <p>Certificación premium para líderes que buscan reconocimiento internacional.</p>
+        <ul class="program-features">
+          <li>1:1 Mentorship</li>
+          <li>Global Network</li>
+          <li>Industry Recognition</li>
+          <li>Career Acceleration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // NAVBAR SCROLL EFFECT
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ============================================
+    // MODAL mas informacion
+    // ============================================
+      const modal = document.getElementById("modal");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.querySelector(".custom-close");
+
+      openModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+
+    // MOBILE MENU TOGGLE
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      
+      if (mobileMenu.classList.contains('active')) {
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      } else {
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      }
+    });
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
