@@ -104,102 +104,109 @@
         </div>
       </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <!-- Fondo animado -->
-    <div class="hero-background">
-      <div class="floating-element"></div>
-      <div class="floating-element"></div>
-      <div class="floating-element"></div>
-      <div class="floating-element"></div>
-      <div class="grid-overlay"></div>
-    </div>
 
-    <!-- Líneas de conexión -->
-    <div class="connection-lines">
-      <div class="line-animated"></div>
-      <div class="line-animated"></div>
-      <div class="line-animated"></div>
-    </div>
 
-    <!-- Partículas flotantes -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+      <!-- ANIMACIÓN AFFINITY COMPLETA -->
+      <section id="affinity-banner" class="affinity-banner">
+        <div class="affinity-banner-container">
+          
+          <!-- FASE 1: Texto inicial grande -->
+          <div class="affinity-text-initial">
+            <h1 class="affinity-title">Emprende tu carrera</h1>
+          </div>
+
+          <!-- FASE 2: Imágenes que se esparcen -->
+          <div class="affinity-images-container">
+            <div class="affinity-image-wrapper" data-index="0">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team">
+            </div>
+            <div class="affinity-image-wrapper" data-index="1">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Meeting">
+            </div>
+            <div class="affinity-image-wrapper" data-index="2">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Growth">
+            </div>
+            <div class="affinity-image-wrapper" data-index="3">
+              <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" alt="Success">
+            </div>
+            <div class="affinity-image-wrapper" data-index="4">
+              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Innovation">
+            </div>
+            <div class="affinity-image-wrapper" data-index="5">
+              <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Technology">
+            </div>
+            <div class="affinity-image-wrapper" data-index="6">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Development">
+            </div>
+            <div class="affinity-image-wrapper" data-index="7">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Business">
+            </div>
+          </div>
+
+          <!-- FASE 3: Texto final -->
+          <div class="affinity-text-final">
+            <h2 class="affinity-final-title">
+              <span class="affinity-line">Potencia tu</span>
+              <span class="affinity-line gradient-text-affinity">Futuro Profesional</span>
+            </h2>
+            <p class="affinity-final-description">
+              Formación de élite, mentoría personalizada y comunidad global.<br>
+              Diseñamos experiencias que transforman carreras.
+            </p>
+            
+            <!-- NUEVO: Botón Ver Demo -->
+            <button class="btn-video-demo" id="openVideoModal">
+              <i class="fas fa-play-circle"></i>
+              <span>Ver Demo</span>
+            </button>
+          </div>
+      </section>
+      <!-- FIN ANIMACIÓN AFFINITY COMPLETA -->
+            <!-- MODAL DE VIDEO -->
+      <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+          <button class="video-close" id="closeVideoModal">
+            <i class="fas fa-times"></i>
+          </button>
+          
+          <div class="video-container">
+            <video id="demoVideo" controls autoplay>
+              <source src="https://ik.imagekit.io/v3kitfabd/Final%20Final%20No%20Va%20Mas.mp" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+
+        </div>
+      </div>
+      <!-- FIN MODAL DE VIDEO -->
     
-    <div class="hero-content">
-      <div class="hero-badge">
-        <div class="pulse-dot"></div>
-        <span>Transformación Profesional</span>
-      </div>
-      
-      <div class="hero-title-wrapper">
-        <h1 class="hero-title">
-          <span class="line">
-            <span class="word" style="color: white;">Potencia</span>
-            <span class="word" style="color: white;">tu</span>
-          </span>
-          <span class="line">
-            <span class="word gradient-text">Futuro</span>
-            <span class="word gradient-text">Profesional</span>
-          </span>
-        </h1>
-      </div>
-      
-      <p class="hero-description">
-        Formación de élite, mentoría personalizada y comunidad global. 
-        Diseñamos experiencias que transforman carreras.
-      </p>
-      
-      <div class="hero-buttons">
-        <button class="btn btn-primary">
-          <span>Explorar Programas</span>
-          <i class="fas fa-arrow-right"></i>
-        </button>
-        <button class="btn btn-secondary">
-          <i class="fas fa-play"></i>
-          Ver Demo
-        </button>
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Fondo animado -->
+      <div class="hero-background">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="grid-overlay"></div>
       </div>
 
-      <!-- Estadísticas flotantes -->
-      <div class="floating-stats">
-        <div class="stat-item">
-          <div class="stat-value">12K+</div>
-          <div class="stat-label">Graduados</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">98%</div>
-          <div class="stat-label">Éxito</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">4.9/5</div>
-          <div class="stat-label">Rating</div>
-        </div>
+      <!-- Líneas de conexión -->
+      <div class="connection-lines">
+        <div class="line-animated"></div>
+        <div class="line-animated"></div>
+        <div class="line-animated"></div>
       </div>
-    </div>
-  </section>
 
-  <!-- Metrics Section -->
-  <section class="metrics">
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-value text-gradient glow-text-pink">12K+</div>
-        <div class="metric-label">Graduados Exitosos</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value text-gradient glow-text-pink">98%</div>
-        <div class="metric-label">Tasa de Éxito</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value text-gradient glow-text-pink">4.9/5</div>
-        <div class="metric-label">Rating Promedio</div>
-      </div>
-    </div>
-  </section>
+      <!-- Partículas flotantes -->
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      
+    </section>
 
   <!-- Programs Section -->
   <section id="programas" class="programs">
@@ -207,138 +214,209 @@
       <div class="section-badge">
         <span style="color: #9ca3af;">Programas Premium</span>
       </div>
-      <h2 class="text-gradient">Formación diseñada para resultados</h2>
+      <h2 class="text-gradient">Vive la Experiencia Emprende Tu Carrera</h2>
       <p style="font-size: 20px; color: #9ca3af; margin-top: 32px; line-height: 1.8;">
-        Programas intensivos que combinan teoría, práctica y mentoría personalizada 
-        para acelerar tu crecimiento profesional.
+        Tu futuro no es un destino, es una construcción. Nosotros te damos las herramientas.
       </p>
     </div>
     
     <div class="programs-grid">
       <div class="program-card">
         <div class="program-icon" style="box-shadow: 0 0 20px rgba(255, 25, 112, 0.4);">
-          <i class="fas fa-code" style="color: #FF1970; font-size: 32px;"></i>
+          <i class="fas fa-route" style="color: #FF1970; font-size: 28px;"></i>
         </div>
-        <h3 class="program-title">Tech Mastery</h3>
+        <h3 class="program-title">Ruta Personalizada y Estratégica</h3>
         <p class="program-description">
-          Domina las tecnologías que transforman industrias y construye productos de impacto global
+          Analizamos tus talentos, intereses y metas para trazar un camino académico hecho a tu medida. Con orientación constante, honesta y personalizada, te ayudamos a tomar la mejor decisión desde el inicio, evitando pérdida de tiempo y dinero.
         </p>
-        <div class="program-features">
-          <div class="program-feature" style="--dot-color: #FF1970;">Full Stack Development</div>
-          <div class="program-feature" style="--dot-color: #FF1970;">AI & Machine Learning</div>
-          <div class="program-feature" style="--dot-color: #FF1970;">Cloud Native Architecture</div>
-        </div>
       </div>
       
       <div class="program-card">
         <div class="program-icon" style="box-shadow: 0 0 20px rgba(219, 18, 175, 0.4);">
-          <i class="fas fa-briefcase" style="color: #DB12AF; font-size: 32px;"></i>
+          <i class="fas fa-rocket" style="color: #DB12AF; font-size: 28px;"></i>
         </div>
-        <h3 class="program-title">Business Elite</h3>
+        <h3 class="program-title">Proceso Simplificado y Ágil</h3>
         <p class="program-description">
-          Desarrolla habilidades de liderazgo estratégico y gestión de alto rendimiento
+          Te acompañamos en todo el proceso: orientación vocacional, elección de carrera y universidad, recolección de documentos e inscripción final. Con nuestros aliados, estudiar es fácil, claro y sin estrés. Desde el primer contacto hasta tu graduación, estamos contigo en cada paso.
         </p>
-        <div class="program-features">
-          <div class="program-feature" style="--dot-color: #DB12AF;">Strategic Management</div>
-          <div class="program-feature" style="--dot-color: #DB12AF;">Executive Leadership</div>
-          <div class="program-feature" style="--dot-color: #DB12AF;">Business Analytics</div>
-        </div>
       </div>
       
       <div class="program-card">
         <div class="program-icon" style="box-shadow: 0 0 20px rgba(162, 0, 250, 0.4);">
-          <i class="fas fa-rocket" style="color: #A200FA; font-size: 32px;"></i>
+          <i class="fas fa-award" style="color: #A200FA; font-size: 28px;"></i>
         </div>
-        <h3 class="program-title">Startup Accelerator</h3>
+        <h3 class="program-title">Acceso a Becas y Beneficios Exclusivos</h3>
         <p class="program-description">
-          Construye y escala negocios digitales con metodologías probadas en Silicon Valley
+          Gracias a nuestros convenios con universidades aliadas, puedes obtener becas académicas entre el 55% y el 75% y acceder a financiación directa sin intereses. De esta manera, estudiar una carrera de calidad se convierte en una oportunidad real y al alcance de tu bolsillo.
         </p>
-        <div class="program-features">
-          <div class="program-feature" style="--dot-color: #A200FA;">Product Validation</div>
-          <div class="program-feature" style="--dot-color: #A200FA;">Growth Hacking</div>
-          <div class="program-feature" style="--dot-color: #A200FA;">Fundraising Strategy</div>
-        </div>
       </div>
       
       <div class="program-card">
         <div class="program-icon" style="box-shadow: 0 0 20px rgba(60, 23, 219, 0.4);">
-          <i class="fas fa-graduation-cap" style="color: #3C17DB; font-size: 32px;"></i>
+          <i class="fas fa-headset" style="color: #3C17DB; font-size: 28px;"></i>
         </div>
-        <h3 class="program-title">Executive Program</h3>
+        <h3 class="program-title">Orientación 24 / 7 / 365</h3>
         <p class="program-description">
-          Certificación premium para líderes que buscan reconocimiento internacional
+          Nuestro apoyo no termina con tu inscripción. Te acompañamos durante tu formación y te conectamos con oportunidades laborales, asegurando que tu éxito académico se transforme en un futuro profesional brillante.
         </p>
-        <div class="program-features">
-          <div class="program-feature" style="--dot-color: #3C17DB;">1:1 Mentorship</div>
-          <div class="program-feature" style="--dot-color: #3C17DB;">Global Network</div>
-          <div class="program-feature" style="--dot-color: #3C17DB;">Industry Recognition</div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Showcase Section -->
-  <section id="servicios" class="showcase">
-    <div class="showcase-header">
-      <h2 class="text-gradient">Experiencia inmersiva</h2>
-      <p style="font-size: 20px; color: #9ca3af; max-width: 700px; margin: 32px auto; line-height: 1.8;">
-        Entornos de aprendizaje diseñados para maximizar tu potencial
-      </p>
-    </div>
-    
-    <div class="showcase-grid">
-      <div class="showcase-column">
-        <div class="showcase-item">
-          <img src="https://images.unsplash.com/photo-1745847768367-8a29b2937288?w=1080&q=80" alt="Innovation">
-          <div class="showcase-overlay"></div>
-          <div class="showcase-content">
-            <div class="showcase-tag">Innovación</div>
-            <h3 class="showcase-title">Metodología Avanzada</h3>
-            <p class="showcase-desc">Frameworks probados en empresas líderes globales</p>
-          </div>
-        </div>
+    <!-- Carrusel de Empresas -->
+
+    <section class="companies-carousel-section">
+      <div class="carousel-container">
         
-        <div class="showcase-item">
-          <img src="https://images.unsplash.com/photo-1603219950587-b4f3f7ee87e7?w=1080&q=80" alt="Technology">
-          <div class="showcase-overlay"></div>
-          <div class="showcase-content">
-            <div class="showcase-tag">Tecnología</div>
-            <h3 class="showcase-title">Infraestructura Premium</h3>
-            <p class="showcase-desc">Acceso a herramientas profesionales de última generación</p>
+        <!-- Header -->
+        <div class="carousel-header">
+          <div class="carousel-badge">
+            <div class="carousel-badge-dot"></div>
+            <span class="carousel-badge-text">Confiado por líderes</span>
+          </div>
+          <h2 class="carousel-title">Nuestros Aliados Estratégicos</h2>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="carousel-wrapper">
+          <div class="carousel-fade-left"></div>
+          <div class="carousel-fade-right"></div>
+
+          <div>
+            <div class="carousel-track" id="carouselTrack">
+              <!-- Los items se generarán con JavaScript -->
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- INICIO: Contador de Cifras con Partículas -->
+    <section class="stats-counter-section">
+      <div class="stats-particles-container">
+        <!-- Partículas flotantes generadas por JS -->
       </div>
       
-      <div class="showcase-column">
-        <div class="showcase-item">
-          <img src="https://images.unsplash.com/photo-1759150467548-5a97257e583a?w=1080&q=80" alt="Mentorship">
-          <div class="showcase-overlay"></div>
-          <div class="showcase-content">
-            <div class="showcase-tag">Creatividad</div>
-            <h3 class="showcase-title">Mentoría Personalizada</h3>
-            <p class="showcase-desc">Acompañamiento 1:1 con expertos de la industria</p>
+      <div class="stats-counter-wrapper">
+
+            <!-- HEADER: Título y Descripción -->
+            <div class="stats-counter-header">
+              <div class="stats-counter-badge">
+                <div class="stats-badge-dot"></div>
+                <span class="stats-badge-text">Nuestro Impacto</span>
+              </div>
+              <h2 class="stats-counter-title text-gradient">Transformando Vidas, Construyendo Futuros</h2>
+              <p class="stats-counter-description">
+                Miles de estudiantes ya han dado el paso decisivo hacia sus sueños profesionales.<br>
+                Estos números reflejan nuestro compromiso con la excelencia educativa.
+              </p>
+            </div>
+              <!-- GRID DE CONTADORES -->
+            <div class="stats-counter-grid">
+              
+              <div class="stat-counter-card" data-stat="card-1">
+                <div class="stat-counter-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-counter-number" data-target="27000" data-suffix="+">0</div>
+                <div class="stat-counter-label">Estudiantes inscritos</div>
+                <div class="stat-counter-glow"></div>
+              </div>
+              
+              <div class="stat-counter-card" data-stat="card-2">
+                <div class="stat-counter-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="stat-counter-number" data-target="15000" data-suffix="+">0</div>
+                <div class="stat-counter-label">Egresados</div>
+                <div class="stat-counter-glow"></div>
+              </div>
+              
+              <div class="stat-counter-card" data-stat="card-3">
+                <div class="stat-counter-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="stat-counter-number" data-target="11000" data-suffix="+">0</div>
+                <div class="stat-counter-label">En campo de acción laboral</div>
+                <div class="stat-counter-glow"></div>
+              </div>
+          
+              <div class="stat-counter-card" data-stat="card-4">
+                <div class="stat-counter-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-counter-number" data-target="35000" data-suffix="+">0</div>
+                <div class="stat-counter-label">Comunidad</div>
+                <div class="stat-counter-glow"></div>
+              </div>
+              
+            </div>
+          </div>
+    </section>
+    <!-- FIN: Contador de Cifras con Partículas -->
+
+    <!-- Showcase Section -->
+    <section id="servicios" class="showcase">
+      <div class="showcase-header">
+        <h2 class="text-gradient">Experiencia inmersiva</h2>
+        <p style="font-size: 20px; color: #9ca3af; max-width: 700px; margin: 32px auto; line-height: 1.8;">
+          Entornos de aprendizaje diseñados para maximizar tu potencial
+        </p>
+      </div>
+      
+      <div class="showcase-grid">
+        <div class="showcase-column">
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1745847768367-8a29b2937288?w=1080&q=80" alt="Innovation">
+            <div class="showcase-overlay"></div>
+            <div class="showcase-content">
+              <div class="showcase-tag">Innovación</div>
+              <h3 class="showcase-title">Metodología Avanzada</h3>
+              <p class="showcase-desc">Frameworks probados en empresas líderes globales</p>
+            </div>
+          </div>
+          
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1603219950587-b4f3f7ee87e7?w=1080&q=80" alt="Technology">
+            <div class="showcase-overlay"></div>
+            <div class="showcase-content">
+              <div class="showcase-tag">Tecnología</div>
+              <h3 class="showcase-title">Infraestructura Premium</h3>
+              <p class="showcase-desc">Acceso a herramientas profesionales de última generación</p>
+            </div>
           </div>
         </div>
         
-        <div class="stats-card">
-          <h3 style="color: white; margin-bottom: 24px;">Resultados Medibles</h3>
-          <p style="color: #9ca3af; font-size: 18px; margin-bottom: 40px; line-height: 1.7;">
-            Sistema de tracking que monitorea tu progreso en tiempo real
-          </p>
-          <div class="stats-grid">
-            <div class="stat-item-showcase">
-              <div class="stat-value-showcase text-gradient">85%</div>
-              <div class="stat-label-showcase">Promoción laboral</div>
+        <div class="showcase-column">
+          <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1759150467548-5a97257e583a?w=1080&q=80" alt="Mentorship">
+            <div class="showcase-overlay"></div>
+            <div class="showcase-content">
+              <div class="showcase-tag">Creatividad</div>
+              <h3 class="showcase-title">Mentoría Personalizada</h3>
+              <p class="showcase-desc">Acompañamiento 1:1 con expertos de la industria</p>
             </div>
-            <div class="stat-item-showcase">
-              <div class="stat-value-showcase text-gradient">3x</div>
-              <div class="stat-label-showcase">Aumento salarial</div>
+          </div>
+          
+          <div class="stats-card">
+            <h3 style="color: white; margin-bottom: 24px;">Resultados Medibles</h3>
+            <p style="color: #9ca3af; font-size: 18px; margin-bottom: 40px; line-height: 1.7;">
+              Sistema de tracking que monitorea tu progreso en tiempo real
+            </p>
+            <div class="stats-grid">
+              <div class="stat-item-showcase">
+                <div class="stat-value-showcase text-gradient">85%</div>
+                <div class="stat-label-showcase">Promoción laboral</div>
+              </div>
+              <div class="stat-item-showcase">
+                <div class="stat-value-showcase text-gradient">3x</div>
+                <div class="stat-label-showcase">Aumento salarial</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Testimonials Section -->
   <section id="testimonios" class="testimonials">
@@ -576,17 +654,11 @@
             <a href="#" class="social-icon" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-icon" aria-label="Threads">
-              <i class="fab fa-threads"></i>
-            </a>
-            <a href="#" class="social-icon" aria-label="Discord">
-              <i class="fab fa-discord"></i>
-            </a>
             <a href="#" class="social-icon" aria-label="TikTok">
               <i class="fab fa-tiktok"></i>
             </a>
-            <a href="#" class="social-icon" aria-label="Twitter/X">
-              <i class="fab fa-x-twitter"></i>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
             </a>
             <a href="#" class="social-icon" aria-label="YouTube">
               <i class="fab fa-youtube"></i>
@@ -601,315 +673,700 @@
     </footer>
 
   <script>
-    // ============================================
-    // NAVBAR SCROLL EFFECT
-    // ============================================
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+// ============================================
+// NAVBAR SCROLL EFFECT
+// ============================================
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// ============================================
+// MODAL MAS INFORMACION
+// ============================================
+const modal = document.getElementById("modal");
+const openModal = document.getElementById("openModal");
+const closeModal = document.querySelector(".custom-close");
+
+openModal.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+
+// ============================================
+// MODAL DE VIDEO - VERSIÓN MEJORADA
+// ============================================
+function initVideoModal() {
+  const videoModal = document.getElementById('videoModal');
+  const openVideoModal = document.getElementById('openVideoModal');
+  const closeVideoModal = document.getElementById('closeVideoModal');
+  const demoVideo = document.getElementById('demoVideo');
+
+  // Verificar que todos los elementos existan
+  if (!videoModal) {
+    console.error('❌ No se encontró el modal: videoModal');
+    return;
+  }
+  if (!openVideoModal) {
+    console.error('❌ No se encontró el botón: openVideoModal');
+    return;
+  }
+  if (!closeVideoModal) {
+    console.error('❌ No se encontró el botón cerrar: closeVideoModal');
+    return;
+  }
+  if (!demoVideo) {
+    console.error('❌ No se encontró el video: demoVideo');
+    return;
+  }
+
+  console.log('✅ Todos los elementos del modal encontrados');
+
+  // Función para cerrar el video
+  function closeVideo() {
+    console.log('Cerrando video...');
+    videoModal.classList.remove('active');
+    demoVideo.pause();
+    demoVideo.currentTime = 0;
+    document.body.style.overflow = 'auto';
+  }
+
+  // Abrir modal
+  openVideoModal.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('🎬 Abriendo modal de video');
+    videoModal.classList.add('active');
+    demoVideo.play().catch(err => {
+      console.error('Error al reproducir video:', err);
+    });
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Cerrar modal con botón X
+  closeVideoModal.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Cerrando con botón X');
+    closeVideo();
+  });
+
+  // Cerrar modal al hacer clic fuera del video
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      console.log('Cerrando - clic fuera del contenido');
+      closeVideo();
+    }
+  });
+
+  // Cerrar con tecla ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+      console.log('Cerrando con tecla ESC');
+      closeVideo();
+    }
+  });
+}
+
+// Ejecutar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initVideoModal);
+} else {
+  initVideoModal();
+}
+// ============================================
+// MOBILE MENU TOGGLE
+// ============================================
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIcon = document.getElementById('menuIcon');
+const closeIcon = document.getElementById('closeIcon');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  
+  if (mobileMenu.classList.contains('active')) {
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'block';
+  } else {
+    menuIcon.style.display = 'block';
+    closeIcon.style.display = 'none';
+  }
+});
+
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    menuIcon.style.display = 'block';
+    closeIcon.style.display = 'none';
+  });
+});
+
+// ============================================
+// SMOOTH SCROLL
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ============================================
+// PARALLAX EFFECT WITH MOUSE
+// ============================================
+document.addEventListener('mousemove', (e) => {
+  const floatingElements = document.querySelectorAll('.floating-element');
+  const mouseX = e.clientX / window.innerWidth;
+  const mouseY = e.clientY / window.innerHeight;
+  
+  floatingElements.forEach((element, index) => {
+    const speed = (index + 1) * 20;
+    const x = (mouseX - 0.5) * speed;
+    const y = (mouseY - 0.5) * speed;
+    element.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+
+// ============================================
+// SCROLL ANIMATIONS FOR SECTIONS
+// ============================================
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.metric-card, .program-card, .showcase-item, .testimonial-card, .stats-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(40px)';
+  el.style.transition = 'all 0.6s ease';
+  observer.observe(el);
+});
+
+// ============================================
+// CARRUSEL CONVENIOS
+// ============================================
+   const companiesCarousel = [
+  {
+    name: "Americana",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023"
+  },
+  {
+    name: "lonja gremial",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/0567e5e2-3ed3-4fe4-85ad-0c01c53f2841-removebg-preview.png"
+  },
+  {
+    name: "Corpesv",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/LOGO%20CORPESV%201.png"
+  },
+  {
+    name: "cenproef",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview%20(2).png"
+  },
+  {
+    name: "cedutec",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/d306cfbe-38da-4119-a84d-3fdb39474eb9-removebg-preview.png"
+  },
+  {
+    name: "cootradecun",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/file-removebg-preview.png"
+  },
+  {
+    name: "fit",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview-removebg-preview.png"
+  },
+  {
+    name: "cenacap",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/logo_CENACAP-removebg-preview.png"
+  },
+  {
+    name: "unimeta",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/logo%20unimeta.png"
+  },
+  {
+    name: "fundetec",
+    logo: "https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png"
+  }
+];
+
+function initCarouselConvenios() {
+  const track = document.getElementById('carouselTrack');
+  if (!track) return;
+  
+  // Duplicar empresas 3 veces para efecto infinito
+  const allCompanies = [...companiesCarousel, ...companiesCarousel, ...companiesCarousel];
+  
+  // Generar HTML para cada empresa
+  allCompanies.forEach((company) => {
+    const item = document.createElement('div');
+    item.className = 'carousel-item';
+    item.innerHTML = `<img src="${company.logo}" alt="${company.name}" class="carousel-logo">`;
+    track.appendChild(item);
+  });
+
+  // Pause on hover
+  track.addEventListener('mouseenter', () => {
+    track.classList.add('paused');
+  });
+
+  track.addEventListener('mouseleave', () => {
+    track.classList.remove('paused');
+  });
+}
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCarouselConvenios);
+} else {
+  initCarouselConvenios();
+}
+
+  // ============================================
+  // CONTADOR DE CIFRAS CON PARTÍCULAS FLOTANTES
+  // ============================================
+  (function() {
+    const section = document.querySelector('.stats-counter-section');
+    const particlesContainer = document.querySelector('.stats-particles-container');
+    const counterCards = document.querySelectorAll('.stat-counter-card');
+    const counterNumbers = document.querySelectorAll('.stat-counter-number');
+    const header = document.querySelector('.stats-counter-header'); 
+    
+    if (!section || !particlesContainer) return;
+
+    // ANIMACIÓN DEL HEADER (NUEVO)
+  const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
-    // ============================================
-    // MODAL mas informacion
-    // ============================================
-      const modal = document.getElementById("modal");
-      const openModal = document.getElementById("openModal");
-      const closeModal = document.querySelector(".custom-close");
-
-      openModal.addEventListener("click", () => {
-        modal.style.display = "flex";
-      });
-
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
-
-    // ============================================
-    // MOBILE MENU TOGGLE
-    // ============================================
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
+  }, { threshold: 0.3 });
+  
+  if (header) {
+    headerObserver.observe(header);
+  }
+    
+    // GENERAR PARTÍCULAS FLOTANTES
+    function createFloatingParticles() {
+      const colors = [
+        'rgba(255, 25, 112, 0.2)',    // Rosa
+        'rgba(219, 18, 175, 0.2)',    // Magenta
+        'rgba(162, 0, 250, 0.2)',     // Morado
+        'rgba(60, 23, 219, 0.2)'      // Azul
+      ];
       
-      if (mobileMenu.classList.contains('active')) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-      } else {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+      const particleCount = 30;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'floating-stat-particle';
+        
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const size = Math.random() * 3 + 1;
+        const duration = Math.random() * 20 + 10;
+        const delay = Math.random() * 5;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        particle.style.left = `${x}%`;
+        particle.style.top = `${y}%`;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.background = color;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.animationDelay = `${delay}s`;
+        
+        // Animación CSS inline
+        particle.style.animation = `floatParticle ${duration}s ease-in-out infinite ${delay}s`;
+        
+        particlesContainer.appendChild(particle);
       }
-    });
-
-    // Close mobile menu when clicking links
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-      });
-    });
-
-    // ============================================
-    // SMOOTH SCROLL
-    // ============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // ============================================
-    // PARALLAX EFFECT WITH MOUSE
-    // ============================================
-    document.addEventListener('mousemove', (e) => {
-      const floatingElements = document.querySelectorAll('.floating-element');
-      const mouseX = e.clientX / window.innerWidth;
-      const mouseY = e.clientY / window.innerHeight;
-      
-      floatingElements.forEach((element, index) => {
-        const speed = (index + 1) * 20;
-        const x = (mouseX - 0.5) * speed;
-        const y = (mouseY - 0.5) * speed;
-        element.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    });
-
-    // ============================================
-    // HERO TITLE ANIMATION
-    // ============================================
-    const words = document.querySelectorAll('.hero-title .word');
-    words.forEach((word, index) => {
-      setTimeout(() => {
-        word.style.opacity = '1';
-        word.style.transform = 'translateY(0)';
-      }, 300 + (index * 100));
-    });
-
-    // ============================================
-    // SCROLL ANIMATIONS FOR SECTIONS
-    // ============================================
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Observe all cards and sections
-    document.querySelectorAll('.metric-card, .program-card, .showcase-item, .testimonial-card, .stats-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(40px)';
-      el.style.transition = 'all 0.6s ease';
-      observer.observe(el);
-    });
-
-    // ============================================
-    // PROGRAM CARDS STAGGER ANIMATION
-    // ============================================
-    const programCards = document.querySelectorAll('.program-card');
-    programCards.forEach((card, index) => {
-      card.style.animationDelay = `${index * 0.1}s`;
-    });
-
-    // ============================================
-    // TESTIMONIAL CARDS HOVER EFFECT
-    // ============================================
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    testimonialCards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
-    });
-
-    // ============================================
-    // BUTTON RIPPLE EFFECT
-    // ============================================
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-        
-        this.appendChild(ripple);
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
-      });
-    });
-
-    // ============================================
-    // COUNTER ANIMATION FOR STATS
-    // ============================================
-    function animateCounter(element, target, duration = 2000) {
-      const start = 0;
+    }
+    
+    // ANIMACIÓN DE CONTADOR
+    function animateCounter(element) {
+      const target = parseInt(element.getAttribute('data-target'));
+      const suffix = element.getAttribute('data-suffix') || '';
+      const duration = 2000; // 2 segundos
       const increment = target / (duration / 16);
-      let current = start;
+      let current = 0;
       
-      const timer = setInterval(() => {
+      const updateCounter = () => {
         current += increment;
         if (current >= target) {
-          element.textContent = target;
-          clearInterval(timer);
+          element.textContent = formatNumber(target) + suffix;
         } else {
-          element.textContent = Math.floor(current);
+          element.textContent = formatNumber(Math.floor(current));
+          requestAnimationFrame(updateCounter);
         }
-      }, 16);
+      };
+      
+      requestAnimationFrame(updateCounter);
     }
-
-    // Observe stats for counter animation
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-          entry.target.classList.add('counted');
-          const value = entry.target.textContent;
-          if (value.includes('K')) {
-            const num = parseInt(value.replace('K+', ''));
-            entry.target.textContent = '0';
-            animateCounter(entry.target, num);
-            setTimeout(() => {
-              entry.target.textContent = value;
-            }, 2000);
-          }
-        }
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat-value').forEach(stat => {
-      statsObserver.observe(stat);
-    });
-
-    // ============================================
-    // SHOWCASE ITEMS REVEAL ANIMATION
-    // ============================================
-    const showcaseItems = document.querySelectorAll('.showcase-item');
-    const showcaseObserver = new IntersectionObserver((entries) => {
+    
+    // FORMATEAR NÚMEROS (con comas)
+    function formatNumber(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+    
+    // OBSERVER PARA ANIMACIONES
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          // Animación de entrada escalonada
           setTimeout(() => {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0) scale(1)';
+            entry.target.classList.add('visible');
           }, index * 100);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    showcaseItems.forEach(item => {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(60px) scale(0.95)';
-      item.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      showcaseObserver.observe(item);
-    });
-
-    // ============================================
-    // CURSOR TRAIL EFFECT (Optional)
-    // ============================================
-    let mouseX = 0;
-    let mouseY = 0;
-    let cursorX = 0;
-    let cursorY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    // ============================================
-    // SECTION HEADER ANIMATIONS
-    // ============================================
-    const sectionHeaders = document.querySelectorAll('.section-header, .showcase-header, .testimonials-header');
-    const headerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          
+          // Iniciar contador
+          const numberElement = entry.target.querySelector('.stat-counter-number');
+          if (numberElement) {
+            setTimeout(() => {
+              entry.target.classList.add('counted');
+              animateCounter(numberElement);
+            }, index * 100 + 200);
+          }
         }
       });
     }, { threshold: 0.3 });
-
-    sectionHeaders.forEach(header => {
-      header.style.opacity = '0';
-      header.style.transform = 'translateY(30px)';
-      header.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      headerObserver.observe(header);
-    });
-
-    // ============================================
-    // PERFORMANCE OPTIMIZATION
-    // ============================================
-    // Reduce animations on low-end devices
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-    if (prefersReducedMotion.matches) {
-      document.querySelectorAll('*').forEach(el => {
-        el.style.animation = 'none';
-        el.style.transition = 'none';
-      });
-    }
-
-    // ============================================
-    // FOOTER ACCORDIONS (MOBILE)
-    // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
-      const accordionButtons = document.querySelectorAll('.accordion-button');
-      
-      accordionButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const targetId = this.getAttribute('data-accordion');
-          const content = document.getElementById(targetId);
-          const isActive = this.classList.contains('active');
-          
-          // Cerrar todos los acordeones
-          document.querySelectorAll('.accordion-button').forEach(btn => {
-            btn.classList.remove('active');
-          });
-          document.querySelectorAll('.accordion-content').forEach(cnt => {
-            cnt.classList.remove('active');
-          });
-          
-          // Si no estaba activo, abrirlo
-          if (!isActive) {
-            this.classList.add('active');
-            content.classList.add('active');
-          }
-        });
-      });
+    // OBSERVAR CARDS
+    counterCards.forEach(card => {
+      observer.observe(card);
     });
-  </script>
-</body>
-</html>
+    
+    // INICIALIZAR PARTÍCULAS
+    createFloatingParticles();
+    
+  })();
+
+  // KEYFRAMES PARA PARTÍCULAS (agregar al final del script)
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes floatParticle {
+      0% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-100px) scale(1);
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-200px) scale(0);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+// ============================================
+// PROGRAM CARDS STAGGER ANIMATION
+// ============================================
+const programCards = document.querySelectorAll('.program-card');
+programCards.forEach((card, index) => {
+  card.style.animationDelay = `${index * 0.1}s`;
+});
+
+// ============================================
+// TESTIMONIAL CARDS HOVER EFFECT
+// ============================================
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+testimonialCards.forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-8px) scale(1.02)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1)';
+  });
+});
+
+// ============================================
+// BUTTON RIPPLE EFFECT
+// ============================================
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    const ripple = document.createElement('span');
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+    
+    this.appendChild(ripple);
+    
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+});
+
+// ============================================
+// COUNTER ANIMATION FOR STATS
+// ============================================
+function animateCounter(element, target, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16);
+  let current = start;
+  
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      entry.target.classList.add('counted');
+      const value = entry.target.textContent;
+      if (value.includes('K')) {
+        const num = parseInt(value.replace('K+', ''));
+        entry.target.textContent = '0';
+        animateCounter(entry.target, num);
+        setTimeout(() => {
+          entry.target.textContent = value;
+        }, 2000);
+      }
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.metric-value, .stat-value').forEach(stat => {
+  statsObserver.observe(stat);
+});
+
+// ============================================
+// SHOWCASE ITEMS REVEAL ANIMATION
+// ============================================
+const showcaseItems = document.querySelectorAll('.showcase-item');
+const showcaseObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0) scale(1)';
+      }, index * 100);
+    }
+  });
+}, { threshold: 0.2 });
+
+showcaseItems.forEach(item => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(60px) scale(0.95)';
+  item.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+  showcaseObserver.observe(item);
+});
+
+// ============================================
+// SECTION HEADER ANIMATIONS
+// ============================================
+const sectionHeaders = document.querySelectorAll('.section-header, .showcase-header, .testimonials-header');
+const headerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.3 });
+
+sectionHeaders.forEach(header => {
+  header.style.opacity = '0';
+  header.style.transform = 'translateY(30px)';
+  header.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+  headerObserver.observe(header);
+});
+
+// ============================================
+// PROGRAM CARDS - ANIMACIÓN ENTRADA ESCALONADA
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  const programCards = document.querySelectorAll('.program-card');
+  
+  const programObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 100);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  programCards.forEach((card) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    programObserver.observe(card);
+  });
+});
+
+// ============================================
+// PERFORMANCE OPTIMIZATION
+// ============================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (prefersReducedMotion.matches) {
+  document.querySelectorAll('*').forEach(el => {
+    el.style.animation = 'none';
+    el.style.transition = 'none';
+  });
+}
+
+// ============================================
+// FOOTER ACCORDIONS (MOBILE)
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionButtons = document.querySelectorAll('.accordion-button');
+  
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-accordion');
+      const content = document.getElementById(targetId);
+      const isActive = this.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.accordion-content').forEach(cnt => {
+        cnt.classList.remove('active');
+      });
+      
+      if (!isActive) {
+        this.classList.add('active');
+        content.classList.add('active');
+      }
+    });
+  });
+});
+
+// ============================================
+// ANIMACIÓN AFFINITY - MEJORADA
+// ============================================
+(function() {
+  const banner = document.getElementById('affinity-banner');
+  const textInitial = document.querySelector('.affinity-text-initial');
+  const imagesContainer = document.querySelector('.affinity-images-container');
+  const imageWrappers = document.querySelectorAll('.affinity-image-wrapper');
+  const textFinal = document.querySelector('.affinity-text-final');
+  
+  if (!banner) return;
+  
+  function handleAffinityScroll() {
+    const scrollY = window.scrollY;
+    const bannerHeight = banner.offsetHeight;
+    const bannerTop = banner.offsetTop;
+    const bannerBottom = bannerTop + bannerHeight;
+    
+    if (scrollY < bannerTop || scrollY > bannerBottom + 200) {
+      return;
+    }
+    
+    const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
+    
+    if (progress < 0.12) {
+      textInitial.classList.remove('hidden');
+      imagesContainer.classList.remove('visible');
+      imagesContainer.classList.remove('fade-out');
+      imageWrappers.forEach(img => {
+        img.classList.remove('active');
+        img.classList.remove('fade-out');
+      });
+      textFinal.classList.remove('visible');
+      textFinal.classList.remove('fade-out');
+    }
+    else if (progress >= 0.12 && progress < 0.18) {
+      textInitial.classList.add('hidden');
+    }
+    
+    if (progress >= 0.18 && progress < 0.58) {
+      imagesContainer.classList.add('visible');
+      imagesContainer.classList.remove('fade-out');
+      
+      if (progress >= 0.20) {
+        imageWrappers.forEach((img) => {
+          img.classList.add('active');
+          img.classList.remove('fade-out');
+        });
+      }
+    }
+    
+    if (progress >= 0.55 && progress < 0.78) {
+      textFinal.classList.add('visible');
+      textFinal.classList.remove('fade-out');
+    }
+    
+    if (progress >= 0.78) {
+      const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
+      
+      if (fadeProgress > 0.15) {
+        imageWrappers.forEach((img) => {
+          img.classList.add('fade-out');
+        });
+        imagesContainer.classList.add('fade-out');
+      }
+      
+      if (fadeProgress > 0.40) {
+        textFinal.classList.add('fade-out');
+      }
+    }
+  }
+  
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleAffinityScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', onScroll, { passive: true });
+  handleAffinityScroll();
+})();
+
+    
+</script>
