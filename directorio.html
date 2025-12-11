@@ -6,303 +6,597 @@
   <title>Directorio - Emprende Tu Carrera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
-      background: #000;
-      color: #fff;
-      min-height: 100vh;
-      padding-top: 80px;
-    }
-
-    .content-section {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 40px;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(135deg, #FF1970, #DB12AF, #A200FA, #3C17DB);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 24px;
-    }
-
-    p {
-      color: #9ca3af;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-
-    .directory-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 60px;
-    }
-
-    .member-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 32px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .member-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 25, 112, 0.3);
-      box-shadow: 0 20px 60px rgba(255, 25, 112, 0.2);
-    }
-
-    .member-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #FF1970, #A200FA);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 2.5rem;
-      color: white;
-    }
-
-    .member-name {
-      color: #fff;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .member-role {
-      color: #9ca3af;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-    }
-
-    .member-social {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-    }
-
-    .social-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #9ca3af;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .social-icon:hover {
-      background: rgba(255, 25, 112, 0.2);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-  </style>
+  <link rel="stylesheet" href="directorio-styles.css">
 </head>
 <body>
-      <!-- Navbar -->
-      <nav id="navbar">
-        <div class="nav-container">
-          <div class="nav-content">
-            <a href="index.html" class="logo">
-              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html" class="active">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html">Programas</a>
+      <a href="directorio.html" class="active">Directorio</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" required>
+          </div>
+        </div>
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required>
+              <option value="">Selecciona un programa</option>
+              <option>Transformación Profesional</option>
+              <option>Programas de liderazgo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Partículas de fondo -->
+  <div class="particles-background" id="particlesBackground"></div>
+
+  <!-- Content -->
+  <div class="content-section">
+    <div class="directory-header">
+      <h1>Conoce a nuestro equipo</h1>
+      <p>Conoce a las personas detrás de Emprende Tu Carrera. Aquí encontrarás a los equipos que hacen posible cada paso de tu proceso.</p>
+    </div>
+
+    <!-- GERENCIA -->
+    <div class="department-section" data-department="gerencia">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h2 class="department-title">Gerencia</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM%20(1).jpeg?updatedAt=1754335165798" alt="Gerente General">
+          </div>
+          <div class="member-name">Johan Franco</div>
+          <div class="member-role">Gerente General</div>
+          <div class="member-social">
+            <a href="mailto:ceo@emprendetucarrera.com.co" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
             </a>
-            
-            <ul class="nav-menu">
-              <li><a href="index.html" class="active">Inicio</a></li>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(4).jpeg?updatedAt=1754335165735" alt="Gerente Tic">
+          </div>
+          <div class="member-name">Jhonatan Franco</div>
+          <div class="member-role">Gerente Tic</div>
+          <div class="member-social">
+            <a href="tic@emprendetucarrera.com.co" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECCIÓN GENERAL -->
+    <div class="department-section" data-department="direccion">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-compass"></i>
+        </div>
+        <h2 class="department-title">Dirección General</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.08%20PM%20(1).jpeg?updatedAt=1754335164011" alt="Directora administrativa">
+          </div>
+          <div class="member-name">Alejandra Moreno</div>
+          <div class="member-role">Directora administrativa</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3187408677&text=%C2%A1Hola%2C%20Alejandra%20Moreno%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(3).jpeg?updatedAt=1754335165719" alt="Director comercial">
+          </div>
+          <div class="member-name">Fernando Suárez</div>
+          <div class="member-role">Director comercial</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3214578060&text=%C2%A1Hola%2C%20Fernando%20Suarez%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSONAL ADMINISTRATIVO -->
+    <div class="department-section" data-department="administrativo">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h2 class="department-title">Personal Administrativo</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.06%20PM.jpeg?updatedAt=1754335163974" alt="Directora administrativa">
+          </div>
+          <div class="member-name">Nicol Castiblanco</div>
+          <div class="member-role">Coordinador en jefe</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3178035550&text=%C2%A1Hola%2C%20Nicol%20Castiblanco%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.08%20PM.jpeg?updatedAt=1754335164053" alt="Directora administrativa">
+          </div>
+          <div class="member-name">Ada Rangel</div>
+          <div class="member-role">Supervisora en jefe</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3150829388&text=%C2%A1Hola%2C%20Ada%20Rangel%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.07%20PM%20(2).jpeg?updatedAt=1754335164402" alt="Contadora">
+          </div>
+          <div class="member-name">Alejandra Uhía</div>
+          <div class="member-role">Contadora</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alejandra.uhia@emprendetucarrera.com.co&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.07%20PM%20(1).jpeg?updatedAt=1754335164407" alt="Directora administrativa">
+          </div>
+          <div class="member-name">Paul Campos</div>
+          <div class="member-role">Coordinador C.A.E.S</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3182496878&text=%C2%A1Hola%2C%20Paul%20Campos%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caes@emprendetucarrera.com.co&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-11%20at%2011.23.52%20AM.jpeg?updatedAt=1754929905627" alt="CAES">
+          </div>
+          <div class="member-name">Yohandra Labrado</div>
+          <div class="member-role">C.A.E.S</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3152376589&text=%C2%A1Hola%2C%20Yohandra%20Labrador%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM%20(2).jpeg?updatedAt=1754335165615" alt="Asistente administrativo">
+          </div>
+          <div class="member-name">Estefanía Rodríguez</div>
+          <div class="member-role">Asistente administrativo</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3166088974&text=%C2%A1Hola%2C%20Estefania%20Rodriguez%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.08%20PM%20(3).jpeg?updatedAt=1754335163944" alt="Gestor documental">
+          </div>
+          <div class="member-name">Andrés Morales</div>
+          <div class="member-role">Gestor documental</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3155922505&text=%C2%A1Hola%2C%20Andr%C3%A9s%20Morales%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-20%20at%202.42.25%20PM.jpeg?updatedAt=1755718967533" alt="Gestor documental">
+          </div>
+          <div class="member-name">Francy Cortes</div>
+          <div class="member-role">Gestor documental</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3182136622&text=%C2%A1Hola%2C%20Francy%20Cortes%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EQUIPO TIC -->
+    <div class="department-section" data-department="tic">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h2 class="department-title">Equipo TIC</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM.jpeg?updatedAt=1754335165679" alt="Coordinador TIC">
+          </div>
+          <div class="member-name">Johan Rincón</div>
+          <div class="member-role">Coordinador TIC</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tech@emprendetucarrera.com.co&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.09%20PM.jpeg?updatedAt=1754335165819" alt="Auxiliar de desarrollo">
+          </div>
+          <div class="member-name">Brenda Amaya</div>
+          <div class="member-role">Auxiliar de desarrollo</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=desarrollo@emprendetucarrera.com.co&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-04%20at%203.59.32%20PM.jpeg?updatedAt=1754414061643" alt="Directora administrativa">
+          </div>
+          <div class="member-name">Jeison Rincón</div>
+          <div class="member-role">Auxiliar TIC</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=soporte@emprendetucarrera.com.co&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMUNICACIONES Y MARKETING -->
+    <div class="department-section" data-department="marketing">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h2 class="department-title">Equipo de comunicaciones audiovisuales y marketing</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-11%20at%2011.18.32%20AM.jpeg?updatedAt=1754929698294" alt="Marketing">
+          </div>
+          <div class="member-name">Sara Venegas</div>
+          <div class="member-role">Social media</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=redesocialesetc@gmail.com&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/foto.jpg?updatedAt=1754400709182" alt="Marketing">
+          </div>
+          <div class="member-name">Nicolás Ortegón</div>
+          <div class="member-role">Productor de multimedia</div>
+          <div class="member-social">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=creativosetc@gmail.com&su=Consulta&body=Hola, quiero más información." class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COORDINADORES DE ACCESO UNIVERSITARIO -->
+    <div class="department-section" data-department="coordinadores">
+      <div class="department-header">
+        <div class="department-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h2 class="department-title">Coordinadores de Acceso Universitario</h2>
+      </div>
+      <div class="directory-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-20%20at%203.13.26%20PM.jpeg?updatedAt=1755720839385" alt="Centro de atención inicial">
+          </div>
+          <div class="member-name">Karen Susa</div>
+          <div class="member-role">Centro de atención inicial</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3177043053&text=%C2%A1Hola%2C%20Karen%20Susa%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-09-01%20at%2010.21.03%20AM.jpeg" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Diana Rodríguez</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://wa.me/573000000019" class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.10%20PM%20(4).jpeg?updatedAt=1754335165760" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Naomi Mateus</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3161056740&text=%C2%A1Hola%2C%20Naomi%20Mateus%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.08%20PM%20(2).jpeg?updatedAt=1754335164109" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Alison Gutiérrez</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3172708353&text=%C2%A1Hola%2C%20Alison%20Gutierrez%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-07-30%20at%203.16.07%20PM%20(4).jpeg?updatedAt=1754335163934" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Yuli Hernández</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3189918075&text=%C2%A1Hola%2C%20Yuli%20Hernandez%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-20%20at%202.26.11%20PM%20(1).jpeg?updatedAt=1755718070463" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Liseth Villegas</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3150829381&text=%C2%A1Hola%2C%20Liseth%20Villegas%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-10-22%20at%208.46.19%20AM.jpeg?updatedAt=1761141841839" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Luisa Quintero</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3150829382&text=%C2%A1Hola%2C%20Luisa%20Quintero%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/WhatsApp%20Image%202025-08-20%20at%202.26.11%20PM%20(6).jpeg?updatedAt=1755718070399" alt="Coordinador de acceso universitario">
+          </div>
+          <div class="member-name">Vanessa Abril</div>
+          <div class="member-role">Coordinador de acceso universitario</div>
+          <div class="member-social">
+            <a href="https://api.whatsapp.com/send?phone=3159230448&text=%C2%A1Hola%2C%20Vanessa%20Abril%21%20%0A1.%20Soy%20%2Aaspirante%2A%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20programas%20acad%C3%A9micos.%0A2.%20Soy%20%2Aestudiante%2A%20y%20necesito%20ayuda%20con%20un%20tr%C3%A1mite." class="social-icon" target="_blank" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+      <!-- Footer -->
+    <footer id="comunidad">
+      <div class="footer-wrapper">
+        <div class="footer-content desktop-footer">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Empresa</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="conocenos.html">Conócenos</a></li>
               <li><a href="programas.html">Programas</a></li>
               <li><a href="directorio.html">Directorio</a></li>
               <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
             </ul>
-            
-            <div class="nav-cta">
-              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
-            </div>
-            
-            <button class="mobile-menu-button" id="mobileMenuBtn">
-              <i class="fas fa-bars" id="menuIcon"></i>
-              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
-            </button>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Marco Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#">Políticas</a></li>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Correo corporativo</a></li>
+            </ul>
           </div>
         </div>
+
+        <div class="footer-mobile mobile-footer">
+          <div class="footer-accordion">
+            <button class="accordion-button" data-accordion="empresa">
+              <span>Empresa</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content" id="empresa">
+              <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conocenos.html">Conócenos</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="directorio.html">Directorio</a></li>
+                <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-accordion">
+            <button class="accordion-button" data-accordion="legal">
+              <span>Marco Legal</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content" id="legal">
+              <ul class="footer-links">
+                <li><a href="#">Políticas</a></li>
+                <li><a href="#">PQRS</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Correo corporativo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-logo-mobile mobile-only">
+          <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+        </div>
         
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html" class="active">Inicio</a>
-          <a href="conocenos.html">Conócenos</a>
-          <a href="programas.html">Programas</a>
-          <a href="directorio.html">Directorio</a>
-          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
-        </div>
-      </nav>
-      <!-- Modal -->
-      <div id="modal" class="custom-modal">
-        <div class="custom-modal-content">
-
-          <span class="custom-close">&times;</span>
-
-          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-          <h1 class="modal-title">Inicia tu viaje profesional</h1>
-
-          <p class="modal-text">
-            Completa el formulario y un especialista se pondrá en contacto
-            contigo en menos de 24 horas.
-          </p>
-
-          <form class="modal-form">
-
-            <label>Nombre completo *</label>
-            <input type="text" placeholder="Tu nombre completo" required>
-
-            <div class="modal-row">
-              <div>
-                <label>Email *</label>
-                <input type="email" placeholder="tu@mail.com" required>
-              </div>
-              <div>
-                <label>Teléfono *</label>
-                <input type="tel" placeholder="+57 300 000 0000" required>
-              </div>
-            </div>
-
-            <div class="modal-row">
-              <div>
-                <label>Profesión actual *</label>
-                <input type="text" placeholder="Ej: Desarrollador" required>
-              </div>
-              <div>
-                <label>Programa de interés *</label>
-                <select required>
-                  <option value="">Selecciona un programa</option>
-                  <option>Transformación Profesional</option>
-                  <option>Programas de liderazgo</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-            </div>
-
-            <label>Cuéntanos sobre tus objetivos</label>
-            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-
-            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-
-            <p class="modal-footer">
-              Al enviar este formulario, aceptas nuestra política de privacidad.
-            </p>
-
-          </form>
-
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom-section">
+          <div class="social-links-footer">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <div class="footer-legal">
+            <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+          </div>
         </div>
       </div>
-
-  <!-- Content -->
-  <div class="content-section">
-    <h1>Directorio</h1>
-    <p>
-      Conoce a nuestro equipo de expertos y mentores comprometidos con tu éxito profesional.
-    </p>
-
-    <div class="directory-grid">
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">Ana García</div>
-        <div class="member-role">CEO & Founder</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">Carlos Rodríguez</div>
-        <div class="member-role">Director de Programas</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">María López</div>
-        <div class="member-role">Mentora Senior</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">Juan Martínez</div>
-        <div class="member-role">Tech Lead</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">Laura Sánchez</div>
-        <div class="member-role">Business Strategist</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="member-name">Diego Torres</div>
-        <div class="member-role">Community Manager</div>
-        <div class="member-social">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 
   <script>
+    // ============================================
     // NAVBAR SCROLL EFFECT
+    // ============================================
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -313,25 +607,27 @@
     });
 
     // ============================================
-    // MODAL mas informacion
+    // MODAL
     // ============================================
-      const modal = document.getElementById("modal");
-      const openModal = document.getElementById("openModal");
-      const closeModal = document.querySelector(".custom-close");
+    const modal = document.getElementById("modal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".custom-close");
 
-      openModal.addEventListener("click", () => {
-        modal.style.display = "flex";
-      });
+    openModal.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
 
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
 
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
 
+    // ============================================
     // MOBILE MENU TOGGLE
+    // ============================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -355,6 +651,99 @@
         mobileMenu.classList.remove('active');
         menuIcon.style.display = 'block';
         closeIcon.style.display = 'none';
+      });
+    });
+
+    // ============================================
+    // PARTÍCULAS DE FONDO - PUNTOS DE LUZ
+    // ============================================
+    const particlesContainer = document.getElementById('particlesBackground');
+    const particleCount = 40;
+
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('light-particle');
+      
+      // Posición vertical aleatoria
+      const startY = Math.random() * 100;
+      particle.style.top = startY + '%';
+      
+      // Tamaño aleatorio
+      const size = Math.random() * 4 + 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      
+      // Duración de animación aleatoria
+      const duration = Math.random() * 20 + 15;
+      particle.style.animationDuration = duration + 's';
+      
+      // Delay aleatorio
+      const delay = Math.random() * 10;
+      particle.style.animationDelay = delay + 's';
+      
+      // Opacidad aleatoria
+      const opacity = Math.random() * 0.4 + 0.2;
+      particle.style.opacity = opacity;
+      
+      particlesContainer.appendChild(particle);
+      
+      // Remover y recrear después de la animación
+      setTimeout(() => {
+        particle.remove();
+        createParticle();
+      }, (duration + delay) * 1000);
+    }
+
+    // Crear partículas iniciales
+    for (let i = 0; i < particleCount; i++) {
+      setTimeout(() => createParticle(), i * 200);
+    }
+
+    // ============================================
+    // ANIMACIÓN DE SCROLL REVEAL
+    // ============================================
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    // Observar secciones de departamentos
+    document.querySelectorAll('.department-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // ============================================
+    // FOOTER ACCORDIONS (MOBILE)
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(cnt => {
+            cnt.classList.remove('active');
+          });
+          
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
+        });
       });
     });
   </script>
