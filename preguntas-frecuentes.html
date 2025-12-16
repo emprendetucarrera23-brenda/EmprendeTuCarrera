@@ -5,297 +5,450 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preguntas Frecuentes - Emprende Tu Carrera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
-      background: #000;
-      color: #fff;
-      min-height: 100vh;
-      padding-top: 80px;
-    }
-
-    .content-section {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 0 40px;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(135deg, #FF1970, #DB12AF, #A200FA, #3C17DB);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 24px;
-    }
-
-    .intro {
-      color: #9ca3af;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 60px;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .faq-item {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .faq-item:hover {
-      border-color: rgba(255, 25, 112, 0.3);
-    }
-
-    .faq-question {
-      padding: 24px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-
-    .faq-question h3 {
-      color: #fff;
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-
-    .faq-icon {
-      color: #FF1970;
-      font-size: 1.25rem;
-      transition: transform 0.3s ease;
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 500px;
-    }
-
-    .faq-answer-content {
-      padding: 0 24px 24px;
-      color: #9ca3af;
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-  </style>
+  <link rel="stylesheet" href="faq.css">
 </head>
 <body>
   <!-- Navbar -->
-      <nav id="navbar">
-        <div class="nav-container">
-          <div class="nav-content">
-            <a href="index.html" class="logo">
-              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-menu">
-              <li><a href="index.html" class="active">Inicio</a></li>
-              <li><a href="conocenos.html">Conócenos</a></li>
-              <li><a href="programas.html">Programas</a></li>
-              <li><a href="directorio.html">Directorio</a></li>
-              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-            </ul>
-            
-            <div class="nav-cta">
-              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
-            </div>
-            
-            <button class="mobile-menu-button" id="mobileMenuBtn">
-              <i class="fas fa-bars" id="menuIcon"></i>
-              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
-            </button>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo Emprende Tu Carrera" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html" class="active">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn" aria-label="Menú">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html">Programas</a>
+      <a href="directorio.html">Directorio</a>
+      <a href="preguntas-frecuentes.html" class="active">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form" id="contactForm">
+        <label>Nombre completo *</label>
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+        
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" name="telefono" placeholder="+57 300 000 0000" required>
           </div>
         </div>
         
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html" class="active">Inicio</a>
-          <a href="conocenos.html">Conócenos</a>
-          <a href="programas.html">Programas</a>
-          <a href="directorio.html">Directorio</a>
-          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
-        </div>
-      </nav>
-      <!-- Modal -->
-      <div id="modal" class="custom-modal">
-        <div class="custom-modal-content">
-
-          <span class="custom-close">&times;</span>
-
-          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-          <h1 class="modal-title">Inicia tu viaje profesional</h1>
-
-          <p class="modal-text">
-            Completa el formulario y un especialista se pondrá en contacto
-            contigo en menos de 24 horas.
-          </p>
-
-          <form class="modal-form">
-
-            <label>Nombre completo *</label>
-            <input type="text" placeholder="Tu nombre completo" required>
-
-            <div class="modal-row">
-              <div>
-                <label>Email *</label>
-                <input type="email" placeholder="tu@mail.com" required>
-              </div>
-              <div>
-                <label>Teléfono *</label>
-                <input type="tel" placeholder="+57 300 000 0000" required>
-              </div>
-            </div>
-
-            <div class="modal-row">
-              <div>
-                <label>Profesión actual *</label>
-                <input type="text" placeholder="Ej: Desarrollador" required>
-              </div>
-              <div>
-                <label>Programa de interés *</label>
-                <select required>
-                  <option value="">Selecciona un programa</option>
-                  <option>Transformación Profesional</option>
-                  <option>Programas de liderazgo</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-            </div>
-
-            <label>Cuéntanos sobre tus objetivos</label>
-            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-
-            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-
-            <p class="modal-footer">
-              Al enviar este formulario, aceptas nuestra política de privacidad.
-            </p>
-
-          </form>
-
-        </div>
-      </div>
-
-  <!-- Content -->
-  <div class="content-section">
-    <h1>Preguntas Frecuentes</h1>
-    <p class="intro">
-      Encuentra respuestas a las preguntas más comunes sobre nuestros programas y servicios.
-    </p>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Cuánto duran los programas?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            La duración varía según el programa elegido. Los programas intensivos tienen una duración 
-            de 3 a 6 meses, mientras que los programas executive pueden extenderse hasta 12 meses 
-            con mentoría personalizada continua.
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" name="profesion" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select name="programa" required>
+              <option value="">Selecciona un programa</option>
+              <option>Transformación Profesional</option>
+              <option>Programas de liderazgo</option>
+              <option>Otro</option>
+            </select>
           </div>
         </div>
-      </div>
+        
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea name="objetivos" placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Qué requisitos previos necesito?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            Los requisitos varían según el programa. Para programas técnicos, se recomienda tener 
-            conocimientos básicos de programación. Para programas de negocios, experiencia profesional 
-            previa es valorada pero no obligatoria. Evaluamos cada caso individualmente.
-          </div>
-        </div>
-      </div>
+  <!-- Partículas de fondo -->
+  <div class="particles-background" id="particlesBackground"></div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Ofrecen certificación?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            Sí, al completar exitosamente cualquier programa recibes una certificación reconocida 
-            internacionalmente. Además, los graduados obtienen acceso permanente a nuestra red 
-            global de alumni y oportunidades de desarrollo continuo.
-          </div>
-        </div>
+  <!-- FAQ Content -->
+  <div class="faq-container">
+    <!-- Header -->
+    <div class="faq-header">
+      <div class="faq-header-icon">
+        <i class="fas fa-sparkles"></i>
       </div>
+      <h1 class="faq-title">
+        <span class="faq-title-normal">Preguntas </span>
+        <span class="faq-title-gradient">Frecuentes</span>
+      </h1>
+      <p class="faq-subtitle">
+        Encuentra respuestas a tus preguntas sobre Emprende Tu Carrera
+      </p>
+    </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Cuál es el formato de las clases?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            Ofrecemos un formato híbrido que combina sesiones en vivo, contenido bajo demanda, 
-            proyectos prácticos y mentoría 1:1. Todo está diseñado para adaptarse a profesionales 
-            que trabajan y maximizar el aprendizaje aplicado.
-          </div>
-        </div>
-      </div>
+    <!-- Categorías -->
+    <div class="faq-categories">
+      <button class="category-btn active" data-category="Todos">
+        Todos <span class="category-count">14</span>
+      </button>
+      <button class="category-btn" data-category="Sobre Nosotros">
+        Sobre Nosotros <span class="category-count">2</span>
+      </button>
+      <button class="category-btn" data-category="Becas">
+        Becas <span class="category-count">2</span>
+      </button>
+      <button class="category-btn" data-category="Acreditación">
+        Acreditación <span class="category-count">1</span>
+      </button>
+      <button class="category-btn" data-category="Programas">
+        Programas <span class="category-count">3</span>
+      </button>
+      <button class="category-btn" data-category="Inscripción">
+        Inscripción <span class="category-count">3</span>
+      </button>
+      <button class="category-btn" data-category="Gestión Académica">
+        Gestión Académica <span class="category-count">3</span>
+      </button>
+    </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Tienen opciones de financiamiento?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            Sí, ofrecemos múltiples opciones de pago incluyendo planes de financiamiento sin intereses, 
-            becas parciales basadas en mérito, y descuentos para grupos corporativos. Contacta a 
-            nuestro equipo para conocer las opciones disponibles.
-          </div>
-        </div>
-      </div>
+    <!-- Lista de preguntas -->
+    <div class="faq-list" id="faqList"></div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Qué soporte recibo durante el programa?</h3>
-          <i class="fas fa-chevron-down faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-content">
-            Recibes mentoría personalizada, acceso a nuestra comunidad exclusiva, revisión de proyectos, 
-            sesiones de Q&A en vivo, y recursos adicionales de aprendizaje. Nuestro equipo está 
-            disponible para apoyarte en cada etapa de tu transformación profesional.
-          </div>
+    <!-- Contact Section -->
+    <div class="faq-contact">
+      <div class="faq-contact-glow"></div>
+      <div class="faq-contact-content">
+        <i class="fas fa-comment-dots faq-contact-icon"></i>
+        <h2 class="faq-contact-title">¿Aún tienes dudas?</h2>
+        <p class="faq-contact-text">
+          Nuestro equipo está disponible para ayudarte con cualquier pregunta
+        </p>
+        <div class="faq-contact-buttons">
+          <button class="faq-contact-btn primary" id="contactBtn">
+            <i class="fas fa-comment-dots"></i>
+            Contactar ahora
+          </button>
+          <a href="programas.html" class="faq-contact-btn secondary">
+            <i class="fas fa-graduation-cap"></i>
+            Ver programas
+          </a>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="programas.html">Programas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Marco Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Políticas</a></li>
+            <li><a href="#">PQRS</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Correo corporativo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-mobile mobile-footer">
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="empresa">
+            <span>Empresa</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="empresa">
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="legal">
+            <span>Marco Legal</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="legal">
+            <ul class="footer-links">
+              <li><a href="#">Políticas</a></li>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Correo corporativo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-logo-mobile mobile-only">
+        <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom-section">
+        <div class="social-links-footer">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <div class="footer-legal">
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
+    // ============================================
+    // DATOS DE FAQ CON ICONOS COMPLETOS
+    // ============================================
+    const faqData = [
+      {
+        id: 1,
+        question: '¿Emprende tu carrera es una universidad?',
+        answer: '• No somos una universidad, somos un puente estratégico entre tú y la educación superior. Gracias a nuestros convenios con instituciones acreditadas, te ayudamos a acceder a becas, programas de calidad y procesos mucho más ágiles para que logres tu título profesional.',
+        icon: 'fa-building',
+        category: 'Sobre Nosotros'
+      },
+      {
+        id: 2,
+        question: '¿Las becas son reales? ¿Cómo funcionan y quién las respalda?',
+        answer: '• Sí, son totalmente reales. Se logran gracias a convenios exclusivos con universidades e institutos acreditados en Colombia que permiten reducir costos de programas virtuales, ya que los estudiantes no utilizan instalaciones físicas, servicios como luz o equipos de cómputo. Ese ahorro se convierte en un beneficio directo para ti, otorgándote becas entre el 55% y el 75% sin afectar la calidad académica.',
+        icon: 'fa-award',
+        category: 'Becas'
+      },
+      {
+        id: 3,
+        question: '¿Las universidades e institutos con los que trabajan están acreditados?',
+        answer: '• Sí. Solo trabajamos con universidades e institutos reconocidos y acreditados por el Ministerio de Educación en Colombia, lo que garantiza que tu título será válido y tendrá el mismo peso académico que el de cualquier institución presencial.',
+        icon: 'fa-certificate',
+        category: 'Acreditación'
+      },
+      {
+        id: 4,
+        question: '¿Cómo es posible graduarse en 16 o 20 meses?',
+        answer: '• Es posible gracias a un modelo académico intensivo y flexible que organiza las materias en ciclos más cortos y reconoce tus avances previos. A diferencia de la educación tradicional, aquí se omiten recesos como vacaciones largas, semanas de receso y festivos académicos, lo que permite avanzar de manera continua y graduarte en 16 o 20 meses, sin sacrificar calidad.',
+        icon: 'fa-clock',
+        category: 'Programas'
+      },
+      {
+        id: 5,
+        question: '¿Cómo es el proceso de suscripción?',
+        answer: '• Es muy sencillo. Nuestro equipo te acompaña paso a paso: desde la orientación vocacional, la elección de carrera y la aplicación de la beca, hasta la recolección de documentos como el ICFES y demás requisitos para el ingreso a la universidad. El acompañamiento es continuo, desde el primer contacto con tu coordinador de acceso universitario hasta que logras graduarte. Todo el proceso es claro, rápido y sin complicaciones.',
+        icon: 'fa-list-check',
+        category: 'Inscripción'
+      },
+      {
+        id: 6,
+        question: '¿Qué programas puedo estudiar con ustedes?',
+        answer: '• Contamos con una amplia oferta que incluye técnicos laborales, técnicos profesionales, carreras profesionales, especializaciones y maestrías en áreas de alta demanda como administración, comunicación, psicología, derecho, administración pública, ingenierías y más. Según tus intereses y metas, nuestro equipo te guía para que elijas la opción más acertada.',
+        icon: 'fa-graduation-cap',
+        category: 'Programas'
+      },
+      {
+        id: 7,
+        question: '¿Qué diferencia a Emprende Tu Carrera de otras opciones?',
+        answer: '• Te acompañamos en cada paso hacia tu futuro: con orientación personalizada, becas exclusivas, financiación directa y un proceso sencillo. Queremos que no solo inicies tu carrera, sino que te gradúes y cumplas tus sueños profesionales.',
+        icon: 'fa-star',
+        category: 'Sobre Nosotros'
+      },
+      {
+        id: 8,
+        question: '¿Cuál es el cronograma de pagos para la matrícula?',
+        answer: '• La fecha máxima de pago es el día 17 de cada mes (sujeto a cambios).',
+        icon: 'fa-credit-card',
+        category: 'Becas'
+      },
+      {
+        id: 9,
+        question: '¿Cuántas veces al año se realizan los ingresos académicos y en qué periodos se llevan a cabo?',
+        answer: '• Los ingresos académicos se realizan tres veces al año, generalmente en los meses de febrero, mayo y septiembre. Por lo común, las fechas de ingreso se programan entre el 25 y el 30 de cada uno de esos meses. Sin embargo, es importante tener en cuenta que estas fechas pueden estar sujetas a cambios, dependiendo de la planeación institucional o de ajustes en el calendario académico.',
+        icon: 'fa-calendar-days',
+        category: 'Inscripción'
+      },
+      {
+        id: 10,
+        question: '¿Qué se cubre en la inducción?',
+        answer: '• Presentación institucional, reglamentos, canales de comunicación, cómo usar la plataforma académica, cronograma del cuatrimestre, responsabilidades académicas y servicios de soporte.',
+        icon: 'fa-book-open',
+        category: 'Inscripción'
+      },
+      {
+        id: 11,
+        question: '¿En qué momento se entregan las credenciales académicas?',
+        answer: '• Las credenciales se gestionan una vez verificado el pago de la primera cuota. Proceso habitual: 1) realizas el pago → 2) subes comprobante/completas solicitud → 3) la oficina registra la verificación y activa la credencial en la plataforma → 4) mensaje al correo.',
+        icon: 'fa-key',
+        category: 'Gestión Académica'
+      },
+      {
+        id: 12,
+        question: '¿Cuándo se emite el acta de homologación?',
+        answer: '• Según lo indicado, la emisión del acta de homologación se realiza en el segundo cuatrimestre. Es el documento oficial que valida/convalida asignaturas estudiadas previamente en otra institución para que sean reconocidas en el programa actual.',
+        icon: 'fa-file-circle-check',
+        category: 'Gestión Académica'
+      },
+      {
+        id: 13,
+        question: '¿Cómo son los horarios de clase (malla horaria)?',
+        answer: '• Disponibilidad: Lunes a viernes, de 6:00 p.m. a 10:00 p.m. Modalidad: combinación híbrida: 2 a 3 días sincrónicos (clases en vivo vía videoconferencia) y el resto asincrónicos (material en la plataforma, foros, tareas y actividades para completar en horario flexible).',
+        icon: 'fa-clock',
+        category: 'Programas'
+      },
+      {
+        id: 14,
+        question: '¿Cómo y cuándo se obtiene el carnet estudiantil?',
+        answer: '• El carnet se carga en la plataforma después de diligenciar el link de solicitud que te habilitan. Pasos típicos: 1) Completa el formulario de solicitud. 2) Sube una fotografía tipo carnet (verifica fondo, formato y dimensiones si la plataforma lo solicita). 3) Espera la validación y la carga final en la plataforma. Si tienes dudas durante el proceso, puedes ponerte en contacto con nuestro equipo administrativo.',
+        icon: 'fa-id-card',
+        category: 'Gestión Académica'
+      }
+    ];
+
+    // ============================================
+    // RENDERIZAR FAQ
+    // ============================================
+    let currentCategory = 'Todos';
+
+    function renderFAQ(category = 'Todos') {
+      const faqList = document.getElementById('faqList');
+      const filteredData = category === 'Todos' 
+        ? faqData 
+        : faqData.filter(item => item.category === category);
+
+      faqList.innerHTML = filteredData.map((item, index) => `
+        <div class="faq-item" data-id="${item.id}" style="animation-delay: ${index * 0.05}s">
+          <button class="faq-question" aria-expanded="false">
+            <div class="faq-icon">
+              <i class="fas ${item.icon}"></i>
+            </div>
+            <div class="faq-question-content">
+              <h3 class="faq-question-title">${item.question}</h3>
+              <span class="faq-category-tag">${item.category}</span>
+            </div>
+            <div class="faq-chevron">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <div class="faq-answer-divider"></div>
+              <div class="faq-answer-text-wrapper">
+                <p class="faq-answer-text">${item.answer}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Agregar event listeners
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', toggleFAQ);
+      });
+    }
+
+    // ============================================
+    // TOGGLE FAQ
+    // ============================================
+    function toggleFAQ(e) {
+      const button = e.currentTarget;
+      const item = button.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+
+      // Cerrar todos
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Abrir el clickeado si no estaba activo
+      if (!isActive) {
+        item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // ============================================
+    // FILTROS DE CATEGORÍA
+    // ============================================
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remover active de todos
+        document.querySelectorAll('.category-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        
+        // Agregar active al clickeado
+        btn.classList.add('active');
+        
+        // Filtrar
+        const category = btn.dataset.category;
+        currentCategory = category;
+        renderFAQ(category);
+      });
+    });
+
+    // ============================================
     // NAVBAR SCROLL EFFECT
+    // ============================================
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -306,25 +459,54 @@
     });
 
     // ============================================
-    // MODAL mas informacion
+    // MODAL
     // ============================================
-      const modal = document.getElementById("modal");
-      const openModal = document.getElementById("openModal");
-      const closeModal = document.querySelector(".custom-close");
+    const modal = document.getElementById("modal");
+    const openModal = document.getElementById("openModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const closeModal = document.querySelector(".custom-close");
+    const contactForm = document.getElementById("contactForm");
 
-      openModal.addEventListener("click", () => {
-        modal.style.display = "flex";
-      });
+    function openModalFunc() {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
 
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
+    function closeModalFunc() {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
 
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
+    openModal.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModalFunc();
+    });
 
+    contactBtn.addEventListener("click", () => {
+      openModalFunc();
+    });
+
+    closeModal.addEventListener("click", () => {
+      closeModalFunc();
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Prevenir submit del formulario (agregar lógica de envío si es necesario)
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("¡Gracias por tu interés! Un especialista se pondrá en contacto contigo pronto.");
+      closeModalFunc();
+      contactForm.reset();
+    });
+
+    // ============================================
     // MOBILE MENU TOGGLE
+    // ============================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -336,9 +518,11 @@
       if (mobileMenu.classList.contains('active')) {
         menuIcon.style.display = 'none';
         closeIcon.style.display = 'block';
+        document.body.style.overflow = 'hidden';
       } else {
         menuIcon.style.display = 'block';
         closeIcon.style.display = 'none';
+        document.body.style.overflow = 'auto';
       }
     });
 
@@ -348,26 +532,92 @@
         mobileMenu.classList.remove('active');
         menuIcon.style.display = 'block';
         closeIcon.style.display = 'none';
+        document.body.style.overflow = 'auto';
       });
     });
 
-    // FAQ ACCORDION
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
+    // ============================================
+    // PARTÍCULAS DE FONDO
+    // ============================================
+    const particlesContainer = document.getElementById('particlesBackground');
+    const particleCount = 40;
+
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('light-particle');
       
-      question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        
-        // Close all items
-        faqItems.forEach(i => i.classList.remove('active'));
-        
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-          item.classList.add('active');
-        }
+      const startY = Math.random() * 100;
+      particle.style.top = startY + '%';
+      
+      const size = Math.random() * 4 + 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      
+      const duration = Math.random() * 20 + 15;
+      particle.style.animationDuration = duration + 's';
+      
+      const delay = Math.random() * 10;
+      particle.style.animationDelay = delay + 's';
+      
+      const opacity = Math.random() * 0.4 + 0.2;
+      particle.style.opacity = opacity;
+      
+      particlesContainer.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+        createParticle();
+      }, (duration + delay) * 1000);
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      setTimeout(() => createParticle(), i * 200);
+    }
+
+    // ============================================
+    // FOOTER ACCORDIONS (MOBILE)
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(cnt => {
+            cnt.classList.remove('active');
+          });
+          
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
+        });
       });
+
+      // Renderizar FAQ inicial
+      renderFAQ();
+    });
+
+    // ============================================
+    // FEEDBACK BUTTONS (OPCIONAL)
+    // ============================================
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('faq-feedback-btn')) {
+        const emoji = e.target.textContent;
+        e.target.style.transform = 'scale(1.3)';
+        setTimeout(() => {
+          e.target.style.transform = 'scale(1)';
+        }, 200);
+        
+        // Aquí puedes agregar lógica para enviar feedback
+        console.log('Feedback:', emoji === '👍' ? 'Útil' : 'No útil');
+      }
     });
   </script>
 </body>

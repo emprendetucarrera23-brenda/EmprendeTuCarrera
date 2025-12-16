@@ -306,19 +306,117 @@
         </div>
       </section>
 
-    <!-- Historias de éxito -->
-    <section id="testimonios" class="testimonials">
-      <div class="testimonials-header">
-        <h2 class="text-gradient">Historias de Éxito</h2>
-        <p style="color: #9ca3af; max-width: 700px; margin: 32px auto; text-align: center;">
-          Descubre cómo nuestros estudiantes han transformado sus carreras 
-          y alcanzado sus objetivos profesionales.
-        </p>
-      </div>
-      <div class="testimonials-carousel-wrapper">
-        <div class="testimonials-track" id="testimonialsTrack"></div>
-      </div>
-    </section>
+
+      <!-- SECCIÓN DE TESTIMONIOS - INICIO -->
+      <section id="testimonials-section" class="testimonials-wrapper">
+          <!-- Fondo animado -->
+          <div class="testimonials-bg">
+              <!-- Orbes de gradiente -->
+              <div class="gradient-orb orb-1"></div>
+              <div class="gradient-orb orb-2"></div>
+              
+              <!-- Grid -->
+              <div class="grid-pattern"></div>
+              
+              <!-- Partículas flotantes -->
+              <div class="particles-container"></div>
+              
+              <!-- Línea animada -->
+              <div class="animated-line"></div>
+          </div>
+
+          <!-- Contenido -->
+          <div class="testimonials-content">
+              <div class="testimonials-container">
+                  <!-- Header -->
+                  <header class="testimonials-header">
+                      <div class="header-icon-wrapper">
+                          <div class="icon-glow"></div>
+                          <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                          </svg>
+                      </div>
+
+                      <h1 class="testimonials-title">
+                          <span class="title-white">Historias de </span>
+                          <span class="title-gradient">Éxito</span>
+                      </h1>
+
+                      <p class="testimonials-subtitle">
+                          Conoce las experiencias de quienes transformaron su futuro con Emprende Tu Carrera
+                      </p>
+                  </header>
+
+                  <!-- Carousel Principal -->
+                  <div class="main-carousel-wrapper">
+                      <div class="carousel-navigation">
+                          <!-- Botón Anterior -->
+                          <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="m15 18-6-6 6-6"/>
+                              </svg>
+                              <div class="btn-glow"></div>
+                          </button>
+
+                          <!-- Botón Siguiente -->
+                          <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <path d="m9 18 6-6-6-6"/>
+                              </svg>
+                              <div class="btn-glow"></div>
+                          </button>
+                      </div>
+
+                      <!-- Slides Container -->
+                      <div class="carousel-slides" id="carouselSlides">
+                          <!-- Los slides se generarán dinámicamente con JS -->
+                      </div>
+
+                      <!-- Dots Navigation -->
+                      <div class="carousel-dots" id="carouselDots">
+                          <!-- Los dots se generarán dinámicamente con JS -->
+                      </div>
+                  </div>
+
+                  <!-- Grid de Testimonios -->
+                  <div class="testimonials-grid-section">
+                      <h2 class="grid-title">
+                          <span class="title-white">Más </span>
+                          <span class="title-gradient">Testimonios</span>
+                      </h2>
+
+                      <div class="testimonials-grid" id="testimonialsGrid">
+                          <!-- Los cards se generarán dinámicamente con JS -->
+                      </div>
+                  </div>
+
+                  <!-- CTA Section -->
+                  <div class="cta-section">
+                      <div class="cta-glow"></div>
+                      <div class="cta-content">
+                          <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                          </svg>
+                          <h2 class="cta-title">¿Listo para escribir tu historia de éxito?</h2>
+                          <p class="cta-description">
+                              Únete a miles de estudiantes que ya transformaron su futuro profesional
+                          </p>
+                          <button class="cta-button">
+                              <div class="cta-button-bg"></div>
+                              <div class="cta-button-hover"></div>
+                              <span class="cta-button-content">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                      <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                                      <circle cx="12" cy="8" r="6"/>
+                                  </svg>
+                                  Comienza ahora
+                              </span>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
     <!-- CTA Section REDISEÑADA -->
     <section class="cta-redesigned">
@@ -710,79 +808,345 @@ document.querySelectorAll('.metric-card, .program-card, .testimonial-card').forE
 });
 
 // ============================================
-// CARRUSEL CONVENIOS
+// DATOS DE TESTIMONIOS
 // ============================================
-const companiesCarousel = [
-  {
-    name: "Americana",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023"
-  },
-  {
-    name: "lonja gremial",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/0567e5e2-3ed3-4fe4-85ad-0c01c53f2841-removebg-preview.png"
-  },
-  {
-    name: "Corpesv",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/LOGO%20CORPESV%201.png"
-  },
-  {
-    name: "cenproef",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview%20(2).png"
-  },
-  {
-    name: "cedutec",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/d306cfbe-38da-4119-a84d-3fdb39474eb9-removebg-preview.png"
-  },
-  {
-    name: "cootradecun",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/file-removebg-preview.png"
-  },
-  {
-    name: "fit",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview-removebg-preview.png"
-  },
-  {
-    name: "cenacap",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/logo_CENACAP-removebg-preview.png"
-  },
-  {
-    name: "unimeta",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/logo%20unimeta.png"
-  },
-  {
-    name: "fundetec",
-    logo: "https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png"
-  }
+const testimonials = [
+    {
+        id: 1,
+        name: 'María Fernanda Gómez',
+        role: 'Administradora de Empresas',
+        program: 'Administración de Empresas',
+        image: 'https://i.pravatar.cc/150?img=1',
+        testimonial: 'Emprende Tu Carrera cambió mi vida. Gracias a la beca del 65% pude estudiar mientras trabajaba. El acompañamiento fue increíble y hoy tengo un cargo gerencial en una empresa multinacional.',
+        rating: 5,
+        achievement: 'Graduada en 18 meses'
+    },
+    {
+        id: 2,
+        name: 'Carlos Andrés Ruiz',
+        role: 'Ingeniero de Sistemas',
+        program: 'Ingeniería de Sistemas',
+        image: 'https://i.pravatar.cc/150?img=12',
+        testimonial: 'La modalidad virtual me permitió estudiar sin dejar mi trabajo. Los horarios flexibles y el contenido actualizado me prepararon para los retos del mercado laboral actual.',
+        rating: 5,
+        achievement: 'Ascenso laboral 3 meses después'
+    },
+    {
+        id: 3,
+        name: 'Laura Valentina Torres',
+        role: 'Psicóloga Clínica',
+        program: 'Psicología',
+        image: 'https://i.pravatar.cc/150?img=5',
+        testimonial: 'El proceso fue muy sencillo desde el inicio. Mi coordinador me acompañó en cada paso y la calidad académica superó mis expectativas. Hoy tengo mi consultorio propio.',
+        rating: 5,
+        achievement: 'Consultorio propio'
+    },
+    {
+        id: 4,
+        name: 'Juan Pablo Martínez',
+        role: 'Comunicador Social',
+        program: 'Comunicación Social',
+        image: 'https://i.pravatar.cc/150?img=13',
+        testimonial: 'Las becas son reales y el ahorro es significativo. Pude graduarme sin endeudarme y con un título completamente válido. Totalmente recomendado para quien quiera crecer profesionalmente.',
+        rating: 5,
+        achievement: 'Ahorro del 70%'
+    },
+    {
+        id: 5,
+        name: 'Ana Sofía Ramírez',
+        role: 'Especialista en Derecho',
+        program: 'Derecho',
+        image: 'https://i.pravatar.cc/150?img=9',
+        testimonial: 'Graduarme en 16 meses parecía imposible, pero el modelo académico intensivo realmente funciona. La universidad está acreditada y mi título tiene el mismo valor que uno presencial.',
+        rating: 5,
+        achievement: 'Graduada en tiempo récord'
+    },
+    {
+        id: 6,
+        name: 'Diego Alejandro Vargas',
+        role: 'Administrador Público',
+        program: 'Administración Pública',
+        image: 'https://i.pravatar.cc/150?img=14',
+        testimonial: 'El soporte 24/7 y las mentorías personalizadas fueron clave en mi proceso. Nunca me sentí solo y siempre tuve ayuda cuando la necesité. Excelente inversión en mi futuro.',
+        rating: 5,
+        achievement: 'Trabajo en sector público'
+    }
 ];
 
-function initCarouselConvenios() {
-  const track = document.getElementById('carouselTrack');
-  if (!track) return;
-  
-  const allCompanies = [...companiesCarousel, ...companiesCarousel, ...companiesCarousel];
-  
-  allCompanies.forEach((company) => {
-    const item = document.createElement('div');
-    item.className = 'carousel-item';
-    item.innerHTML = `<img src="${company.logo}" alt="${company.name}" class="carousel-logo">`;
-    track.appendChild(item);
-  });
+// ============================================
+// VARIABLES GLOBALES
+// ============================================
+let currentIndex = 0;
+let autoPlayInterval = null;
+let isTransitioning = false;
 
-  track.addEventListener('mouseenter', () => {
-    track.classList.add('paused');
-  });
+// ============================================
+// INICIALIZACIÓN
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    initParticles();
+    initCarousel();
+    initGrid();
+    startAutoPlay();
+});
 
-  track.addEventListener('mouseleave', () => {
-    track.classList.remove('paused');
-  });
+// ============================================
+// PARTÍCULAS FLOTANTES
+// ============================================
+function initParticles() {
+    const container = document.querySelector('.particles-container');
+    if (!container) return;
+
+    for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particle.style.animationDuration = (3 + Math.random() * 3) + 's';
+        container.appendChild(particle);
+    }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initCarouselConvenios);
-} else {
-  initCarouselConvenios();
+// ============================================
+// CAROUSEL PRINCIPAL
+// ============================================
+function initCarousel() {
+    renderSlides();
+    renderDots();
+    updateCarousel();
+    
+    // Event Listeners
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        if (!isTransitioning) {
+            navigate(-1);
+        }
+    });
+    
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        if (!isTransitioning) {
+            navigate(1);
+        }
+    });
+
+    // Pausar auto-play al hover
+    const carouselWrapper = document.querySelector('.main-carousel-wrapper');
+    carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+    carouselWrapper.addEventListener('mouseleave', startAutoPlay);
 }
 
+function renderSlides() {
+    const container = document.getElementById('carouselSlides');
+    container.innerHTML = testimonials.map((testimonial, index) => `
+        <div class="carousel-slide" data-index="${index}">
+            <div class="slide-glow"></div>
+            <div class="slide-card">
+                <!-- Acentos de esquinas -->
+                <div class="corner-accent corner-top-left"></div>
+                <div class="corner-accent corner-bottom-right"></div>
+                
+                <!-- Ícono de comillas flotante -->
+                <div class="floating-quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
+                        <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
+                    </svg>
+                </div>
+
+                <div class="slide-content">
+                    <!-- Imagen de perfil -->
+                    <div class="profile-section">
+                        <div class="profile-glow"></div>
+                        <div class="profile-image">
+                            <img src="${testimonial.image}" alt="${testimonial.name}">
+                        </div>
+                        <div class="profile-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Contenido del testimonio -->
+                    <div class="testimonial-content">
+                        <!-- Estrellas -->
+                        <div class="stars-rating">
+                            ${generateStars(testimonial.rating)}
+                        </div>
+
+                        <!-- Testimonio -->
+                        <p class="testimonial-text">
+                            "${testimonial.testimonial}"
+                        </p>
+
+                        <!-- Divisor -->
+                        <div class="testimonial-divider"></div>
+
+                        <!-- Información del autor -->
+                        <div class="author-info">
+                            <h3 class="author-name">${testimonial.name}</h3>
+                            <p class="author-role">${testimonial.role}</p>
+
+                            <div class="author-badges">
+                                <span class="badge badge-program">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                                        <circle cx="12" cy="8" r="6"/>
+                                    </svg>
+                                    ${testimonial.program}
+                                </span>
+                                <span class="badge badge-achievement">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+                                        <path d="M12 9v4"/>
+                                        <path d="M12 17h.01"/>
+                                    </svg>
+                                    ${testimonial.achievement}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function generateStars(rating) {
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+        stars += `
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+        `;
+    }
+    return stars;
+}
+
+function renderDots() {
+    const container = document.getElementById('carouselDots');
+    container.innerHTML = testimonials.map((_, index) => `
+        <button class="dot" data-index="${index}" aria-label="Ir al testimonio ${index + 1}">
+            <div class="dot-glow"></div>
+        </button>
+    `).join('');
+
+    // Event listeners para dots
+    const dots = container.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            if (!isTransitioning && index !== currentIndex) {
+                currentIndex = index;
+                updateCarousel();
+                stopAutoPlay();
+            }
+        });
+    });
+}
+
+function updateCarousel() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    slides.forEach((slide, index) => {
+        slide.classList.remove('active', 'prev', 'next');
+        
+        if (index === currentIndex) {
+            slide.classList.add('active');
+        } else if (index === (currentIndex - 1 + testimonials.length) % testimonials.length) {
+            slide.classList.add('prev');
+        } else if (index === (currentIndex + 1) % testimonials.length) {
+            slide.classList.add('next');
+        }
+    });
+
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function navigate(direction) {
+    isTransitioning = true;
+    currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+    updateCarousel();
+    
+    setTimeout(() => {
+        isTransitioning = false;
+    }, 600);
+}
+
+// ============================================
+// AUTO-PLAY
+// ============================================
+function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayInterval = setInterval(() => {
+        if (!isTransitioning) {
+            navigate(1);
+        }
+    }, 5000);
+}
+
+function stopAutoPlay() {
+    if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = null;
+    }
+}
+
+// ============================================
+// GRID DE TESTIMONIOS
+// ============================================
+function initGrid() {
+    const container = document.getElementById('testimonialsGrid');
+    container.innerHTML = testimonials.map((testimonial, index) => `
+        <div class="grid-card" data-index="${index}">
+            <div class="grid-card-glow"></div>
+            <div class="grid-card-content">
+                <div class="grid-card-header">
+                    <div class="grid-card-image">
+                        <img src="${testimonial.image}" alt="${testimonial.name}">
+                    </div>
+                    <div class="grid-card-info">
+                        <h4 class="grid-card-name">${testimonial.name}</h4>
+                        <p class="grid-card-role">${testimonial.role}</p>
+                    </div>
+                </div>
+
+                <div class="grid-card-stars">
+                    ${generateStars(testimonial.rating)}
+                </div>
+
+                <p class="grid-card-text">
+                    "${testimonial.testimonial}"
+                </p>
+
+                <div class="grid-card-footer">
+                    <span class="grid-card-badge">
+                        ${testimonial.achievement}
+                    </span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Event listeners para cards
+    const cards = container.querySelectorAll('.grid-card');
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            stopAutoPlay();
+        });
+    });
+}
 // ============================================
 // CONTADOR DE CIFRAS CON PARTÍCULAS
 // ============================================
@@ -925,108 +1289,158 @@ programCards.forEach((card, index) => {
 });
 
 // ============================================
-// CARRUSEL DE TESTIMONIOS - IZQUIERDA A DERECHA
+// CARRUSEL DE TESTIMONIOS - VERSIÓN CORREGIDA
 // ============================================
+(function() {
+  'use strict';
+  
+  const testimonialsData = [
+    {
+      quote: "Emprende Tu Carrera transformó completamente mi trayectoria profesional. Las mentorías personalizadas me dieron las herramientas exactas que necesitaba para dar el salto a liderazgo.",
+      name: "María González",
+      role: "Senior Product Manager",
+      company: "Tech Innovators",
+      color: "#FF1970"
+    },
+    {
+      quote: "Los programas de emprendimiento digital son excepcionales. En 6 meses lancé mi startup y conseguí mis primeros clientes. La comunidad es increíblemente valiosa.",
+      name: "Carlos Ramírez",
+      role: "Founder & CEO",
+      company: "StartUp Digital",
+      color: "#BF09D5"
+    },
+    {
+      quote: "La formación técnica es de primer nivel. Pasé de conocimientos básicos a dominar tecnologías avanzadas. Ahora trabajo en proyectos que antes consideraba imposibles.",
+      name: "Ana Martínez",
+      role: "Full Stack Developer",
+      company: "Global Tech Solutions",
+      color: "#6500E9"
+    },
+    {
+      quote: "El acompañamiento fue clave en mi proceso. Me ayudaron a encontrar la carrera perfecta y ahora estoy trabajando en lo que siempre soñé.",
+      name: "Diego Morales",
+      role: "UX Designer",
+      company: "Creative Studios",
+      color: "#FF1970"
+    },
+    {
+      quote: "Gracias a las becas y el financiamiento sin intereses, pude estudiar sin preocupaciones económicas. Totalmente recomendado.",
+      name: "Laura Pérez",
+      role: "Data Analyst",
+      company: "Analytics Pro",
+      color: "#BF09D5"
+    },
+    {
+      quote: "La orientación 24/7 fue increíble. Siempre que tuve dudas, estuvieron ahí para apoyarme. Una experiencia transformadora.",
+      name: "Juan Torres",
+      role: "Marketing Manager",
+      company: "Digital Growth",
+      color: "#6500E9"
+    }
+  ];
 
-const testimonials = [
-  {
-    quote: "Emprende Tu Carrera transformó completamente mi trayectoria profesional. Las mentorías personalizadas me dieron las herramientas exactas que necesitaba para dar el salto a liderazgo.",
-    name: "María González",
-    role: "Senior Product Manager",
-    company: "Tech Innovators",
-    color: "#FF1970"
-  },
-  {
-    quote: "Los programas de emprendimiento digital son excepcionales. En 6 meses lancé mi startup y conseguí mis primeros clientes. La comunidad es increíblemente valiosa.",
-    name: "Carlos Ramírez",
-    role: "Founder & CEO",
-    company: "StartUp Digital",
-    color: "#BF09D5"
-  },
-  {
-    quote: "La formación técnica es de primer nivel. Pasé de conocimientos básicos a dominar tecnologías avanzadas. Ahora trabajo en proyectos que antes consideraba imposibles.",
-    name: "Ana Martínez",
-    role: "Full Stack Developer",
-    company: "Global Tech Solutions",
-    color: "#6500E9"
-  },
-  {
-    quote: "El acompañamiento fue clave en mi proceso. Me ayudaron a encontrar la carrera perfecta y ahora estoy trabajando en lo que siempre soñé.",
-    name: "Diego Morales",
-    role: "UX Designer",
-    company: "Creative Studios",
-    color: "#FF1970"
-  },
-  {
-    quote: "Gracias a las becas y el financiamiento sin intereses, pude estudiar sin preocupaciones económicas. Totalmente recomendado.",
-    name: "Laura Pérez",
-    role: "Data Analyst",
-    company: "Analytics Pro",
-    color: "#BF09D5"
-  },
-  {
-    quote: "La orientación 24/7 fue increíble. Siempre que tuve dudas, estuvieron ahí para apoyarme. Una experiencia transformadora.",
-    name: "Juan Torres",
-    role: "Marketing Manager",
-    company: "Digital Growth",
-    color: "#6500E9"
-  }
-];
+  let animationFrameId = null;
+  let currentPosition = 0;
+  let isPaused = false;
+  const SPEED = 0.5;
 
-function initTestimonialsCarousel() {
-  const track = document.getElementById('testimonialsTrack');
-  
-  if (!track) {
-    console.error('❌ ERROR: No se encontró testimonialsTrack');
-    return;
-  }
-  
-  const allTestimonials = [...testimonials, ...testimonials, ...testimonials];
-  
-  allTestimonials.forEach((testimonial, index) => {
-    const card = document.createElement('div');
-    card.className = 'testimonial-card';
-    card.innerHTML = `
-      <div class="quote-icon">
-        <i class="fas fa-quote-left" style="font-size: 40px; color: ${testimonial.color};"></i>
-      </div>
-      <div class="rating">
-        <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-        <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-        <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-        <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-        <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-      </div>
-      <p class="testimonial-text">${testimonial.quote}</p>
-      <div class="testimonial-author">
-        <div class="author-name">${testimonial.name}</div>
-        <div class="author-role">${testimonial.role}</div>
-        <div class="author-company" style="color: ${testimonial.color};">${testimonial.company}</div>
-      </div>
-    `;
+  function initTestimonialsCarousel() {
+    const track = document.getElementById('testimonialsTrack');
     
-    track.appendChild(card);
+    if (!track) {
+      console.error('❌ No se encontró testimonialsTrack');
+      return;
+    }
     
-    // SOLUCIÓN CON JAVASCRIPT PURO - Fuerza el pause/play directamente
-    card.addEventListener('mouseenter', function() {
-      track.style.animationPlayState = 'paused';
-      console.log('✅ PAUSED - Card:', index);
+    console.log('🔵 Iniciando carrusel...');
+    
+    // Limpiar
+    track.innerHTML = '';
+    
+    // Crear copias
+    const allTestimonials = [...testimonialsData, ...testimonialsData, ...testimonialsData];
+    
+    // Crear tarjetas
+    allTestimonials.forEach((testimonial, index) => {
+      const card = document.createElement('div');
+      card.className = 'testimonial-card';
+      card.setAttribute('data-card-id', index);
+      
+      card.innerHTML = `
+        <div class="quote-icon">
+          <i class="fas fa-quote-left" style="font-size: 40px; color: ${testimonial.color};"></i>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
+          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
+          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
+          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
+          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
+        </div>
+        <p class="testimonial-text">${testimonial.quote}</p>
+        <div class="testimonial-author">
+          <div class="author-name">${testimonial.name}</div>
+          <div class="author-role">${testimonial.role}</div>
+          <div class="author-company" style="color: ${testimonial.color};">${testimonial.company}</div>
+        </div>
+      `;
+      
+      track.appendChild(card);
     });
 
-    card.addEventListener('mouseleave', function() {
-      track.style.animationPlayState = 'running';
-      console.log('▶️ RESUMED - Card:', index);
+    console.log('✅ Tarjetas creadas:', allTestimonials.length);
+    
+    // Calcular ancho
+    const cardWidth = 420;
+    const gap = 32;
+    const cardsPerCopy = testimonialsData.length;
+    const copyWidth = (cardWidth + gap) * cardsPerCopy;
+    
+    // Función de animación
+    function animate() {
+      if (!isPaused) {
+        currentPosition -= SPEED;
+        
+        if (Math.abs(currentPosition) >= copyWidth) {
+          currentPosition = 0;
+        }
+        
+        track.style.transform = `translateX(${currentPosition}px)`;
+      }
+      
+      animationFrameId = requestAnimationFrame(animate);
+    }
+    
+    // ⭐ EVENTOS CORREGIDOS
+    const cards = track.querySelectorAll('.testimonial-card');
+    
+    cards.forEach((card, index) => {
+      card.addEventListener('mouseenter', function() {
+        isPaused = true;
+        console.log('🔴 PAUSADO - Tarjeta:', index);
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        isPaused = false;
+        console.log('🟢 REANUDADO - Tarjeta:', index);
+      });
     });
-  });
-  
-  console.log('✅ Carrusel inicializado con', allTestimonials.length, 'cards');
-}
+    
+    // Iniciar
+    animate();
+    
+    console.log('✅ Carrusel iniciado');
+    console.log('⚙️ Velocidad:', SPEED, 'px/frame');
+  }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initTestimonialsCarousel);
-} else {
-  initTestimonialsCarousel();
-}
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTestimonialsCarousel);
+  } else {
+    initTestimonialsCarousel();
+  }
+  
+  console.log('✅ Script cargado');
+})();
 
 // ============================================
 // CTA BUTTONS - ABRIR MODAL

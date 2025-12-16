@@ -5,272 +5,568 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programas - Emprende Tu Carrera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
-      background: #000;
-      color: #fff;
-      min-height: 100vh;
-      padding-top: 80px;
-    }
-
-    .content-section {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 40px;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(135deg, #FF1970, #DB12AF, #A200FA, #3C17DB);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 24px;
-    }
-
-    p {
-      color: #9ca3af;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-
-    .programs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-      margin-top: 60px;
-    }
-
-    .program-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 40px;
-      transition: all 0.3s ease;
-    }
-
-    .program-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 25, 112, 0.3);
-      box-shadow: 0 20px 60px rgba(255, 25, 112, 0.2);
-    }
-
-    .program-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-
-    .program-card h3 {
-      color: #fff;
-      font-size: 1.75rem;
-      margin-bottom: 16px;
-    }
-
-    .program-card p {
-      font-size: 1rem;
-      margin-bottom: 24px;
-    }
-
-    .program-features {
-      list-style: none;
-      padding: 0;
-    }
-
-    .program-features li {
-      color: #9ca3af;
-      padding: 8px 0;
-      padding-left: 24px;
-      position: relative;
-    }
-
-    .program-features li::before {
-      content: '◆';
-      position: absolute;
-      left: 0;
-      color: #FF1970;
-    }
-  </style>
+  <link rel="stylesheet" href="programas.css">
 </head>
 <body>
-      <!-- Navbar -->
-      <nav id="navbar">
-        <div class="nav-container">
-          <div class="nav-content">
-            <a href="index.html" class="logo">
-              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-menu">
-              <li><a href="index.html" class="active">Inicio</a></li>
+      <!-- ========================================
+       NAVBAR
+      ======================================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html" class="active">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html" class="active">Programas</a>
+      <a href="directorio.html">Directorio</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#" class="btn btn-primary" id="openModalMobile"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero-programas">
+    <div class="hero-background">
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="pulse-dot"></div>
+        <span>Formación Premium</span>
+      </div>
+
+      <h1 class="hero-title">Descubre Tu Camino Profesional</h1>
+
+      <p class="hero-description">
+        Explora nuestra oferta académica diseñada para transformar tu carrera. 
+        Desde técnicos laborales hasta posgrados, encuentra el programa perfecto para alcanzar tus metas.
+      </p>
+
+      <button class="hero-button" onclick="document.querySelector('.programs-section').scrollIntoView({behavior: 'smooth'})">
+        <span>Explorar Programas</span>
+        <i class="fas fa-arrow-down"></i>
+      </button>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-arrow">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PROGRAMS SECTION
+       ======================================== -->
+  <section class="programs-section">
+    <div class="programs-container">
+      <!-- SIDEBAR NAVIGATION -->
+      <aside class="programs-sidebar">
+        <div class="sidebar-line"></div>
+        <nav class="nav-items">
+          <div class="nav-item active" data-category="tecnicos-laborales">
+            <div class="nav-dot">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="nav-label">
+              Técnicos Laborales
+              <span class="nav-count">7 programas</span>
+            </div>
+          </div>
+
+          <div class="nav-item" data-category="tecnicos-profesionales">
+            <div class="nav-dot">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="nav-label">
+              Técnicos Profesionales
+              <span class="nav-count">7 programas</span>
+            </div>
+          </div>
+
+          <div class="nav-item" data-category="pregrados">
+            <div class="nav-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="nav-label">
+              Pregrados
+              <span class="nav-count">11 programas</span>
+            </div>
+          </div>
+
+          <div class="nav-item" data-category="posgrados">
+            <div class="nav-dot">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="nav-label">
+              Posgrados
+              <span class="nav-count">7 programas</span>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- CONTENT AREA -->
+      <main class="programs-content">
+        <div class="content-header" id="contentHeader">
+          <span class="content-category" id="categoryBadge">Técnicos Laborales</span>
+          <h2 class="content-title" id="categoryTitle">Formación Técnica Laboral</h2>
+          <p class="content-description" id="categoryDescription">
+            Programas prácticos de corta duración que te preparan para ingresar rápidamente al mercado laboral con habilidades específicas y demandadas.
+          </p>
+        </div>
+
+        <div class="programs-slider-wrapper">
+          <div class="programs-slider" id="programsSlider">
+            <!-- Programs will be injected here by JavaScript -->
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- ========================================
+       MODAL
+       ======================================== -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h2 class="modal-title">Inicia tu viaje profesional</h2>
+
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" required>
+          </div>
+        </div>
+
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required id="programSelect">
+              <option value="">Selecciona un programa</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <!-- Versión Desktop -->
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="programas.html">Programas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Marco Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Políticas</a></li>
+            <li><a href="#">PQRS</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Correo corporativo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Versión Mobile con Acordeones -->
+      <div class="footer-mobile mobile-footer">
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="empresa">
+            <span>Empresa</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="empresa">
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="conocenos.html">Conócenos</a></li>
               <li><a href="programas.html">Programas</a></li>
               <li><a href="directorio.html">Directorio</a></li>
               <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
             </ul>
-            
-            <div class="nav-cta">
-              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
-            </div>
-            
-            <button class="mobile-menu-button" id="mobileMenuBtn">
-              <i class="fas fa-bars" id="menuIcon"></i>
-              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
-            </button>
           </div>
         </div>
+
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="legal">
+            <span>Marco Legal</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="legal">
+            <ul class="footer-links">
+              <li><a href="#">Políticas</a></li>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Correo corporativo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Central (Mobile) -->
+      <div class="footer-logo-mobile mobile-only">
+        <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom-section">
+        <div class="social-links-footer">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
         
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html" class="active">Inicio</a>
-          <a href="conocenos.html">Conócenos</a>
-          <a href="programas.html">Programas</a>
-          <a href="directorio.html">Directorio</a>
-          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+        <div class="footer-legal">
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
         </div>
-      </nav>
-      <!-- Modal -->
-      <div id="modal" class="custom-modal">
-        <div class="custom-modal-content">
-
-          <span class="custom-close">&times;</span>
-
-          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-          <h1 class="modal-title">Inicia tu viaje profesional</h1>
-
-          <p class="modal-text">
-            Completa el formulario y un especialista se pondrá en contacto
-            contigo en menos de 24 horas.
-          </p>
-
-          <form class="modal-form">
-
-            <label>Nombre completo *</label>
-            <input type="text" placeholder="Tu nombre completo" required>
-
-            <div class="modal-row">
-              <div>
-                <label>Email *</label>
-                <input type="email" placeholder="tu@mail.com" required>
-              </div>
-              <div>
-                <label>Teléfono *</label>
-                <input type="tel" placeholder="+57 300 000 0000" required>
-              </div>
-            </div>
-
-            <div class="modal-row">
-              <div>
-                <label>Profesión actual *</label>
-                <input type="text" placeholder="Ej: Desarrollador" required>
-              </div>
-              <div>
-                <label>Programa de interés *</label>
-                <select required>
-                  <option value="">Selecciona un programa</option>
-                  <option>Transformación Profesional</option>
-                  <option>Programas de liderazgo</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-            </div>
-
-            <label>Cuéntanos sobre tus objetivos</label>
-            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-
-            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-
-            <p class="modal-footer">
-              Al enviar este formulario, aceptas nuestra política de privacidad.
-            </p>
-
-          </form>
-
-        </div>
-      </div>
-
-  <!-- Content -->
-  <div class="content-section">
-    <h1>Nuestros Programas</h1>
-    <p>
-      Descubre nuestros programas intensivos diseñados para transformar tu carrera profesional 
-      y llevarte al siguiente nivel.
-    </p>
-
-    <div class="programs-grid">
-      <div class="program-card">
-        <div class="program-icon">
-          <i class="fas fa-code" style="color: #FF1970; font-size: 32px;"></i>
-        </div>
-        <h3>Tech Mastery</h3>
-        <p>Domina las tecnologías que transforman industrias y construye productos de impacto global.</p>
-        <ul class="program-features">
-          <li>Full Stack Development</li>
-          <li>AI & Machine Learning</li>
-          <li>Cloud Native Architecture</li>
-          <li>DevOps & CI/CD</li>
-        </ul>
-      </div>
-
-      <div class="program-card">
-        <div class="program-icon">
-          <i class="fas fa-briefcase" style="color: #DB12AF; font-size: 32px;"></i>
-        </div>
-        <h3>Business Elite</h3>
-        <p>Desarrolla habilidades de liderazgo estratégico y gestión de alto rendimiento.</p>
-        <ul class="program-features">
-          <li>Strategic Management</li>
-          <li>Executive Leadership</li>
-          <li>Business Analytics</li>
-          <li>Change Management</li>
-        </ul>
-      </div>
-
-      <div class="program-card">
-        <div class="program-icon">
-          <i class="fas fa-rocket" style="color: #A200FA; font-size: 32px;"></i>
-        </div>
-        <h3>Startup Accelerator</h3>
-        <p>Construye y escala negocios digitales con metodologías probadas en Silicon Valley.</p>
-        <ul class="program-features">
-          <li>Product Validation</li>
-          <li>Growth Hacking</li>
-          <li>Fundraising Strategy</li>
-          <li>Market Expansion</li>
-        </ul>
-      </div>
-
-      <div class="program-card">
-        <div class="program-icon">
-          <i class="fas fa-graduation-cap" style="color: #3C17DB; font-size: 32px;"></i>
-        </div>
-        <h3>Executive Program</h3>
-        <p>Certificación premium para líderes que buscan reconocimiento internacional.</p>
-        <ul class="program-features">
-          <li>1:1 Mentorship</li>
-          <li>Global Network</li>
-          <li>Industry Recognition</li>
-          <li>Career Acceleration</li>
-        </ul>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script>
+
+    // ==========================================
+    // PROGRAMS DATA - TODOS LOS PROGRAMAS SEGÚN IMÁGENES
+    // ==========================================
+    const programsData = {
+      'tecnicos-laborales': {
+        title: 'Formación Técnica Laboral',
+        description: 'Programas prácticos de corta duración que te preparan para ingresar rápidamente al mercado laboral con habilidades específicas y demandadas.',
+        programs: [
+          {
+            icon: 'fa-hands-helping',
+            name: 'Técnico Laboral en Recursos Humanos',
+            description: 'Participa en la administración del talento humano apoyando procesos operativos relacionados con selección, capacitación y bienestar. Contribuye al orden y seguimiento de la información del personal, fortaleciendo el desarrollo y la organización interna de la empresa.',
+            features: ['Apoyo en procesos de selección de personal', 'Gestión de nómina y prestaciones', 'Organización de actividades de capacitación', 'Apoyo a programas de bienestar laboral']
+          },
+          {
+            icon: 'fa-calculator',
+            name: 'Técnico Laboral en Auxiliar Contable',
+            description: 'Brinda apoyo a los procesos contables y financieros mediante el registro, control y verificación de operaciones económicas. Contribuye al orden de la información contable y al cumplimiento de obligaciones administrativas y tributarias básicas.',
+            features: ['Registro y clasificación de operaciones contables', 'Apoyo en procesos de nómina y pagos', 'Manejo de software contable', 'Aplicación de principios tributarios básicos']
+          },
+          {
+            icon: 'fa-gavel',
+            name: 'Técnico Laboral en Criminalística',
+            description: 'Participa en actividades técnicas de apoyo a la investigación de hechos, mediante la recolección, análisis y manejo adecuado de evidencias. Aplica procedimientos y protocolos básicos que contribuyen al esclarecimiento de situaciones dentro del marco legal y ético.',
+            features: ['Recolección y preservación de evidencias', 'Apoyo a procesos de investigación técnica', 'Aplicación de métodos forenses básicos', 'Cumplimiento de protocolos legales y éticos']
+          },
+          {
+            icon: 'fa-balance-scale',
+            name: 'Técnico Laboral en Asistente Jurídico',
+            description: 'Apoya la gestión legal y administrativa mediante la organización de documentos, el seguimiento de trámites y el soporte operativo a procesos jurídicos. Contribuye al orden y eficiencia en despachos, oficinas jurídicas y entidades públicas o privadas.',
+            features: ['Organización de expedientes legales', 'Apoyo en trámites judiciales y administrativos', 'Manejo de documentación jurídica', 'Aplicación básica de normativa legal']
+          },
+          {
+            icon: 'fa-laptop-code',
+            name: 'Técnico Laboral en Desarrollo de Software',
+            description: 'Apoya la creación, mantenimiento y actualización de soluciones tecnológicas, aplicando fundamentos de programación y herramientas digitales. Desarrolla habilidades para apoyar proyectos informáticos y responder a necesidades tecnológicas básicas de las organizaciones.',
+            features: ['Desarrollo de aplicaciones web básicas', 'Gestión y consulta de bases de datos', 'Uso de control de versiones (Git)', 'Pruebas y validación de funcionalidades']
+          },
+          {
+            icon: 'fa-user-shield',
+            name: 'Técnico Laboral en Auxiliar Administrativo',
+            description: 'Apoya la operación administrativa diaria mediante la gestión de información, coordinación de tareas y atención a usuarios internos y externos. Contribuye al orden, la eficiencia y el correcto funcionamiento de los procesos organizacionales.',
+            features: ['Organización y manejo de documentos', 'Atención a clientes y proveedores', 'Uso de herramientas ofimáticas', 'Apoyo a procesos administrativos internos']
+          },
+          {
+            icon: 'fa-hard-hat',
+            name: 'Técnico Laboral en Seguridad y Salud en el Trabajo',
+            description: 'Contribuye a la prevención de riesgos laborales apoyando la implementación de acciones de seguridad y salud ocupacional. Participa en el cumplimiento del Sistema de Gestión y en la promoción de ambientes de trabajo seguros y saludables.',
+            features: ['Apoyo al Sistema de Gestión SG-SST', 'Identificación y control de riesgos laborales', 'Aplicación de medidas preventivas', 'Promoción de hábitos de seguridad e higiene']
+          }
+        ]
+      },
+      'tecnicos-profesionales': {
+        title: 'Formación Técnica Profesional',
+        description: 'Programas integrales que combinan teoría y práctica para desarrollar competencias profesionales de nivel técnico superior.',
+        programs: [
+          {
+            icon: 'fa-heartbeat',
+            name: 'Técnico Profesional en Procesos Administrativos de Salud',
+            description: 'Se orienta al apoyo y fortalecimiento de la gestión administrativa en instituciones del sector salud, participando en la organización, control y seguimiento de procesos que respaldan la prestación de servicios. Contribuye al manejo adecuado de la información, la coordinación interna y el cumplimiento de estándares de calidad y eficiencia en el ámbito administrativo.',
+            features: ['Gestión de procesos administrativos en instituciones de salud', 'Manejo de facturación y documentación médica', 'Organización de historias clínicas y registros', 'Uso de sistemas de información en salud']
+          },
+          {
+            icon: 'fa-leaf',
+            name: 'Técnico Profesional en Procesos de Manejo Ambiental',
+            description: 'Se enfoca en el apoyo a la gestión ambiental mediante la aplicación de prácticas orientadas a la conservación y uso responsable de los recursos naturales. Participa en la implementación de estrategias sostenibles, el cumplimiento de la normativa ambiental y el seguimiento de acciones que promueven el cuidado del medio ambiente en organizaciones y comunidades.',
+            features: ['Apoyo a la gestión y control ambiental', 'Aplicación de prácticas de sostenibilidad', 'Cumplimiento de la normativa ambiental vigente', 'Participación en evaluaciones de impacto ambiental']
+          },
+          {
+            icon: 'fa-gavel',
+            name: 'Técnico Profesional en Procesos Judiciales',
+            description: 'Apoya el desarrollo de procesos judiciales y administrativos mediante la gestión documental, el seguimiento de trámites y la aplicación de procedimientos legales. Contribuye al correcto funcionamiento de las actividades jurídicas, actuando con responsabilidad, ética y respeto por el marco normativo vigente.',
+            features: ['Apoyo a procesos y trámites judiciales', 'Organización y control de documentación legal', 'Aplicación de procedimientos jurídicos', 'Conocimiento básico de derecho procesal']
+          },
+          {
+            icon: 'fa-building',
+            name: 'Técnico Profesional en Avalúos Inmobiliarios Urbanos y Rurales',
+            description: 'Forma para la valoración técnica de bienes inmuebles urbanos y rurales, aplicando criterios normativos, catastrales y de mercado. Participa en procesos de gestión, compra, venta y administración de propiedades, aportando análisis objetivos que respaldan la toma de decisiones en el sector inmobiliario.',
+            features: ['Valoración técnica de inmuebles urbanos y rurales', 'Aplicación de normativa catastral y legal', 'Análisis de mercado inmobiliario', 'Elaboración de informes y peritajes técnicos']
+          },
+          {
+            icon: 'fa-shield-alt',
+            name: 'Técnico Profesional en Procesos de Seguridad y Salud en el Trabajo',
+            description: 'Se orienta a la gestión preventiva de riesgos laborales mediante la identificación de peligros y la aplicación de medidas de control. Apoya la implementación, seguimiento y mejora de acciones que promueven ambientes de trabajo seguros, saludables y alineados con la normativa vigente.',
+            features: ['Implementación y seguimiento del SG-SST avanzado', 'Identificación, evaluación y control de riesgos', 'Apoyo en auditorías y verificación de cumplimiento', 'Elaboración de planes de emergencia y prevención']
+          },
+          {
+            icon: 'fa-wrench',
+            name: 'Técnico Profesional en Mecánica Automotriz',
+            description: 'Forma para el diagnóstico, mantenimiento y reparación de vehículos, integrando conocimientos mecánicos, eléctricos y electrónicos. Apoya la correcta operación de los sistemas automotrices, contribuyendo a la seguridad, el rendimiento y la eficiencia en talleres y centros de servicio.',
+            features: ['Diagnóstico de fallas automotrices', 'Mantenimiento de sistemas mecánicos y electrónicos', 'Reparación de componentes avanzados', 'Apoyo en la gestión operativa de talleres']
+          },
+          {
+            icon: 'fa-motorcycle',
+            name: 'Técnico Profesional en Mecánica de Motos',
+            description: 'Se enfoca en el diagnóstico, reparación y mantenimiento de motocicletas, aplicando procedimientos técnicos que garantizan su funcionamiento seguro y eficiente. Participa en labores de revisión preventiva y correctiva de sistemas mecánicos y eléctricos.',
+            features: ['Mantenimiento y reparación de motocicletas', 'Diagnóstico de sistemas mecánicos y eléctricos', 'Aplicación de técnicas de mantenimiento preventivo', 'Verificación de condiciones de seguridad y desempeño']
+          }
+        ]
+      },
+      'pregrados': {
+        title: 'Programas de Pregrado',
+        description: 'Carreras universitarias completas que te forman como profesional integral con visión estratégica y liderazgo.',
+        programs: [
+          {
+            icon: 'fa-balance-scale',
+            name: 'Derecho',
+            description: 'Forma profesionales con sólidos conocimientos jurídicos, capaces de analizar, interpretar y aplicar el derecho en distintos contextos sociales, empresariales y tecnológicos. Promueve el ejercicio ético de la profesión, la defensa de la justicia y la solución responsable de conflictos.',
+            features: ['Derecho corporativo y empresarial', 'Litigio y resolución de conflictos', 'Elaboración y análisis de contratos', 'Aplicación del derecho en entornos digitales']
+          },
+          {
+            icon: 'fa-brain',
+            name: 'Psicología',
+            description: 'Orienta a la comprensión del comportamiento humano desde una perspectiva científica y ética, promoviendo el bienestar mental y emocional. Forma profesionales capaces de intervenir en contextos clínicos, organizacionales y sociales, aportando al desarrollo individual y colectivo.',
+            features: ['Evaluación e intervención clínica', 'Psicología organizacional y del trabajo', 'Neuropsicología y procesos cognitivos', 'Intervención social y comunitaria']
+          },
+          {
+            icon: 'fa-city',
+            name: 'Administración Pública',
+            description: 'Prepara profesionales para liderar y fortalecer la gestión del Estado, mediante la formulación, ejecución y evaluación de políticas públicas. Contribuye al desarrollo social y económico con enfoque ético, estratégico y participativo.',
+            features: ['Diseño y análisis de políticas públicas', 'Gestión y administración gubernamental', 'Marco del derecho administrativo', 'Participación ciudadana y control social']
+          },
+          {
+            icon: 'fa-bullhorn',
+            name: 'Comunicaciones y Marketing',
+            description: 'Forma profesionales capaces de diseñar y ejecutar estrategias de comunicación integrales, orientadas a posicionar marcas y conectar con audiencias en entornos tradicionales y digitales. Integra creatividad, análisis y pensamiento estratégico.',
+            features: ['Marketing digital y medios interactivos', 'Construcción y gestión de marca', 'Comunicación corporativa e institucional', 'Estrategia y producción de contenidos']
+          },
+          {
+            icon: 'fa-building',
+            name: 'Administración de Empresas',
+            description: 'Desarrolla competencias para la dirección y gestión de organizaciones, con enfoque estratégico, innovador y sostenible. Forma líderes capaces de tomar decisiones, optimizar recursos y transformar empresas en entornos dinámicos y competitivos.',
+            features: ['Planeación y estrategia corporativa', 'Gestión financiera y administrativa', 'Innovación y desarrollo empresarial', 'Liderazgo y toma de decisiones']
+          },
+          {
+            icon: 'fa-calculator',
+            name: 'Contaduría Pública',
+            description: 'Forma profesionales en el manejo integral de la información contable y financiera, con capacidad para garantizar transparencia, cumplimiento normativo y soporte a la toma de decisiones. Promueve el ejercicio ético y responsable de la profesión contable.',
+            features: ['Aplicación de Normas Internacionales (NIIF)', 'Auditoría y control financiero', 'Tributación y planeación fiscalavanzada', 'Asesoría contable y financiera']
+          },
+          {
+            icon: 'fa-plane',
+            name: 'Administración Turística y Hotelera',
+            description: 'Prepara profesionales para la gestión eficiente de servicios turísticos y hoteleros, con enfoque en calidad, sostenibilidad y experiencia del cliente. Contribuye al desarrollo del sector turístico a nivel local, nacional e internacional.',
+            features: ['Gestión hotelera y de alojamiento', 'Turismo sostenible y responsable', 'Organización de eventos y convenciones', 'Diseño de experiencias para el cliente']
+          },
+          {
+            icon: 'fa-industry',
+            name: 'Ingeniería Industrial',
+            description: 'Forma ingenieros capaces de optimizar procesos productivos y sistemas organizacionales, integrando eficiencia, calidad e innovación. Contribuye a la mejora continua y a la competitividad de las organizaciones en diversos sectores.',
+            features: ['Mejora de procesos y lean manufacturing', 'Gestión de operaciones y producción', 'Sistemas de calidad', 'Logística y cadena de suministro']
+          },
+          {
+            icon: 'fa-laptop-code',
+            name: 'Ingeniería de Sistemas',
+            description: 'Desarrolla profesionales capaces de diseñar, implementar y gestionar soluciones tecnológicas innovadoras. Integra software, infraestructura y datos para responder a los desafíos del entorno digital y empresarial.',
+            features: ['Desarrollo software', 'Inteligencia artificial y machine learning', 'Arquitectura en la nube', 'Automatización y DevOps']
+          },
+          {
+            icon: 'fa-network-wired',
+            name: 'Negocios Internacionales',
+            description: 'Forma profesionales con visión global para gestionar operaciones comerciales en mercados internacionales. Desarrolla competencias en negociación, logística y análisis de entornos económicos globales.',
+            features: ['Comercio exterior y aduanas', 'Negociación internacional', 'Logística y operaciones globales', 'Análisis de mercados emergentes']
+          },
+          {
+            icon: 'fa-child',
+            name: 'Licenciatura en Educación Infantil',
+            description: 'Forma docentes comprometidos con el desarrollo integral de la primera infancia, aplicando pedagogías innovadoras e inclusivas. Promueve el aprendizaje significativo, el desarrollo cognitivo y el bienestar emocional en los primeros años.',
+            features: ['Pedagogía y desarrollo infantil', 'Procesos cognitivos y emocionales', 'Didáctica y estrategias de enseñanza', 'Inclusión y atención a la diversidad']
+          }
+        ]
+      },
+      'posgrados': {
+        title: 'Programas de Posgrado',
+        description: 'Especializaciones y maestrías que potencian tu expertise y te posicionan como líder en tu campo profesional.',
+        programs: [
+          {
+            icon: 'fa-gavel',
+            name: 'Especialización en Derecho Administrativo',
+            description: 'Profundiza en el estudio del derecho público, fortaleciendo las competencias para la gestión jurídica en entidades estatales. Desarrolla una visión avanzada sobre la actuación administrativa, el control legal y la responsabilidad del Estado dentro del marco normativo vigente.',
+            features: ['Régimen de contratación estatal', 'Análisis y expedición de actos administrativos', 'Control judicial de la administración pública', 'Responsabilidad patrimonial del Estado']
+          },
+          {
+            icon: 'fa-balance-scale',
+            name: 'Especialización en Derecho Penal',
+            description: 'Fortalece el conocimiento del sistema penal contemporáneo, integrando fundamentos teóricos y prácticos para la actuación en procesos penales. Desarrolla habilidades para el litigio, el análisis criminal y la aplicación del modelo acusatorio.',
+            features: ['Derecho penal avanzado', 'Procedimiento y técnicas procesales penales', 'Fundamentos de criminalística', 'Funcionamiento del sistema penal acusatorio']
+          },
+          {
+            icon: 'fa-people-arrows',
+            name: 'Especialización en Gerencia del Talento Humano',
+            description: 'Desarrolla competencias estratégicas para la gestión integral del capital humano en entornos organizacionales dinámicos. Integra el uso de datos, liderazgo y cultura organizacional para potenciar el desempeño y la transformación empresarial.',
+            features: ['Analítica de personas (People Analytics)', 'Desarrollo de cultura organizacional', 'Diseño de sistemas de compensación', 'Gestión del cambio organizacional']
+          },
+          {
+            icon: 'fa-chart-line',
+            name: 'Especialización en Gerencia Empresarial y Competitividad',
+            description: 'Fortalece la capacidad de dirigir organizaciones con enfoque estratégico, orientado a la innovación y la competitividad. Forma líderes capaces de analizar mercados, gestionar el cambio y diseñar estrategias que generen valor sostenible.',
+            features: ['Estrategia y posicionamiento competitivo', 'Innovación y desarrollo empresarial', 'Gestión del cambio organizacional', 'Análisis y comportamiento de mercados']
+          },
+          {
+            icon: 'fa-coins',
+            name: 'Especialización en Gerencia Tributaria',
+            description: 'Forma expertos en la planeación y gestión tributaria, con capacidad para diseñar estrategias fiscales alineadas con la normativa vigente. Contribuye a la optimización de recursos y al cumplimiento de las obligaciones tributarias corporativas.',
+            features: ['Planeación tributaria estratégica', 'Optimización y gestión fiscal', 'Interpretación de la normativa tributaria', 'Auditoría y control fiscal']
+          },
+          {
+            icon: 'fa-briefcase',
+            name: 'Maestría en Administración de Negocios (MBA) Virtual',
+            description: 'Desarrolla líderes empresariales con visión global y pensamiento estratégico, mediante una formación ejecutiva integral en modalidad virtual. Integra finanzas, innovación y liderazgo para la toma de decisiones en entornos competitivos y cambiantes.',
+            features: ['Estrategia empresarial global', 'Finanzas corporativas avanzadas', 'Innovación y transformación digital', 'Networking ejecutivo']
+          },
+          {
+            icon: 'fa-laptop-code',
+            name: 'Maestría en Ingeniería de Software',
+            description: 'Forma profesionales capaces de diseñar y liderar soluciones tecnológicas complejas, aplicando arquitecturas avanzadas y metodologías modernas de desarrollo. Prepara para dirigir equipos de alto desempeño en proyectos de software de impacto tecnológico.',
+            features: ['Diseño de arquitecturas de software', 'Prácticas avanzadas de DevOps', 'Desarrollo de soluciones cloud native', 'Aplicación de inteligencia artificial']
+          }
+        ]
+      }
+    };
+
+    // ==========================================
+    // STATE
+    // ==========================================
+    let currentCategory = 'tecnicos-laborales';
+    let currentSlideIndex = 0;
+
+    // ==========================================
+    // ELEMENTS
+    // ==========================================
+    const navItems = document.querySelectorAll('.nav-item');
+    const programsSlider = document.getElementById('programsSlider');
+    const categoryBadge = document.getElementById('categoryBadge');
+    const categoryTitle = document.getElementById('categoryTitle');
+    const categoryDescription = document.getElementById('categoryDescription');
+    const contentHeader = document.getElementById('contentHeader');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.querySelector('.custom-close');
+    const programSelect = document.getElementById('programSelect');
+    const openModalBtn = document.getElementById('openModal');
+    const openModalMobileBtn = document.getElementById('openModalMobile');
+
+    // ==========================================
     // NAVBAR SCROLL EFFECT
+    // ==========================================
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -280,26 +576,9 @@
       }
     });
 
-    // ============================================
-    // MODAL mas informacion
-    // ============================================
-      const modal = document.getElementById("modal");
-      const openModal = document.getElementById("openModal");
-      const closeModal = document.querySelector(".custom-close");
-
-      openModal.addEventListener("click", () => {
-        modal.style.display = "flex";
-      });
-
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
-
+    // ==========================================
     // MOBILE MENU TOGGLE
+    // ==========================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -317,6 +596,7 @@
       }
     });
 
+    // Cerrar menú al hacer clic en un enlace
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -325,6 +605,199 @@
         closeIcon.style.display = 'none';
       });
     });
+
+    // ==========================================
+    // RENDER PROGRAMS
+    // ==========================================
+    function renderPrograms(category) {
+      const data = programsData[category];
+      currentSlideIndex = 0;
+
+      // Update header
+      categoryBadge.textContent = navItems[Object.keys(programsData).indexOf(category)].querySelector('.nav-label').childNodes[0].textContent.trim();
+      categoryTitle.textContent = data.title;
+      categoryDescription.textContent = data.description;
+
+      // Reset animation
+      contentHeader.style.animation = 'none';
+      setTimeout(() => {
+        contentHeader.style.animation = '';
+      }, 10);
+
+      // Render cards
+      programsSlider.innerHTML = data.programs.map(program => `
+        <div class="program-card">
+          <div class="program-icon">
+            <i class="fas ${program.icon}"></i>
+          </div>
+          <h3>${program.name}</h3>
+          <p>${program.description}</p>
+          <ul class="program-features">
+            ${program.features.map(feature => `<li>${feature}</li>`).join('')}
+          </ul>
+          <button class="program-cta" onclick="openModal('${program.name}')">
+            Solicitar información
+          </button>
+        </div>
+      `).join('');
+
+      // Scroll slider to start
+      programsSlider.scrollLeft = 0;
+      updateSliderControls();
+    }
+
+    // ==========================================
+    // UPDATE SLIDER CONTROLS
+    // ==========================================
+    function updateSliderControls() {
+      const maxScroll = programsSlider.scrollWidth - programsSlider.parentElement.clientWidth;
+      prevBtn.disabled = programsSlider.scrollLeft <= 10;
+      nextBtn.disabled = programsSlider.scrollLeft >= maxScroll - 10;
+    }
+
+    // ==========================================
+    // SLIDER NAVIGATION
+    // ==========================================
+    function slidePrograms(direction) {
+      const cardWidth = 360 + 32; // card width + gap
+      if (direction === 'next') {
+        currentSlideIndex++;
+        programsSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      } else {
+        currentSlideIndex--;
+        programsSlider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
+      setTimeout(updateSliderControls, 300);
+    }
+
+    // ==========================================
+    // UPDATE PROGRAM SELECT
+    // ==========================================
+    function updateProgramSelect() {
+      const allPrograms = [];
+      Object.keys(programsData).forEach(category => {
+        programsData[category].programs.forEach(program => {
+          allPrograms.push(program.name);
+        });
+      });
+      programSelect.innerHTML = '<option value="">Selecciona un programa</option>' +
+        allPrograms.map(name => `<option value="${name}">${name}</option>`).join('');
+    }
+
+    // ==========================================
+    // OPEN MODAL
+    // ==========================================
+    function openModal(programName = '') {
+      modal.style.display = 'flex';
+      if (programName) {
+        programSelect.value = programName;
+      }
+    }
+
+    // ==========================================
+    // SETUP EVENT LISTENERS
+    // ==========================================
+    function setupEventListeners() {
+      // Navigation items
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          navItems.forEach(nav => nav.classList.remove('active'));
+          item.classList.add('active');
+          currentCategory = item.dataset.category;
+          renderPrograms(currentCategory);
+        });
+      });
+
+      // Slider controls
+      prevBtn.addEventListener('click', () => slidePrograms('prev'));
+      nextBtn.addEventListener('click', () => slidePrograms('next'));
+
+      // Slider scroll
+      programsSlider.addEventListener('scroll', updateSliderControls);
+
+      // Modal open
+      if (openModalBtn) {
+        openModalBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal();
+        });
+      }
+
+      if (openModalMobileBtn) {
+        openModalMobileBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal();
+        });
+      }
+
+      // Modal close
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // Form submit
+      document.querySelector('.modal-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('¡Gracias! Un especialista se pondrá en contacto contigo pronto.');
+        modal.style.display = 'none';
+      });
+    }
+
+    // ==========================================
+    // FOOTER ACCORDIONS
+    // ==========================================
+    function initFooterAccordions() {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          // Cerrar todos los acordeones
+          document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(cnt => {
+            cnt.classList.remove('active');
+          });
+          
+          // Abrir el acordeón actual si no estaba activo
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
+        });
+      });
+    }
+
+    // ==========================================
+    // INITIALIZE
+    // ==========================================
+    function init() {
+      renderPrograms(currentCategory);
+      updateProgramSelect();
+      setupEventListeners();
+      initFooterAccordions();
+    }
+
+    // ==========================================
+    // INIT ON LOAD
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+      init();
+      console.log('✅ Página Programas cargada correctamente');
+    });
+
   </script>
 </body>
 </html>
