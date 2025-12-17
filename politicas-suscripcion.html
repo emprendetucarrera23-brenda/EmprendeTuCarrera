@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Políticas de Suscripción - Emprende Tu Carrera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="politicas.css">
+  <link rel="stylesheet" href="politicas-suscripcion.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR - MANTIENE EL ESTILO ORIGINAL
+       ============================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html">Programas</a>
+      <a href="directorio.html">Directorio</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       MODAL 
+       ============================================ -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" required>
+          </div>
+        </div>
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required>
+              <option value="">Selecciona un programa</option>
+              <option>Transformación Profesional</option>
+              <option>Programas de liderazgo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================
+       PARTÍCULAS DE FONDO FLOTANTES
+       ============================================ -->
+  <div class="particles-background" id="particlesContainer"></div>
+
+  <main class="container">
+    <!-- HEADER CON TÍTULO Y DESCRIPCIÓN -->
+    <header class="legal-header">
+      <h1>Políticas de Suscripción</h1>
+      <p>
+        En <strong>Emprende Tu Carrera (ETC)</strong> no solo te brindamos información:
+        somos tu aliado estratégico para garantizar tu acceso a la educación superior
+        mediante ofertas académicas exclusivas y un acompañamiento integral en todo tu proceso.
+        Gracias a nuestras alianzas con instituciones educativas, aseguramos una experiencia 
+        transparente, confiable y con beneficios diferenciales que optimizan cada etapa de tu admisión.
+      </p>
+    </header>
+
+    <div class="layout-grid">
+      <!-- ================= ASIDE / ÍNDICE LEGAL ================= -->
+      <aside class="sidebar">
+        <div class="glass-card sticky-nav">
+          <h3>Índice Legal</h3>
+          <nav class="side-links">
+            <a href="#servicio" class="active">Descripción del Servicio</a>
+            <a href="#pago">Proceso de Pago</a>
+            <a href="#flexibilidad">Flexibilidad</a>
+            <a href="#devoluciones">Devoluciones</a>
+            <a href="#procedimiento">Procedimiento</a>
+            <a href="#aclaraciones">Aclaraciones</a>
+            <a href="#modificaciones">Modificaciones</a>
+          </nav>
+          <a href="politicas.html" class="back-to-policies-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Volver a Políticas</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ================= CONTENIDO PRINCIPAL ================= -->
+      <div class="content-body">
+
+        <!-- ===== 1. DESCRIPCIÓN DEL SERVICIO ===== -->
+        <section id="servicio" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+          <h2>1. Descripción del Servicio y Costo</h2>
+
+          <div class="subsection">
+            <h3><i class="fas fa-star"></i> 1.1. Nuestro Propósito y Valor Diferencial</h3>
+            <p>
+              En Emprende Tu Carrera (ETC) nuestro objetivo es conectarte con la oportunidad académica 
+              que mejor se ajuste a tus aspiraciones, gracias a convenios y alianzas estratégicas con 
+              institutos e instituciones de educación. Esto nos permite ofrecerte condiciones, beneficios 
+              y precios diferenciales o exclusivos que difícilmente obtendrías de manera directa con la institución.
+            </p>
+            <div class="value-badge">
+              <i class="fas fa-check-circle"></i>
+              <span>Más que un centro de información, somos tu puente directo hacia ofertas educativas optimizadas</span>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h3><i class="fas fa-hands-helping"></i> 1.2. Servicio de Asesoramiento y Gestión Integral</h3>
+            <p>Tu suscripción a ETC incluye un acompañamiento integral que abarca:</p>
+            
+            <div class="service-cards">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <h4>Soporte y Acompañamiento Continuo</h4>
+                <p>
+                  Te acompañamos desde la elección del programa hasta tu ingreso a la institución, 
+                  resolviendo dudas y asegurando una experiencia fluida.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-compass"></i>
+                </div>
+                <h4>Orientación Académica Personalizada</h4>
+                <p>
+                  Expertos que te ayudan a identificar el programa y la universidad ideal, 
+                  presentándote ofertas exclusivas que optimizan tu tiempo y tu inversión.
+                </p>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <h4>Gestión Documental Simplificada</h4>
+                <p>
+                  Nos encargamos de los trámites administrativos para tu inscripción y matrícula, 
+                  evitando errores y garantizando eficiencia según los convenios vigentes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h3><i class="fas fa-question-circle"></i> 1.3. Razones del Costo del Servicio</h3>
+            <p>
+              La suscripción a ETC cubre el trabajo especializado de nuestro equipo multidisciplinario 
+              (orientadores, gestores documentales, coordinadores, soporte, etc.), y representa:
+            </p>
+            <ul class="benefit-list">
+              <li><i class="fas fa-check"></i> Acceso a ofertas exclusivas gracias a nuestras alianzas estratégicas</li>
+              <li><i class="fas fa-check"></i> Acompañamiento profesional que te ahorra tiempo y evita errores</li>
+              <li><i class="fas fa-check"></i> Gestión eficiente en trámites de inscripción, matrícula y seguimiento</li>
+              <li><i class="fas fa-check"></i> Sostenibilidad de alianzas para beneficios continuos</li>
+            </ul>
+          </div>
+
+          <div class="subsection">
+            <h3><i class="fas fa-dollar-sign"></i> 1.4. Costo del Servicio</h3>
+            <p>
+              El valor de nuestros servicios será el informado al momento de la contratación e incluye 
+              toda la asesoría y gestión descrita en el punto 1.2.
+            </p>
+            <div class="warning-box">
+              <i class="fas fa-exclamation-triangle"></i>
+              <div>
+                <strong>Nota importante:</strong>
+                <p>
+                  Este costo no cubre matrículas, mensualidades, derechos de grado u otros pagos académicos, 
+                  los cuales deben cancelarse directamente a la institución educativa seleccionada.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2. PROCESO DE PAGO ===== -->
+        <section id="pago" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-credit-card"></i></div>
+          <h2>2. Proceso de Pago</h2>
+
+          <div class="subsection">
+            <h3><i class="fas fa-clock"></i> 2.1. Momento del Pago</h3>
+            <p>
+              El pago de la suscripción a ETC debe realizarse en el momento en que se formaliza 
+              la solicitud de nuestros servicios de asesoramiento y gestión integral.
+            </p>
+          </div>
+
+          <div class="subsection">
+            <h3><i class="fas fa-wallet"></i> 2.2. Métodos de Pago</h3>
+            <p>Para tu comodidad, ponemos a tu disposición diferentes medios de pago:</p>
+            
+            <div class="payment-methods">
+              <div class="payment-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Pago en efectivo</span>
+              </div>
+              <div class="payment-item">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Transferencias bancarias</span>
+              </div>
+              <div class="payment-item">
+                <i class="fas fa-credit-card"></i>
+                <span>Tarjetas crédito/débito</span>
+              </div>
+              <div class="payment-item">
+                <i class="fas fa-laptop"></i>
+                <span>Pagos electrónicos</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3. FLEXIBILIDAD ===== -->
+        <section id="flexibilidad" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-random"></i></div>
+          <h2>3. Flexibilidad de tu Suscripción</h2>
+          <p>
+            En Emprende Tu Carrera (ETC) entendemos que tus planes pueden cambiar. Por eso, 
+            tu suscripción incluye opciones flexibles para adaptarse a tus necesidades:
+          </p>
+
+          <div class="flexibility-grid">
+            <div class="flexibility-card">
+              <div class="flex-icon">
+                <i class="fas fa-pause-circle"></i>
+              </div>
+              <h4>3.1. Stand-by (Pausa)</h4>
+              <p>
+                Puedes solicitar la pausa de tu suscripción y reactivarla dentro de un plazo 
+                máximo de <strong>doce (12) meses</strong> contados desde la fecha inicial de tu suscripción.
+              </p>
+            </div>
+
+            <div class="flexibility-card">
+              <div class="flex-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h4>3.2. Cesión</h4>
+              <p>
+                Si decides no continuar con tu suscripción, tienes la posibilidad de cederla a otra persona. 
+                Deberás informarnos por escrito los datos completos del beneficiario.
+              </p>
+              <div class="mini-warning">
+                <i class="fas fa-info-circle"></i>
+                <span>La cesión no genera devolución de dinero</span>
+              </div>
+            </div>
+
+            <div class="flexibility-card">
+              <div class="flex-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <h4>3.3. Cambio de Opción Académica</h4>
+              <p>
+                Puedes cambiar de institución o programa dentro de nuestras alianzas, siempre que:
+              </p>
+              <ul class="mini-list">
+                <li>Se cumplan los requisitos de la nueva oferta</li>
+                <li>Se realice dentro de los 12 meses</li>
+                <li>El servicio no haya sido ejecutado sustancialmente</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 4. DEVOLUCIONES ===== -->
+        <section id="devoluciones" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-undo"></i></div>
+          <h2>4. Políticas de Devolución de Dinero</h2>
+          <p>
+            En Emprende Tu Carrera (ETC) cumplimos estrictamente con lo dispuesto en el 
+            <strong>Estatuto del Consumidor (Ley 1480 de 2011, Colombia)</strong>, garantizando 
+            transparencia y la justa aplicación de la ley en todas nuestras operaciones.
+          </p>
+
+          <!-- Derecho de Retracto -->
+          <div class="refund-section">
+            <div class="refund-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>4.1. Derecho de Retracto (Artículo 47, Ley 1480 de 2011)</h3>
+            </div>
+
+            <div class="refund-content">
+              <div class="refund-item">
+                <div class="refund-label">
+                  <i class="fas fa-check-circle"></i>
+                  <strong>Condiciones</strong>
+                </div>
+                <p>
+                  Puedes ejercer el derecho de retracto dentro de los <strong>cinco (5) días hábiles</strong> 
+                  siguientes a la celebración del contrato de suscripción, siempre que el servicio aún 
+                  no haya comenzado a prestarse.
+                </p>
+              </div>
+
+              <div class="refund-item">
+                <div class="refund-label">
+                  <i class="fas fa-times-circle"></i>
+                  <strong>Excepciones</strong>
+                </div>
+                <p>
+                  El derecho de retracto no aplica si el servicio ya comenzó con tu consentimiento expreso 
+                  antes de finalizar el plazo legal. Se considera inicio de ejecución:
+                </p>
+                <ul class="exception-list">
+                  <li>Envío de documentos a universidades</li>
+                  <li>Generación de códigos de postulación</li>
+                  <li>Inicio de asesorías personalizadas sustanciales</li>
+                </ul>
+              </div>
+
+              <div class="refund-item">
+                <div class="refund-label">
+                  <i class="fas fa-clipboard-list"></i>
+                  <strong>Procedimiento</strong>
+                </div>
+                <p>
+                  Envía tu solicitud por escrito a <strong>pqrs@emprendetucarrera.com.co</strong> dentro del plazo establecido. Incluye:
+                </p>
+                <ul class="mini-list">
+                  <li>Datos personales completos</li>
+                  <li>Comprobante de pago</li>
+                  <li>Detalles de la transacción</li>
+                  <li>Manifestación expresa de retracto</li>
+                </ul>
+              </div>
+
+              <div class="refund-item highlight-refund">
+                <div class="refund-label">
+                  <i class="fas fa-money-bill-wave"></i>
+                  <strong>Reembolso</strong>
+                </div>
+                <p>
+                  El reembolso se hará por el mismo medio de pago utilizado. ETC reembolsará la totalidad 
+                  del dinero pagado en un máximo de <strong>treinta (30) días calendario</strong> tras recibir tu solicitud válida.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reversión del Pago -->
+          <div class="refund-section">
+            <div class="refund-header">
+              <i class="fas fa-sync-alt"></i>
+              <h3>4.2. Reversión del Pago (Artículo 51, Ley 1480 de 2011)</h3>
+            </div>
+
+            <div class="refund-content">
+              <div class="refund-item">
+                <div class="refund-label">
+                  <i class="fas fa-check-circle"></i>
+                  <strong>Condiciones</strong>
+                </div>
+                <p>
+                  Puedes solicitar la reversión de un pago realizado por tarjeta de crédito, débito u 
+                  otros medios electrónicos cuando:
+                </p>
+                <ul class="benefit-list">
+                  <li><i class="fas fa-check"></i> La operación no fue solicitada</li>
+                  <li><i class="fas fa-check"></i> El servicio adquirido no fue recibido</li>
+                  <li><i class="fas fa-check"></i> El servicio no corresponde a lo contratado</li>
+                </ul>
+              </div>
+
+              <div class="refund-item">
+                <div class="refund-label">
+                  <i class="fas fa-tasks"></i>
+                  <strong>Procedimiento</strong>
+                </div>
+                <p>
+                  Presenta la queja a ETC (<strong>pqrs@emprendetucarrera.com.co</strong>) y notifica 
+                  al emisor del instrumento de pago dentro de los <strong>cinco (5) días hábiles</strong> 
+                  posteriores al conocimiento de la causal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Otros Casos -->
+          <div class="refund-section">
+            <div class="refund-header">
+              <i class="fas fa-search"></i>
+              <h3>4.3. Devoluciones en Otros Casos (Evaluación Específica)</h3>
+            </div>
+
+            <div class="refund-content">
+              <p>Podrán aplicarse devoluciones adicionales, tras evaluación de ETC, en los siguientes casos:</p>
+              
+              <div class="case-cards">
+                <div class="case-card">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <h5>Incumplimiento por información errónea de ETC</h5>
+                  <p>Si se garantizó explícitamente que cumplías un requisito y no es así por error de ETC</p>
+                </div>
+
+                <div class="case-card">
+                  <i class="fas fa-ban"></i>
+                  <h5>Imposibilidad de prestar el servicio</h5>
+                  <p>Por causa imputable a ETC, se realizará devolución proporcional o total según el avance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Casos No Elegibles -->
+          <div class="not-eligible-section">
+            <div class="not-eligible-header">
+              <i class="fas fa-hand-paper"></i>
+              <h3>4.4. Casos No Elegibles para Devolución</h3>
+            </div>
+            <p>No habrá lugar a devolución de dinero en las siguientes situaciones:</p>
+            
+            <div class="not-eligible-list">
+              <div class="not-eligible-item">
+                <i class="fas fa-times"></i>
+                <span>Decisión del aspirante de acudir directamente a la institución educativa</span>
+              </div>
+              <div class="not-eligible-item">
+                <i class="fas fa-times"></i>
+                <span>Cancelación voluntaria fuera del plazo de retracto, una vez iniciado el servicio</span>
+              </div>
+              <div class="not-eligible-item">
+                <i class="fas fa-times"></i>
+                <span>Información falsa, incompleta o errónea proporcionada por el aspirante</span>
+              </div>
+              <div class="not-eligible-item">
+                <i class="fas fa-times"></i>
+                <span>Incumplimiento de requisitos universitarios no atribuibles a ETC</span>
+              </div>
+              <div class="not-eligible-item">
+                <i class="fas fa-times"></i>
+                <span>Fuerza mayor o caso fortuito</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5. PROCEDIMIENTO ===== -->
+        <section id="procedimiento" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-clipboard-list"></i></div>
+          <h2>5. Procedimiento para Solicitar la Devolución</h2>
+
+          <div class="procedure-timeline">
+            <div class="timeline-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Solicitud por Escrito</h4>
+                <p>
+                  Toda solicitud de devolución debe presentarse por escrito al correo oficial: 
+                  <strong>pqrs@emprendetucarrera.com.co</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Información Requerida</h4>
+                <ul class="mini-list">
+                  <li>Nombre completo del suscriptor</li>
+                  <li>Número de documento de identificación</li>
+                  <li>Número de contacto</li>
+                  <li>Detalles del pago (fecha, monto y método)</li>
+                  <li>Descripción clara del motivo</li>
+                  <li>Evidencia o soportes pertinentes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Plazo para Radicación</h4>
+                <p>
+                  Las solicitudes deberán realizarse en un plazo máximo de <strong>treinta (30) días calendario</strong> 
+                  a partir del hecho que fundamenta la petición.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Evaluación</h4>
+                <p>
+                  ETC contará con un plazo máximo de <strong>quince (15) días hábiles</strong> para evaluar 
+                  el caso y emitir una respuesta.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>Comunicación y Reembolso</h4>
+                <p>
+                  El resultado será notificado por escrito. En caso de aprobación, el reembolso se efectuará 
+                  dentro de <strong>treinta (30) días calendario</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6. ACLARACIONES ===== -->
+        <section id="aclaraciones" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-info-circle"></i></div>
+          <h2>6. Aclaraciones Importantes</h2>
+
+          <div class="clarification-grid">
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-eye"></i>
+                <h4>6.1. Transparencia y Buena Fe</h4>
+              </div>
+              <p>
+                En Emprende Tu Carrera (ETC) actuamos siempre bajo principios de transparencia y buena fe. 
+                Garantizamos que la información que recibes sobre nuestros servicios, costos y términos 
+                sea clara, veraz, suficiente y oportuna.
+              </p>
+            </div>
+
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-handshake"></i>
+                <h4>6.2. Responsabilidad de Intermediación</h4>
+              </div>
+              <p>
+                ETC cumple el rol de gestor e intermediario especializado entre el aspirante y las universidades. 
+                Nuestra responsabilidad se limita a la prestación de los servicios de asesoramiento y gestión descritos.
+              </p>
+              <div class="clarification-footer">
+                <i class="fas fa-university"></i>
+                <span>Los pagos académicos son responsabilidad directa del aspirante frente a la universidad</span>
+              </div>
+            </div>
+
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-book-open"></i>
+                <h4>6.3. Lectura y Comprensión</h4>
+              </div>
+              <p>
+                Recomendamos enfáticamente a todos los aspirantes leer y comprender integralmente estas políticas, 
+                así como los términos y condiciones de cada universidad, antes de suscribirse.
+              </p>
+            </div>
+
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-shield-alt"></i>
+                <h4>6.4. Protección de Datos Personales</h4>
+              </div>
+              <p>
+                Al suscribirte, confirmas tu aceptación de nuestra Política de Tratamiento de Datos Personales, 
+                en cumplimiento de la Ley 1581 de 2012 y demás normas aplicables en Colombia.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7. MODIFICACIONES ===== -->
+        <section id="modificaciones" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-pen"></i></div>
+          <h2>7. Modificaciones a la Política</h2>
+
+          <div class="modifications-box">
+            <div class="modification-item">
+              <div class="mod-icon">
+                <i class="fas fa-sync"></i>
+              </div>
+              <div class="mod-content">
+                <h4>7.1. Derecho de Actualización</h4>
+                <p>
+                  ETC se reserva el derecho de modificar, actualizar o complementar estas políticas en 
+                  cualquier momento, para ajustarlas a cambios normativos, mejoras en servicios o nuevas 
+                  condiciones de operación.
+                </p>
+              </div>
+            </div>
+
+            <div class="modification-item">
+              <div class="mod-icon">
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="mod-content">
+                <h4>7.2. Comunicación de Cambios</h4>
+                <p>
+                  Cualquier cambio será comunicado oportunamente a los aspirantes a través de nuestra página web o por correo electrónico.
+                </p>
+                </div>
+                </div>        
+                <div class="modification-item">
+          <div class="mod-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="mod-content">
+            <h4>7.3. Respeto a Derechos Adquiridos</h4>
+            <p>
+              Las modificaciones no afectarán los derechos adquiridos bajo contratos celebrados 
+              antes de la entrada en vigor de dichas actualizaciones, salvo aceptación expresa del aspirante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>  </div>
+</div>
+  </main>  <!-- Sección de CTA adicional -->
+  <section class="policies-cta-section">
+    <div class="cta-container">
+      <div class="cta-icon-large">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <h2 class="cta-title">¿Tienes dudas sobre tu suscripción?</h2>
+      <p class="cta-text">
+        Nuestro equipo está disponible para resolver cualquier inquietud sobre nuestras políticas de suscripción y devoluciones.
+      </p>
+      <button class="cta-btn" id="ctaContactBtn">
+        <span>Contactar soporte</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </section> 
+       <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>    <div class="footer-column">
+      <h4 class="footer-heading">Empresa</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="conocenos.html">Conócenos</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="directorio.html">Directorio</a></li>
+        <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+      </ul>
+    </div>    <div class="footer-column">
+      <h4 class="footer-heading">Marco Legal</h4>
+      <ul class="footer-links">
+        <li><a href="politicas.html">Políticas</a></li>
+        <li><a href="#">PQRS</a></li>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Correo corporativo</a></li>
+      </ul>
+    </div>
+  </div>  <div class="footer-mobile mobile-footer">
+    <div class="footer-accordion">
+      <button class="accordion-button" data-accordion="empresa">
+        <span>Empresa</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="accordion-content" id="empresa">
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+    </div>    <div class="footer-accordion">
+      <button class="accordion-button" data-accordion="legal">
+        <span>Marco Legal</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="accordion-content" id="legal">
+        <ul class="footer-links">
+          <li><a href="politicas.html">Políticas</a></li>
+          <li><a href="#">PQRS</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Correo corporativo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>  <div class="footer-logo-mobile mobile-only">
+    <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+  </div>  <div class="footer-divider"></div>  <div class="footer-bottom-section">
+    <div class="social-links-footer">
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="#" class="social-icon" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>    <div class="footer-legal">
+      <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+    </div>
+  </div>
+</div>
+  </footer>
+    <script>
+
+      console.log('✅ Políticas de Suscripción - Inicializando...');
+
+      // ============================================
+      // 1. NAVBAR SCROLL EFFECT
+      // ============================================
+      const navbar = document.getElementById('navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // ============================================
+      // 2. MODAL - ABRIR Y CERRAR
+      // ============================================
+      const modal = document.getElementById("modal");
+      const openModalButtons = document.querySelectorAll("#openModal, #ctaContactBtn");
+      const closeModal = document.querySelector(".custom-close");
+
+      openModalButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.style.display = "flex";
+          document.body.style.overflow = 'hidden';
+          console.log('✅ Modal abierto');
+        });
+      });
+
+      if (closeModal) {
+        closeModal.addEventListener("click", () => {
+          modal.style.display = "none";
+          document.body.style.overflow = '';
+          console.log('❌ Modal cerrado');
+        });
+      }
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+          modal.style.display = "none";
+          document.body.style.overflow = '';
+        }
+      });
+
+      const modalForm = document.querySelector(".modal-form");
+      if (modalForm) {
+        modalForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("¡Formulario enviado! Un especialista te contactará pronto.");
+          modal.style.display = "none";
+          document.body.style.overflow = '';
+          modalForm.reset();
+        });
+      }
+
+      // ============================================
+      // 3. MOBILE MENU TOGGLE
+      // ============================================
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          
+          if (mobileMenu.classList.contains('active')) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+          } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+      }
+
+    </script>
+  </body>
+</html>

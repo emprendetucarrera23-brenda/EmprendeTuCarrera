@@ -7,544 +7,504 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-    <body>
-      <!-- Navbar -->
-      <nav id="navbar">
-        <div class="nav-container">
-          <div class="nav-content">
-            <a href="index.html" class="logo">
-              <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-menu">
-              <li><a href="index.html" class="active">Inicio</a></li>
-              <li><a href="conocenos.html">Conócenos</a></li>
-              <li><a href="programas.html">Programas</a></li>
-              <li><a href="directorio.html">Directorio</a></li>
-              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-            </ul>
-            
-            <div class="nav-cta">
-              <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
-            </div>
-            
-            <button class="mobile-menu-button" id="mobileMenuBtn">
-              <i class="fas fa-bars" id="menuIcon"></i>
-              <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
-            </button>
-          </div>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
         </div>
         
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html" class="active">Inicio</a>
-          <a href="conocenos.html">Conócenos</a>
-          <a href="programas.html">Programas</a>
-          <a href="directorio.html">Directorio</a>
-          <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-          <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
-        </div>
-      </nav>
-
-      <!-- Modal -->
-      <div id="modal" class="custom-modal">
-        <div class="custom-modal-content">
-          <span class="custom-close">&times;</span>
-          <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-          <h1 class="modal-title">Inicia tu viaje profesional</h1>
-          <p class="modal-text">
-            Completa el formulario y un especialista se pondrá en contacto
-            contigo en menos de 24 horas.
-          </p>
-          <form class="modal-form">
-            <label>Nombre completo *</label>
-            <input type="text" placeholder="Tu nombre completo" required>
-            <div class="modal-row">
-              <div>
-                <label>Email *</label>
-                <input type="email" placeholder="tu@mail.com" required>
-              </div>
-              <div>
-                <label>Teléfono *</label>
-                <input type="tel" placeholder="+57 300 000 0000" required>
-              </div>
-            </div>
-            <div class="modal-row">
-              <div>
-                <label>Profesión actual *</label>
-                <input type="text" placeholder="Ej: Desarrollador" required>
-              </div>
-              <div>
-                <label>Programa de interés *</label>
-                <select required>
-                  <option value="">Selecciona un programa</option>
-                  <option>Transformación Profesional</option>
-                  <option>Programas de liderazgo</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-            </div>
-            <label>Cuéntanos sobre tus objetivos</label>
-            <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-            <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-            <p class="modal-footer">
-              Al enviar este formulario, aceptas nuestra política de privacidad.
-            </p>
-          </form>
-        </div>
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
       </div>
-
-      <!-- ANIMACIÓN AFFINITY COMPLETA -->
-      <section id="affinity-banner" class="affinity-banner">
-        <div class="affinity-banner-container">
-          <div class="affinity-text-initial">
-            <h1 class="affinity-title">Emprende tu carrera</h1>
-          </div>
-          <div class="affinity-images-container">
-            <div class="affinity-image-wrapper" data-index="0">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team">
-            </div>
-            <div class="affinity-image-wrapper" data-index="1">
-              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Meeting">
-            </div>
-            <div class="affinity-image-wrapper" data-index="2">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Growth">
-            </div>
-            <div class="affinity-image-wrapper" data-index="3">
-              <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" alt="Success">
-            </div>
-            <div class="affinity-image-wrapper" data-index="4">
-              <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Innovation">
-            </div>
-            <div class="affinity-image-wrapper" data-index="5">
-              <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Technology">
-            </div>
-            <div class="affinity-image-wrapper" data-index="6">
-              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Development">
-            </div>
-            <div class="affinity-image-wrapper" data-index="7">
-              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Business">
-            </div>
-          </div>
-          <div class="affinity-text-final">
-            <h2 class="affinity-final-title">
-              <span class="affinity-line">Potencia tu</span>
-              <span class="affinity-line gradient-text-affinity">Futuro Profesional</span>
-            </h2>
-            <p class="affinity-final-description">
-              Formación de élite, mentoría personalizada y comunidad global.<br>
-              Diseñamos experiencias que transforman carreras.
-            </p>
-            <button class="btn-video-demo" id="openVideoModal">
-              <i class="fas fa-play-circle"></i>
-              <span>Ver Demo</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- MODAL DE VIDEO -->
-      <div id="videoModal" class="video-modal">
-        <div class="video-modal-content">
-          <button class="video-close" id="closeVideoModal">
-            <i class="fas fa-times"></i>
-          </button>
-          <div class="video-container">
-            <video id="demoVideo" controls autoplay>
-              <source src="https://ik.imagekit.io/v3kitfabd/Final%20Final%20No%20Va%20Mas.mp" type="video/mp4">
-              Tu navegador no soporta el elemento de video.
-            </video>
-          </div>
-        </div>
-      </div>
+    </div>
     
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-background">
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="grid-overlay"></div>
-        </div>
-        <div class="connection-lines">
-          <div class="line-animated"></div>
-          <div class="line-animated"></div>
-          <div class="line-animated"></div>
-        </div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-      </section>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html">Programas</a>
+      <a href="directorio.html">Directorio</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
 
-    <!-- Programs Section -->
-    <section id="programas" class="programs">
-      <div class="section-header">
-        <div class="section-badge">
-          <span style="color: #9ca3af;">Programas Premium</span>
+  <!-- Modal -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" required>
+          </div>
         </div>
-        <h2 class="text-gradient">Vive la Experiencia Emprende Tu Carrera</h2>
-        <p style="font-size: 20px; color: #9ca3af; margin-top: 32px; line-height: 1.8;">
-          Tu futuro no es un destino, es una construcción. Nosotros te damos las herramientas.
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required>
+              <option value="">Selecciona un programa</option>
+              <option>Transformación Profesional</option>
+              <option>Programas de liderazgo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ANIMACIÓN AFFINITY COMPLETA -->
+  <section id="affinity-banner" class="affinity-banner">
+    <div class="affinity-banner-container">
+      <div class="affinity-text-initial">
+        <h1 class="affinity-title">Emprende tu carrera</h1>
+      </div>
+      <div class="affinity-images-container">
+        <div class="affinity-image-wrapper" data-index="0">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team">
+        </div>
+        <div class="affinity-image-wrapper" data-index="1">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Meeting">
+        </div>
+        <div class="affinity-image-wrapper" data-index="2">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Growth">
+        </div>
+        <div class="affinity-image-wrapper" data-index="3">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80" alt="Success">
+        </div>
+        <div class="affinity-image-wrapper" data-index="4">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80" alt="Innovation">
+        </div>
+        <div class="affinity-image-wrapper" data-index="5">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Technology">
+        </div>
+        <div class="affinity-image-wrapper" data-index="6">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Development">
+        </div>
+        <div class="affinity-image-wrapper" data-index="7">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Business">
+        </div>
+      </div>
+      <div class="affinity-text-final">
+        <h2 class="affinity-final-title">
+          <span class="affinity-line">Potencia tu</span>
+          <span class="affinity-line gradient-text-affinity">Futuro Profesional</span>
+        </h2>
+        <p class="affinity-final-description">
+          Formación de élite, mentoría personalizada y comunidad global.<br>
+          Diseñamos experiencias que transforman carreras.
+        </p>
+        <button class="btn-video-demo" id="openVideoModal">
+          <i class="fas fa-play-circle"></i>
+          <span>Ver Video</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DE VIDEO - CORREGIDO -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <button class="video-close" id="closeVideoModal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="video-container">
+        <video id="demoVideo" controls>
+          <source src="https://ik.imagekit.io/v3kitfabd/Final%20Final%20No%20Va%20Mas.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="connection-lines">
+      <div class="line-animated"></div>
+      <div class="line-animated"></div>
+      <div class="line-animated"></div>
+    </div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programas" class="programs">
+    <div class="section-header">
+      <div class="section-badge">
+        <span style="color: #9ca3af;">Programas Premium</span>
+      </div>
+      <h2 class="text-gradient">Vive la Experiencia Emprende Tu Carrera</h2>
+      <p style="font-size: 20px; color: #9ca3af; margin-top: 32px; line-height: 1.8;">
+        Tu futuro no es un destino, es una construcción. Nosotros te damos las herramientas.
+      </p>
+    </div>
+    
+    <div class="programs-grid">
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(255, 25, 112, 0.4);">
+          <i class="fas fa-route" style="color: #FF1970; font-size: 28px;"></i>
+        </div>
+        <h3 class="program-title">Ruta Personalizada y Estratégica</h3>
+        <p class="program-description">
+          Analizamos tus talentos, intereses y metas para trazar un camino académico hecho a tu medida. Con orientación constante, honesta y personalizada, te ayudamos a tomar la mejor decisión desde el inicio, evitando pérdida de tiempo y dinero.
         </p>
       </div>
       
-      <div class="programs-grid">
-        <div class="program-card">
-          <div class="program-icon" style="box-shadow: 0 0 20px rgba(255, 25, 112, 0.4);">
-            <i class="fas fa-route" style="color: #FF1970; font-size: 28px;"></i>
-          </div>
-          <h3 class="program-title">Ruta Personalizada y Estratégica</h3>
-          <p class="program-description">
-            Analizamos tus talentos, intereses y metas para trazar un camino académico hecho a tu medida. Con orientación constante, honesta y personalizada, te ayudamos a tomar la mejor decisión desde el inicio, evitando pérdida de tiempo y dinero.
-          </p>
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(219, 18, 175, 0.4);">
+          <i class="fas fa-rocket" style="color: #DB12AF; font-size: 28px;"></i>
         </div>
-        
-        <div class="program-card">
-          <div class="program-icon" style="box-shadow: 0 0 20px rgba(219, 18, 175, 0.4);">
-            <i class="fas fa-rocket" style="color: #DB12AF; font-size: 28px;"></i>
-          </div>
-          <h3 class="program-title">Proceso Simplificado y Ágil</h3>
-          <p class="program-description">
-            Te acompañamos en todo el proceso: orientación vocacional, elección de carrera y universidad, recolección de documentos e inscripción final. Con nuestros aliados, estudiar es fácil, claro y sin estrés. Desde el primer contacto hasta tu graduación, estamos contigo en cada paso.
-          </p>
-        </div>
-        
-        <div class="program-card">
-          <div class="program-icon" style="box-shadow: 0 0 20px rgba(162, 0, 250, 0.4);">
-            <i class="fas fa-award" style="color: #A200FA; font-size: 28px;"></i>
-          </div>
-          <h3 class="program-title">Acceso a Becas y Beneficios Exclusivos</h3>
-          <p class="program-description">
-            Gracias a nuestros convenios con universidades aliadas, puedes obtener becas académicas entre el 55% y el 75% y acceder a financiación directa sin intereses. De esta manera, estudiar una carrera de calidad se convierte en una oportunidad real y al alcance de tu bolsillo.
-          </p>
-        </div>
-        
-        <div class="program-card">
-          <div class="program-icon" style="box-shadow: 0 0 20px rgba(60, 23, 219, 0.4);">
-            <i class="fas fa-headset" style="color: #3C17DB; font-size: 28px;"></i>
-          </div>
-          <h3 class="program-title">Orientación 24 / 7 / 365</h3>
-          <p class="program-description">
-            Nuestro apoyo no termina con tu inscripción. Te acompañamos durante tu formación y te conectamos con oportunidades laborales, asegurando que tu éxito académico se transforme en un futuro profesional brillante.
-          </p>
-        </div>
-      </div>
-    </section>
-
-      <!-- Carrusel de Empresas -->
-      <section class="companies-carousel-section">
-        <div class="carousel-container">
-          <div class="carousel-header">
-            <div class="carousel-badge">
-              <div class="carousel-badge-dot"></div>
-              <span class="carousel-badge-text">Confiado por líderes</span>
-            </div>
-            <h2 class="carousel-title">Nuestros Aliados Estratégicos</h2>
-          </div>
-          <div class="carousel-wrapper">
-            <div class="carousel-fade-left"></div>
-            <div class="carousel-fade-right"></div>
-            <div>
-              <div class="carousel-track" id="carouselTrack"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contador de Cifras con Partículas -->
-      <section class="stats-counter-section">
-        <div class="stats-particles-container"></div>
-        <div class="stats-counter-wrapper">
-          <div class="stats-counter-header">
-            <div class="stats-counter-badge">
-              <div class="stats-badge-dot"></div>
-              <span class="stats-badge-text">Nuestro Impacto</span>
-            </div>
-            <h2 class="stats-counter-title text-gradient">Transformando Vidas, Construyendo Futuros</h2>
-            <p class="stats-counter-description">
-              Miles de estudiantes ya han dado el paso decisivo hacia sus sueños profesionales.<br>
-              Estos números reflejan nuestro compromiso con la excelencia educativa.
-            </p>
-          </div>
-          <div class="stats-counter-grid">
-            <div class="stat-counter-card" data-stat="card-1">
-              <div class="stat-counter-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="stat-counter-number" data-target="27000" data-suffix="+">0</div>
-              <div class="stat-counter-label">Estudiantes inscritos</div>
-              <div class="stat-counter-glow"></div>
-            </div>
-            <div class="stat-counter-card" data-stat="card-2">
-              <div class="stat-counter-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <div class="stat-counter-number" data-target="15000" data-suffix="+">0</div>
-              <div class="stat-counter-label">Egresados</div>
-              <div class="stat-counter-glow"></div>
-            </div>
-            <div class="stat-counter-card" data-stat="card-3">
-              <div class="stat-counter-icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class="stat-counter-number" data-target="11000" data-suffix="+">0</div>
-              <div class="stat-counter-label">En campo de acción laboral</div>
-              <div class="stat-counter-glow"></div>
-            </div>
-            <div class="stat-counter-card" data-stat="card-4">
-              <div class="stat-counter-icon">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <div class="stat-counter-number" data-target="35000" data-suffix="+">0</div>
-              <div class="stat-counter-label">Comunidad</div>
-              <div class="stat-counter-glow"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- SECCIÓN DE TESTIMONIOS - INICIO -->
-      <section id="testimonials-section" class="testimonials-wrapper">
-          <!-- Fondo animado -->
-          <div class="testimonials-bg">
-              <!-- Orbes de gradiente -->
-              <div class="gradient-orb orb-1"></div>
-              <div class="gradient-orb orb-2"></div>
-              
-              <!-- Grid -->
-              <div class="grid-pattern"></div>
-              
-              <!-- Partículas flotantes -->
-              <div class="particles-container"></div>
-              
-              <!-- Línea animada -->
-              <div class="animated-line"></div>
-          </div>
-
-          <!-- Contenido -->
-          <div class="testimonials-content">
-              <div class="testimonials-container">
-                  <!-- Header -->
-                  <header class="testimonials-header">
-                      <div class="header-icon-wrapper">
-                          <div class="icon-glow"></div>
-                          <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-                          </svg>
-                      </div>
-
-                      <h1 class="testimonials-title">
-                          <span class="title-white">Historias de </span>
-                          <span class="title-gradient">Éxito</span>
-                      </h1>
-
-                      <p class="testimonials-subtitle">
-                          Conoce las experiencias de quienes transformaron su futuro con Emprende Tu Carrera
-                      </p>
-                  </header>
-
-                  <!-- Carousel Principal -->
-                  <div class="main-carousel-wrapper">
-                      <div class="carousel-navigation">
-                          <!-- Botón Anterior -->
-                          <button class="carousel-btn carousel-btn-prev" id="prevBtn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="m15 18-6-6 6-6"/>
-                              </svg>
-                              <div class="btn-glow"></div>
-                          </button>
-
-                          <!-- Botón Siguiente -->
-                          <button class="carousel-btn carousel-btn-next" id="nextBtn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                  <path d="m9 18 6-6-6-6"/>
-                              </svg>
-                              <div class="btn-glow"></div>
-                          </button>
-                      </div>
-
-                      <!-- Slides Container -->
-                      <div class="carousel-slides" id="carouselSlides">
-                          <!-- Los slides se generarán dinámicamente con JS -->
-                      </div>
-
-                      <!-- Dots Navigation -->
-                      <div class="carousel-dots" id="carouselDots">
-                          <!-- Los dots se generarán dinámicamente con JS -->
-                      </div>
-                  </div>
-
-                  <!-- Grid de Testimonios -->
-                  <div class="testimonials-grid-section">
-                      <h2 class="grid-title">
-                          <span class="title-white">Más </span>
-                          <span class="title-gradient">Testimonios</span>
-                      </h2>
-
-                      <div class="testimonials-grid" id="testimonialsGrid">
-                          <!-- Los cards se generarán dinámicamente con JS -->
-                      </div>
-                  </div>
-
-                  <!-- CTA Section -->
-                  <div class="cta-section">
-                      <div class="cta-glow"></div>
-                      <div class="cta-content">
-                          <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
-                          </svg>
-                          <h2 class="cta-title">¿Listo para escribir tu historia de éxito?</h2>
-                          <p class="cta-description">
-                              Únete a miles de estudiantes que ya transformaron su futuro profesional
-                          </p>
-                          <button class="cta-button">
-                              <div class="cta-button-bg"></div>
-                              <div class="cta-button-hover"></div>
-                              <span class="cta-button-content">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                      <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
-                                      <circle cx="12" cy="8" r="6"/>
-                                  </svg>
-                                  Comienza ahora
-                              </span>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-    <!-- CTA Section REDISEÑADA -->
-    <section class="cta-redesigned">
-      <div class="cta-redesigned-background">
-        <div class="cta-glow-orb cta-glow-orb-1"></div>
-        <div class="cta-glow-orb cta-glow-orb-2"></div>
-        <div class="cta-glow-orb cta-glow-orb-3"></div>
+        <h3 class="program-title">Proceso Simplificado y Ágil</h3>
+        <p class="program-description">
+          Te acompañamos en todo el proceso: orientación vocacional, elección de carrera y universidad, recolección de documentos e inscripción final. Con nuestros aliados, estudiar es fácil, claro y sin estrés. Desde el primer contacto hasta tu graduación, estamos contigo en cada paso.
+        </p>
       </div>
       
-      <div class="cta-redesigned-container">
-        <div class="cta-redesigned-content">
-          
-          <!-- Badge superior -->
-          <div class="cta-redesigned-badge">
-            <div class="cta-badge-pulse"></div>
-            <span>Empieza hoy</span>
-          </div>
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(162, 0, 250, 0.4);">
+          <i class="fas fa-award" style="color: #A200FA; font-size: 28px;"></i>
+        </div>
+        <h3 class="program-title">Acceso a Becas y Beneficios Exclusivos</h3>
+        <p class="program-description">
+          Gracias a nuestros convenios con universidades aliadas, puedes obtener becas académicas entre el 55% y el 75% y acceder a financiación directa sin intereses. De esta manera, estudiar una carrera de calidad se convierte en una oportunidad real y al alcance de tu bolsillo.
+        </p>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-icon" style="box-shadow: 0 0 20px rgba(60, 23, 219, 0.4);">
+          <i class="fas fa-headset" style="color: #3C17DB; font-size: 28px;"></i>
+        </div>
+        <h3 class="program-title">Orientación 24 / 7 / 365</h3>
+        <p class="program-description">
+          Nuestro apoyo no termina con tu inscripción. Te acompañamos durante tu formación y te conectamos con oportunidades laborales, asegurando que tu éxito académico se transforme en un futuro profesional brillante.
+        </p>
+      </div>
+    </div>
+  </section>
 
-          <!-- Título principal -->
-          <h2 class="cta-redesigned-title">
-            <span class="cta-title-line">Da el salto a tu</span>
-            <span class="cta-title-line text-gradient">mejor versión</span>
-          </h2>
-
-          <!-- Descripción -->
-          <p class="cta-redesigned-description">
-            Únete a miles de profesionales que ya están construyendo carreras extraordinarias.<br>
-            Tu transformación comienza hoy.
-          </p>
-
-          <!-- Grid de beneficios -->
-          <div class="cta-benefits-grid">
-            <div class="cta-benefit-item">
-              <div class="cta-benefit-icon">
-                <i class="fas fa-bolt"></i>
-              </div>
-              <span>Acceso inmediato a todo el contenido</span>
-            </div>
-            
-            <div class="cta-benefit-item">
-              <div class="cta-benefit-icon">
-                <i class="fas fa-user-tie"></i>
-              </div>
-              <span>Mentoría personalizada 1:1</span>
-            </div>
-            
-            <div class="cta-benefit-item">
-              <div class="cta-benefit-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <span>Certificación reconocida globalmente</span>
-            </div>
-            
-            <div class="cta-benefit-item">
-              <div class="cta-benefit-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <span>Comunidad exclusiva de profesionales</span>
-            </div>
-          </div>
-
-          <!-- Botones de acción -->
-          <div class="cta-redesigned-actions">
-            <button class="cta-btn-primary" id="ctaPrimaryBtn">
-              <span>Comenzar Ahora</span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <button class="cta-btn-secondary" id="ctaSecondaryBtn">
-              <i class="fas fa-calendar-alt"></i>
-              <span>Agendar Consulta Gratuita</span>
-            </button>
-          </div>
-
-          <!-- Trust indicators -->
-          <div class="cta-trust-indicators">
-            <div class="cta-trust-item">
-              <div class="cta-trust-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <div class="cta-trust-text">
-                <div class="cta-trust-value">30 días</div>
-                <div class="cta-trust-label">Garantía</div>
-              </div>
-            </div>
-
-            <div class="cta-trust-divider"></div>
-
-            <div class="cta-trust-item">
-              <div class="cta-trust-icon">
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="cta-trust-text">
-                <div class="cta-trust-value">4.9/5</div>
-                <div class="cta-trust-label">Rating</div>
-              </div>
-            </div>
-
-            <div class="cta-trust-divider"></div>
-
-            <div class="cta-trust-item">
-              <div class="cta-trust-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class="cta-trust-text">
-                <div class="cta-trust-value">12K+</div>
-                <div class="cta-trust-label">Estudiantes</div>
-              </div>
-            </div>
-
-            <div class="cta-trust-divider"></div>
-
-            <div class="cta-trust-item">
-              <div class="cta-trust-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="cta-trust-text">
-                <div class="cta-trust-value">98%</div>
-                <div class="cta-trust-label">Éxito</div>
-              </div>
-            </div>
-          </div>
-
+  <!-- Carrusel de Empresas - CORREGIDO -->
+  <section class="companies-carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-header">
+        <div class="carousel-badge">
+          <div class="carousel-badge-dot"></div>
+          <span class="carousel-badge-text">Confiado por líderes</span>
+        </div>
+        <h2 class="carousel-title">Nuestros Aliados Estratégicos</h2>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="carouselTrack"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-        <!-- Footer -->
-    <footer id="comunidad">
+  <!-- Contador de Cifras con Partículas -->
+  <section class="stats-counter-section">
+    <div class="stats-particles-container"></div>
+    <div class="stats-counter-wrapper">
+      <div class="stats-counter-header">
+        <div class="stats-counter-badge">
+          <div class="stats-badge-dot"></div>
+          <span class="stats-badge-text">Nuestro Impacto</span>
+        </div>
+        <h2 class="stats-counter-title text-gradient">Resultados que Inspiran</h2>
+        <p class="stats-counter-description">
+          Miles de estudiantes ya han dado el paso decisivo hacia sus sueños profesionales.<br>
+          Estos números reflejan nuestro compromiso con la excelencia educativa.
+        </p>
+      </div>
+      <div class="stats-counter-grid">
+        <div class="stat-counter-card" data-stat="card-1">
+          <div class="stat-counter-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-counter-number" data-target="27000" data-suffix="+">0</div>
+          <div class="stat-counter-label">Estudiantes inscritos</div>
+          <div class="stat-counter-glow"></div>
+        </div>
+        <div class="stat-counter-card" data-stat="card-2">
+          <div class="stat-counter-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="stat-counter-number" data-target="15000" data-suffix="+">0</div>
+          <div class="stat-counter-label">Egresados</div>
+          <div class="stat-counter-glow"></div>
+        </div>
+        <div class="stat-counter-card" data-stat="card-3">
+          <div class="stat-counter-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="stat-counter-number" data-target="11000" data-suffix="+">0</div>
+          <div class="stat-counter-label">En campo de acción laboral</div>
+          <div class="stat-counter-glow"></div>
+        </div>
+        <div class="stat-counter-card" data-stat="card-4">
+          <div class="stat-counter-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="stat-counter-number" data-target="35000" data-suffix="+">0</div>
+          <div class="stat-counter-label">Comunidad</div>
+          <div class="stat-counter-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE TESTIMONIOS -->
+  <section id="testimonials-section" class="testimonials-wrapper">
+    <!-- Fondo animado -->
+    <div class="testimonials-bg">
+      <!-- Orbes de gradiente -->
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      
+      <!-- Grid -->
+      <div class="grid-pattern"></div>
+      
+      <!-- Partículas flotantes -->
+      <div class="particles-container"></div>
+      
+      <!-- Línea animada -->
+      <div class="animated-line"></div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="testimonials-content">
+      <div class="testimonials-container">
+        <!-- Header -->
+        <header class="testimonials-header">
+          <div class="header-icon-wrapper">
+            <div class="icon-glow"></div>
+            <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+          </div>
+
+          <h1 class="testimonials-title">
+            <span class="title-white">Historias de </span>
+            <span class="title-gradient">Éxito</span>
+          </h1>
+
+          <p class="testimonials-subtitle">
+            Conoce las experiencias de quienes transformaron su futuro con Emprende Tu Carrera
+          </p>
+        </header>
+
+        <!-- Carousel Principal -->
+        <div class="main-carousel-wrapper">
+          <div class="carousel-navigation">
+            <!-- Botón Anterior -->
+            <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+              <div class="btn-glow"></div>
+            </button>
+
+            <!-- Botón Siguiente -->
+            <button class="carousel-btn carousel-btn-next" id="nextBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+              <div class="btn-glow"></div>
+            </button>
+          </div>
+
+          <!-- Slides Container -->
+          <div class="carousel-slides" id="carouselSlides">
+            <!-- Los slides se generarán dinámicamente con JS -->
+          </div>
+
+          <!-- Dots Navigation -->
+          <div class="carousel-dots" id="carouselDots">
+            <!-- Los dots se generarán dinámicamente con JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section REDISEÑADA -->
+  <section class="cta-redesigned">
+    <div class="cta-redesigned-background">
+      <div class="cta-glow-orb cta-glow-orb-1"></div>
+      <div class="cta-glow-orb cta-glow-orb-2"></div>
+      <div class="cta-glow-orb cta-glow-orb-3"></div>
+    </div>
+    
+    <div class="cta-redesigned-container">
+      <div class="cta-redesigned-content">
+        
+        <!-- Badge superior -->
+        <div class="cta-redesigned-badge">
+          <div class="cta-badge-pulse"></div>
+          <span>Empieza hoy</span>
+        </div>
+
+        <!-- Título principal -->
+        <h2 class="cta-redesigned-title">
+          <span class="cta-title-line">Da el salto a tu</span>
+          <span class="cta-title-line text-gradient">mejor versión</span>
+        </h2>
+
+        <!-- Descripción -->
+        <p class="cta-redesigned-description">
+          Únete a miles de profesionales que ya están construyendo carreras extraordinarias.<br>
+          Tu transformación comienza hoy.
+        </p>
+
+        <!-- Grid de beneficios -->
+        <div class="cta-benefits-grid">
+          <div class="cta-benefit-item">
+            <div class="cta-benefit-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <span>Acceso inmediato a todo el contenido</span>
+          </div>
+          
+          <div class="cta-benefit-item">
+            <div class="cta-benefit-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <span>Mentoría personalizada 1:1</span>
+          </div>
+          
+          <div class="cta-benefit-item">
+            <div class="cta-benefit-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <span>Certificación reconocida globalmente</span>
+          </div>
+          
+          <div class="cta-benefit-item">
+            <div class="cta-benefit-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <span>Comunidad exclusiva de profesionales</span>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="cta-redesigned-actions">
+          <button class="cta-btn-primary" id="ctaPrimaryBtn">
+            <span>Comenzar Ahora</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button class="cta-btn-secondary" id="ctaSecondaryBtn">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Agendar Consulta Gratuita</span>
+          </button>
+        </div>
+
+        <!-- Trust indicators -->
+        <div class="cta-trust-indicators">
+          <div class="cta-trust-item">
+            <div class="cta-trust-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="cta-trust-text">
+              <div class="cta-trust-value">30 días</div>
+              <div class="cta-trust-label">Garantía</div>
+            </div>
+          </div>
+
+          <div class="cta-trust-divider"></div>
+
+          <div class="cta-trust-item">
+            <div class="cta-trust-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="cta-trust-text">
+              <div class="cta-trust-value">4.9/5</div>
+              <div class="cta-trust-label">Rating</div>
+            </div>
+          </div>
+
+          <div class="cta-trust-divider"></div>
+
+          <div class="cta-trust-item">
+            <div class="cta-trust-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="cta-trust-text">
+              <div class="cta-trust-value">12K+</div>
+              <div class="cta-trust-label">Estudiantes</div>
+            </div>
+          </div>
+
+          <div class="cta-trust-divider"></div>
+
+          <div class="cta-trust-item">
+            <div class="cta-trust-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="cta-trust-text">
+              <div class="cta-trust-value">98%</div>
+              <div class="cta-trust-label">Éxito</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="comunidad">
     <div class="footer-wrapper">
       <!-- Versión Desktop -->
       <div class="footer-content desktop-footer">
@@ -634,270 +594,472 @@
         </div>
         
         <div class="footer-legal">
-          <p>© 2025 Todos los derechos reservados — Emprende Tu Carrera</p>
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
+</body>
+</html>
+
   <script>
-// ============================================
-// NAVBAR SCROLL EFFECT
-// ============================================
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
 
-// ============================================
-// MODAL MAS INFORMACION
-// ============================================
-const modal = document.getElementById("modal");
-const openModal = document.getElementById("openModal");
-const closeModal = document.querySelector(".custom-close");
-
-openModal.addEventListener("click", () => {
-  modal.style.display = "flex";
-});
-
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
-});
-
-// ============================================
-// MODAL DE VIDEO
-// ============================================
-function initVideoModal() {
-  const videoModal = document.getElementById('videoModal');
-  const openVideoModal = document.getElementById('openVideoModal');
-  const closeVideoModal = document.getElementById('closeVideoModal');
-  const demoVideo = document.getElementById('demoVideo');
-
-  if (!videoModal || !openVideoModal || !closeVideoModal || !demoVideo) {
-    return;
-  }
-
-  function closeVideo() {
-    videoModal.classList.remove('active');
-    demoVideo.pause();
-    demoVideo.currentTime = 0;
-    document.body.style.overflow = 'auto';
-  }
-
-  openVideoModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    videoModal.classList.add('active');
-    demoVideo.play().catch(err => {
-      console.error('Error al reproducir video:', err);
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
-    document.body.style.overflow = 'hidden';
-  });
 
-  closeVideoModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeVideo();
-  });
+    // ============================================
+    // MODAL MAS INFORMACION
+    // ============================================
+    const modal = document.getElementById("modal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".custom-close");
 
-  videoModal.addEventListener('click', (e) => {
-    if (e.target === videoModal) {
-      closeVideo();
+    if (openModal) {
+      openModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "flex";
+      });
     }
-  });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-      closeVideo();
+    if (closeModal) {
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
     }
-  });
-}
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initVideoModal);
-} else {
-  initVideoModal();
-}
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
 
-// ============================================
-// MOBILE MENU TOGGLE
-// ============================================
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuIcon = document.getElementById('menuIcon');
-const closeIcon = document.getElementById('closeIcon');
+    // ============================================
+    // MODAL DE VIDEO - CORREGIDO
+    // ============================================
+    function initVideoModal() {
+      const videoModal = document.getElementById('videoModal');
+      const openVideoModal = document.getElementById('openVideoModal');
+      const closeVideoModal = document.getElementById('closeVideoModal');
+      const demoVideo = document.getElementById('demoVideo');
 
-mobileMenuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  
-  if (mobileMenu.classList.contains('active')) {
-    menuIcon.style.display = 'none';
-    closeIcon.style.display = 'block';
-  } else {
-    menuIcon.style.display = 'block';
-    closeIcon.style.display = 'none';
-  }
-});
+      if (!videoModal || !openVideoModal || !closeVideoModal || !demoVideo) {
+        console.error('❌ Elementos del modal de video no encontrados');
+        return;
+      }
 
-const mobileLinks = mobileMenu.querySelectorAll('a');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    menuIcon.style.display = 'block';
-    closeIcon.style.display = 'none';
-  });
-});
+      console.log('✅ Modal de video inicializado');
 
-// ============================================
-// SMOOTH SCROLL
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      function closeVideo() {
+        videoModal.classList.remove('active');
+        demoVideo.pause();
+        demoVideo.currentTime = 0;
+        document.body.style.overflow = 'auto';
+      }
+
+      openVideoModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('🎬 Abriendo modal de video');
+        videoModal.classList.add('active');
+        demoVideo.play().catch(err => {
+          console.error('Error al reproducir video:', err);
+        });
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeVideoModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('❌ Cerrando modal de video');
+        closeVideo();
+      });
+
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+          closeVideo();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+          closeVideo();
+        }
+      });
     }
-  });
-});
 
-// ============================================
-// PARALLAX EFFECT WITH MOUSE
-// ============================================
-document.addEventListener('mousemove', (e) => {
-  const floatingElements = document.querySelectorAll('.floating-element');
-  const mouseX = e.clientX / window.innerWidth;
-  const mouseY = e.clientY / window.innerHeight;
-  
-  floatingElements.forEach((element, index) => {
-    const speed = (index + 1) * 20;
-    const x = (mouseX - 0.5) * speed;
-    const y = (mouseY - 0.5) * speed;
-    element.style.transform = `translate(${x}px, ${y}px)`;
-  });
-});
-
-// ============================================
-// SCROLL ANIMATIONS FOR SECTIONS
-// ============================================
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideoModal);
+    } else {
+      initVideoModal();
     }
-  });
-}, observerOptions);
 
-document.querySelectorAll('.metric-card, .program-card, .testimonial-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(40px)';
-  el.style.transition = 'all 0.6s ease';
-  observer.observe(el);
-});
+    // ============================================
+    // MOBILE MENU TOGGLE
+    // ============================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
 
-// ============================================
-// DATOS DE TESTIMONIOS
-// ============================================
-const testimonials = [
-    {
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        
+        if (mobileMenu.classList.contains('active')) {
+          menuIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+        } else {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      });
+    }
+
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ============================================
+    // PARALLAX EFFECT WITH MOUSE
+    // ============================================
+    document.addEventListener('mousemove', (e) => {
+      const floatingElements = document.querySelectorAll('.floating-element');
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+      
+      floatingElements.forEach((element, index) => {
+        const speed = (index + 1) * 20;
+        const x = (mouseX - 0.5) * speed;
+        const y = (mouseY - 0.5) * speed;
+        element.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+
+    // ============================================
+    // SCROLL ANIMATIONS FOR SECTIONS
+    // ============================================
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.metric-card, .program-card, .testimonial-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+      el.style.transition = 'all 0.6s ease';
+      observer.observe(el);
+    });
+
+    // ============================================
+    // CONTADOR DE CIFRAS CON PARTÍCULAS
+    // ============================================
+    (function() {
+      const section = document.querySelector('.stats-counter-section');
+      const particlesContainer = document.querySelector('.stats-particles-container');
+      const counterCards = document.querySelectorAll('.stat-counter-card');
+      const counterNumbers = document.querySelectorAll('.stat-counter-number');
+      const header = document.querySelector('.stats-counter-header'); 
+      
+      if (!section || !particlesContainer) return;
+
+      const headerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      if (header) {
+        headerObserver.observe(header);
+      }
+      
+      function createFloatingParticles() {
+        const colors = [
+          'rgba(255, 25, 112, 0.2)',
+          'rgba(219, 18, 175, 0.2)',
+          'rgba(162, 0, 250, 0.2)',
+          'rgba(60, 23, 219, 0.2)'
+        ];
+        
+        const particleCount = 30;
+        
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'floating-stat-particle';
+          
+          const x = Math.random() * 100;
+          const y = Math.random() * 100;
+          const size = Math.random() * 3 + 1;
+          const duration = Math.random() * 20 + 10;
+          const delay = Math.random() * 5;
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          
+          particle.style.left = `${x}%`;
+          particle.style.top = `${y}%`;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.background = color;
+          particle.style.animationDuration = `${duration}s`;
+          particle.style.animationDelay = `${delay}s`;
+          particle.style.animation = `floatParticle ${duration}s ease-in-out infinite ${delay}s`;
+          
+          particlesContainer.appendChild(particle);
+        }
+      }
+      
+      function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const suffix = element.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = formatNumber(target) + suffix;
+          } else {
+            element.textContent = formatNumber(Math.floor(current));
+            requestAnimationFrame(updateCounter);
+          }
+        };
+        
+        requestAnimationFrame(updateCounter);
+      }
+      
+      function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+      
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100);
+            
+            const numberElement = entry.target.querySelector('.stat-counter-number');
+            if (numberElement) {
+              setTimeout(() => {
+                entry.target.classList.add('counted');
+                animateCounter(numberElement);
+              }, index * 100 + 200);
+            }
+          }
+        });
+      }, { threshold: 0.3 });
+      
+      counterCards.forEach(card => {
+        counterObserver.observe(card);
+      });
+      
+      createFloatingParticles();
+    })();
+
+    // ============================================
+    // PROGRAM CARDS STAGGER ANIMATION
+    // ============================================
+    const programCards = document.querySelectorAll('.program-card');
+    programCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // ============================================
+    // CARRUSEL DE LOGOS - CORREGIDO
+    // ============================================
+    (function() {
+      'use strict';
+      
+      const logosData = [
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo%20unimeta.png?updatedAt=1765399946908', alt: 'Unimeta' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/LOGO%20CORPESV%201.png?updatedAt=1765399297749', alt: 'corpes' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/577e6684-58d8-4dc0-89b0-5c39b2d43a8b-removebg-preview.png?updatedAt=1765399215535', alt: 'Sumate si puedes' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/0567e5e2-3ed3-4fe4-85ad-0c01c53f2841-removebg-preview.png?updatedAt=1765399215332', alt: 'lonja' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview-removebg-preview.png?updatedAt=1765399215248', alt: 'F.I.T' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/images__1_-removebg-preview.png', alt: 'Interamericana' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview%20(2).png?updatedAt=1765399166754', alt: 'cenproef' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/file-removebg-preview.png?updatedAt=1765399166705', alt: 'coontradecun' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/d306cfbe-38da-4119-a84d-3fdb39474eb9-removebg-preview.png?updatedAt=1765399166775', alt: 'cedutec' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo_CENACAP-removebg-preview.png?updatedAt=1765399166636', alt: 'cenacap' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' }
+      ];
+
+      function initCarousel() {
+        const track = document.getElementById('carouselTrack');
+        
+        if (!track) {
+          console.error('❌ No se encontró carouselTrack');
+          return;
+        }
+        
+        console.log('🔵 Iniciando carrusel de logos...');
+        
+        // Limpiar contenido previo
+        track.innerHTML = '';
+        
+        // Crear 3 copias para loop infinito
+        const allLogos = [...logosData, ...logosData, ...logosData];
+        
+        // Crear items del carrusel
+        allLogos.forEach((logo, index) => {
+          const item = document.createElement('div');
+          item.className = 'carousel-item';
+          
+          const img = document.createElement('img');
+          img.src = logo.src;
+          img.alt = logo.alt;
+          img.className = 'carousel-logo';
+          
+          item.appendChild(img);
+          track.appendChild(item);
+        });
+
+        console.log('✅ Carrusel creado con', allLogos.length, 'logos');
+        
+        // Eventos de pausa
+        const items = track.querySelectorAll('.carousel-item');
+        
+        items.forEach((item, index) => {
+          item.addEventListener('mouseenter', function() {
+            track.classList.add('paused');
+            console.log('🔴 PAUSADO - Logo:', index);
+          });
+          
+          item.addEventListener('mouseleave', function() {
+            track.classList.remove('paused');
+            console.log('🟢 REANUDADO - Logo:', index);
+          });
+        });
+        
+        console.log('✅ Carrusel de logos iniciado correctamente');
+      }
+
+      // Inicializar cuando el DOM esté listo
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+      } else {
+        initCarousel();
+      }
+    })();
+
+    // ============================================
+    // CARRUSEL DE TESTIMONIOS
+    // ============================================
+    const testimonials = [
+      {
         id: 1,
-        name: 'María Fernanda Gómez',
-        role: 'Administradora de Empresas',
-        program: 'Administración de Empresas',
-        image: 'https://i.pravatar.cc/150?img=1',
-        testimonial: 'Emprende Tu Carrera cambió mi vida. Gracias a la beca del 65% pude estudiar mientras trabajaba. El acompañamiento fue increíble y hoy tengo un cargo gerencial en una empresa multinacional.',
+        name: 'Thomas Ojeda',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjUBmfbex3DuU1Y8C528AgB-Xt4_5KVUjN27FaaUe9ZgmEex_Rw4=w72-h72-p-rp-mo-br100',
+        testimonial: 'Me ayudaron mucho con mi proyecto de vida estoy muy agradecido definitivamente son los mejores',
         rating: 5,
-        achievement: 'Graduada en 18 meses'
-    },
-    {
+        achievement: 'Graduado en 18 meses'
+      },
+      {
         id: 2,
-        name: 'Carlos Andrés Ruiz',
-        role: 'Ingeniero de Sistemas',
-        program: 'Ingeniería de Sistemas',
-        image: 'https://i.pravatar.cc/150?img=12',
-        testimonial: 'La modalidad virtual me permitió estudiar sin dejar mi trabajo. Los horarios flexibles y el contenido actualizado me prepararon para los retos del mercado laboral actual.',
+        name: 'Diana',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjVUr8Gad2_QXUe5_5gGQuTNl0nW2LjofdhxEFdtW7gHGulc0q8R=w72-h72-p-rp-mo-br100',
+        testimonial: 'ÉSTE MENSAJE ES CON TODO EL CORAZÓN, DISCULPEN SI LO ESCRIBO EN MAYÚSCULA PERO ES QUE QUIERO RESALTAR ÉSTE COMENTARIO, NO SE CÓMO AGRADECERLES SU AYUDA Y COMPROMISO CON NUESTRO PROYECTO DE VIDA!! GRACIAS A USTEDES MI VIDA CAMBIÓ, GRACIAS POR AYUDARNOS A CONSTRUIR UUN MEJOR FUTURO PARA NUESTRAS VIDAS Y FAMILIAS, GRACIAS INFINITAS.. FAMILIA EMPRENDE TU CARRERA!',
         rating: 5,
         achievement: 'Ascenso laboral 3 meses después'
-    },
-    {
+      },
+      {
         id: 3,
-        name: 'Laura Valentina Torres',
-        role: 'Psicóloga Clínica',
-        program: 'Psicología',
-        image: 'https://i.pravatar.cc/150?img=5',
-        testimonial: 'El proceso fue muy sencillo desde el inicio. Mi coordinador me acompañó en cada paso y la calidad académica superó mis expectativas. Hoy tengo mi consultorio propio.',
+        name: 'Alvaro Orjuela Guerrero',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a/ACg8ocIOFXA52V6zT_xy88a5Ad3w5EligHu7ZHGMZu9T_1I3_ZoC1Q=w72-h72-p-rp-mo-br100',
+        testimonial: 'Mi experiencia con la señorita Yuli Andrea Hernández ha sido, no solamente grata sino, de una eficiencia ponderable. Muy contento y agradecido por su gestión, don de gentes y profesionalismo❗.',
         rating: 5,
         achievement: 'Consultorio propio'
-    },
-    {
+      },
+      {
         id: 4,
-        name: 'Juan Pablo Martínez',
-        role: 'Comunicador Social',
-        program: 'Comunicación Social',
-        image: 'https://i.pravatar.cc/150?img=13',
-        testimonial: 'Las becas son reales y el ahorro es significativo. Pude graduarme sin endeudarme y con un título completamente válido. Totalmente recomendado para quien quiera crecer profesionalmente.',
+        name: 'Carolina Consuegra',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjVCJc86xFLaOP8XT8xekpJ5N5QVmw1RN1yopRnuyRqJaFffEoM=w72-h72-p-rp-mo-br100',
+        testimonial: 'He tenido hasta el momento una muy buena experiencia, estamos cumpliendo con las expectativas de formación académica y muy importante saber bien muy bien el proceso para luego si calificar el servicio y lo que en realidad se apunta con esta oferta de formación, las personas suelen de manera muy rápida sin dar lugar a profundizar el tema y manifiestan en comentarios palabras equivocadas. Yo estoy en este proceso y ha sido muy valioso para mi estoy muy feliz de porder continuar con mis estudios y saber que en poco tiempo todo se hará realidad. Los invito a no desistir y continuar adelante.',
         rating: 5,
         achievement: 'Ahorro del 70%'
-    },
-    {
+      },
+      {
         id: 5,
-        name: 'Ana Sofía Ramírez',
-        role: 'Especialista en Derecho',
-        program: 'Derecho',
-        image: 'https://i.pravatar.cc/150?img=9',
-        testimonial: 'Graduarme en 16 meses parecía imposible, pero el modelo académico intensivo realmente funciona. La universidad está acreditada y mi título tiene el mismo valor que uno presencial.',
+        name: 'Hamilton Arredondo',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjX25SLcE1ylzBHgVgT36Ni8JcRG1KJJf5TLp3hD12O9w8q3drc=w72-h72-p-rp-mo-br100',
+        testimonial: 'SON LOS MEJORES, GRACIAS GRACIAS GRACIAS ESTOY FELIZ',
         rating: 5,
         achievement: 'Graduada en tiempo récord'
-    },
-    {
+      },
+      {
         id: 6,
-        name: 'Diego Alejandro Vargas',
-        role: 'Administrador Público',
-        program: 'Administración Pública',
-        image: 'https://i.pravatar.cc/150?img=14',
-        testimonial: 'El soporte 24/7 y las mentorías personalizadas fueron clave en mi proceso. Nunca me sentí solo y siempre tuve ayuda cuando la necesité. Excelente inversión en mi futuro.',
+        name: 'Viviana Pita',
+        role: 'Estudiante',
+        image: 'https://lh3.googleusercontent.com/a-/ALV-UjWgQbZr31BSVhvDKH6zYDMfdSawiRdY2MDNpYP9ZLC9_6-ipql7Iw=w72-h72-p-rp-mo-br100',
+        testimonial: 'La mejor decisión, darme la oportunidad de retomar estudios, no pude haber elegido un mejor aliado que “Emprende Tu Carrera” sin contar que el talento humano que tienen es súper amable, mi orientadora Yohandra es la mejor, siempre pendiente de todo y con la mejor disposición, es un acompañamiento constante, cualquier duda, inquietud u apoyo ella siempre está con la mejor actitud. Gracias por ser parte de esta nueva meta ✨.',
         rating: 5,
         achievement: 'Trabajo en sector público'
-    }
-];
+      }
+    ];
 
-// ============================================
-// VARIABLES GLOBALES
-// ============================================
-let currentIndex = 0;
-let autoPlayInterval = null;
-let isTransitioning = false;
+    let currentIndex = 0;
+    let autoPlayInterval = null;
+    let isTransitioning = false;
 
-// ============================================
-// INICIALIZACIÓN
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    initParticles();
-    initCarousel();
-    initGrid();
-    startAutoPlay();
-});
+    // Inicialización
+    document.addEventListener('DOMContentLoaded', function() {
+      initTestimonialsParticles();
+      initTestimonialsCarousel();
+      startAutoPlay();
+    });
 
-// ============================================
-// PARTÍCULAS FLOTANTES
-// ============================================
-function initParticles() {
-    const container = document.querySelector('.particles-container');
-    if (!container) return;
+    // Partículas flotantes
+    function initTestimonialsParticles() {
+      const container = document.querySelector('.testimonials-wrapper .particles-container');
+      if (!container) return;
 
-    for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < 30; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';
@@ -905,667 +1067,331 @@ function initParticles() {
         particle.style.animationDelay = Math.random() * 3 + 's';
         particle.style.animationDuration = (3 + Math.random() * 3) + 's';
         container.appendChild(particle);
+      }
     }
-}
 
-// ============================================
-// CAROUSEL PRINCIPAL
-// ============================================
-function initCarousel() {
-    renderSlides();
-    renderDots();
-    updateCarousel();
-    
-    // Event Listeners
-    document.getElementById('prevBtn').addEventListener('click', () => {
-        if (!isTransitioning) {
+    // Carousel de testimonios
+    function initTestimonialsCarousel() {
+      renderSlides();
+      renderDots();
+      updateCarousel();
+      
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          if (!isTransitioning) {
             navigate(-1);
-        }
-    });
-    
-    document.getElementById('nextBtn').addEventListener('click', () => {
-        if (!isTransitioning) {
-            navigate(1);
-        }
-    });
-
-    // Pausar auto-play al hover
-    const carouselWrapper = document.querySelector('.main-carousel-wrapper');
-    carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
-    carouselWrapper.addEventListener('mouseleave', startAutoPlay);
-}
-
-function renderSlides() {
-    const container = document.getElementById('carouselSlides');
-    container.innerHTML = testimonials.map((testimonial, index) => `
-        <div class="carousel-slide" data-index="${index}">
-            <div class="slide-glow"></div>
-            <div class="slide-card">
-                <!-- Acentos de esquinas -->
-                <div class="corner-accent corner-top-left"></div>
-                <div class="corner-accent corner-bottom-right"></div>
-                
-                <!-- Ícono de comillas flotante -->
-                <div class="floating-quote">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
-                        <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
-                    </svg>
-                </div>
-
-                <div class="slide-content">
-                    <!-- Imagen de perfil -->
-                    <div class="profile-section">
-                        <div class="profile-glow"></div>
-                        <div class="profile-image">
-                            <img src="${testimonial.image}" alt="${testimonial.name}">
-                        </div>
-                        <div class="profile-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                                <path d="m9 12 2 2 4-4"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Contenido del testimonio -->
-                    <div class="testimonial-content">
-                        <!-- Estrellas -->
-                        <div class="stars-rating">
-                            ${generateStars(testimonial.rating)}
-                        </div>
-
-                        <!-- Testimonio -->
-                        <p class="testimonial-text">
-                            "${testimonial.testimonial}"
-                        </p>
-
-                        <!-- Divisor -->
-                        <div class="testimonial-divider"></div>
-
-                        <!-- Información del autor -->
-                        <div class="author-info">
-                            <h3 class="author-name">${testimonial.name}</h3>
-                            <p class="author-role">${testimonial.role}</p>
-
-                            <div class="author-badges">
-                                <span class="badge badge-program">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
-                                        <circle cx="12" cy="8" r="6"/>
-                                    </svg>
-                                    ${testimonial.program}
-                                </span>
-                                <span class="badge badge-achievement">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
-                                        <path d="M12 9v4"/>
-                                        <path d="M12 17h.01"/>
-                                    </svg>
-                                    ${testimonial.achievement}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
-
-function generateStars(rating) {
-    let stars = '';
-    for (let i = 0; i < rating; i++) {
-        stars += `
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-        `;
-    }
-    return stars;
-}
-
-function renderDots() {
-    const container = document.getElementById('carouselDots');
-    container.innerHTML = testimonials.map((_, index) => `
-        <button class="dot" data-index="${index}" aria-label="Ir al testimonio ${index + 1}">
-            <div class="dot-glow"></div>
-        </button>
-    `).join('');
-
-    // Event listeners para dots
-    const dots = container.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            if (!isTransitioning && index !== currentIndex) {
-                currentIndex = index;
-                updateCarousel();
-                stopAutoPlay();
-            }
+          }
         });
-    });
-}
+      }
+      
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (!isTransitioning) {
+            navigate(1);
+          }
+        });
+      }
 
-function updateCarousel() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
+      const carouselWrapper = document.querySelector('.main-carousel-wrapper');
+      if (carouselWrapper) {
+        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+        carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+      }
+    }
 
-    slides.forEach((slide, index) => {
+    function renderSlides() {
+      const container = document.getElementById('carouselSlides');
+      if (!container) return;
+      
+      container.innerHTML = testimonials.map((testimonial, index) => `
+        <div class="carousel-slide" data-index="${index}">
+          <div class="slide-glow"></div>
+          <div class="slide-card">
+            <div class="corner-accent corner-top-left"></div>
+            <div class="corner-accent corner-bottom-right"></div>
+            
+            <div class="floating-quote">
+              <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
+                <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
+              </svg>
+            </div>
+
+            <div class="slide-content">
+              <div class="profile-section">
+                <div class="profile-glow"></div>
+                <div class="profile-image">
+                  <img src="${testimonial.image}" alt="${testimonial.name}">
+                </div>
+                <div class="profile-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="testimonial-content">
+                <div class="stars-rating">
+                  ${generateStars(testimonial.rating)}
+                </div>
+
+                <p class="testimonial-text">
+                  "${testimonial.testimonial}"
+                </p>
+
+                <div class="testimonial-divider"></div>
+
+                <div class="author-info">
+                  <h3 class="author-name">${testimonial.name}</h3>
+                  <p class="author-role">${testimonial.role}</p>
+
+                  <div class="author-badges">
+                    <span class="badge badge-achievement">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+                        <path d="M12 9v4"/>
+                        <path d="M12 17h.01"/>
+                      </svg>
+                      ${testimonial.achievement}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function generateStars(rating) {
+      let stars = '';
+      for (let i = 0; i < rating; i++) {
+        stars += `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        `;
+      }
+      return stars;
+    }
+
+    function renderDots() {
+      const container = document.getElementById('carouselDots');
+      if (!container) return;
+      
+      container.innerHTML = testimonials.map((_, index) => `
+        <button class="dot" data-index="${index}" aria-label="Ir al testimonio ${index + 1}">
+          <div class="dot-glow"></div>
+        </button>
+      `).join('');
+
+      const dots = container.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          if (!isTransitioning && index !== currentIndex) {
+            currentIndex = index;
+            updateCarousel();
+            stopAutoPlay();
+          }
+        });
+      });
+    }
+
+    function updateCarousel() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.dot');
+
+      slides.forEach((slide, index) => {
         slide.classList.remove('active', 'prev', 'next');
         
         if (index === currentIndex) {
-            slide.classList.add('active');
+          slide.classList.add('active');
         } else if (index === (currentIndex - 1 + testimonials.length) % testimonials.length) {
-            slide.classList.add('prev');
+          slide.classList.add('prev');
         } else if (index === (currentIndex + 1) % testimonials.length) {
-            slide.classList.add('next');
+          slide.classList.add('next');
         }
-    });
+      });
 
-    dots.forEach((dot, index) => {
+      dots.forEach((dot, index) => {
         if (index === currentIndex) {
-            dot.classList.add('active');
+          dot.classList.add('active');
         } else {
-            dot.classList.remove('active');
+          dot.classList.remove('active');
         }
-    });
-}
+      });
+    }
 
-function navigate(direction) {
-    isTransitioning = true;
-    currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
-    updateCarousel();
-    
-    setTimeout(() => {
+    function navigate(direction) {
+      isTransitioning = true;
+      currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+      updateCarousel();
+      
+      setTimeout(() => {
         isTransitioning = false;
-    }, 600);
-}
+      }, 600);
+    }
 
-// ============================================
-// AUTO-PLAY
-// ============================================
-function startAutoPlay() {
-    stopAutoPlay();
-    autoPlayInterval = setInterval(() => {
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayInterval = setInterval(() => {
         if (!isTransitioning) {
-            navigate(1);
+          navigate(1);
         }
-    }, 5000);
-}
+      }, 5000);
+    }
 
-function stopAutoPlay() {
-    if (autoPlayInterval) {
+    function stopAutoPlay() {
+      if (autoPlayInterval) {
         clearInterval(autoPlayInterval);
         autoPlayInterval = null;
+      }
     }
-}
 
-// ============================================
-// GRID DE TESTIMONIOS
-// ============================================
-function initGrid() {
-    const container = document.getElementById('testimonialsGrid');
-    container.innerHTML = testimonials.map((testimonial, index) => `
-        <div class="grid-card" data-index="${index}">
-            <div class="grid-card-glow"></div>
-            <div class="grid-card-content">
-                <div class="grid-card-header">
-                    <div class="grid-card-image">
-                        <img src="${testimonial.image}" alt="${testimonial.name}">
-                    </div>
-                    <div class="grid-card-info">
-                        <h4 class="grid-card-name">${testimonial.name}</h4>
-                        <p class="grid-card-role">${testimonial.role}</p>
-                    </div>
-                </div>
+    // ============================================
+    // CTA BUTTONS - ABRIR MODAL
+    // ============================================
+    const ctaPrimaryBtn = document.getElementById('ctaPrimaryBtn');
+    const ctaSecondaryBtn = document.getElementById('ctaSecondaryBtn');
 
-                <div class="grid-card-stars">
-                    ${generateStars(testimonial.rating)}
-                </div>
+    if (ctaPrimaryBtn) {
+      ctaPrimaryBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+      });
+    }
 
-                <p class="grid-card-text">
-                    "${testimonial.testimonial}"
-                </p>
+    if (ctaSecondaryBtn) {
+      ctaSecondaryBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+      });
+    }
 
-                <div class="grid-card-footer">
-                    <span class="grid-card-badge">
-                        ${testimonial.achievement}
-                    </span>
-                </div>
-            </div>
-        </div>
-    `).join('');
-
-    // Event listeners para cards
-    const cards = container.querySelectorAll('.grid-card');
-    cards.forEach((card, index) => {
-        card.addEventListener('click', () => {
-            currentIndex = index;
-            updateCarousel();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            stopAutoPlay();
+    // ============================================
+    // FOOTER ACCORDIONS (MOBILE)
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          // Cerrar todos los acordeones
+          document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.accordion-content').forEach(cnt => {
+            cnt.classList.remove('active');
+          });
+          
+          // Abrir el acordeón clickeado si no estaba activo
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
         });
+      });
     });
-}
-// ============================================
-// CONTADOR DE CIFRAS CON PARTÍCULAS
-// ============================================
-(function() {
-  const section = document.querySelector('.stats-counter-section');
-  const particlesContainer = document.querySelector('.stats-particles-container');
-  const counterCards = document.querySelectorAll('.stat-counter-card');
-  const counterNumbers = document.querySelectorAll('.stat-counter-number');
-  const header = document.querySelector('.stats-counter-header'); 
-  
-  if (!section || !particlesContainer) return;
 
-  const headerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.3 });
-  
-  if (header) {
-    headerObserver.observe(header);
-  }
-  
-  function createFloatingParticles() {
-    const colors = [
-      'rgba(255, 25, 112, 0.2)',
-      'rgba(219, 18, 175, 0.2)',
-      'rgba(162, 0, 250, 0.2)',
-      'rgba(60, 23, 219, 0.2)'
-    ];
-    
-    const particleCount = 30;
-    
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'floating-stat-particle';
+    // ============================================
+    // ANIMACIÓN AFFINITY
+    // ============================================
+    (function() {
+      const banner = document.getElementById('affinity-banner');
+      const textInitial = document.querySelector('.affinity-text-initial');
+      const imagesContainer = document.querySelector('.affinity-images-container');
+      const imageWrappers = document.querySelectorAll('.affinity-image-wrapper');
+      const textFinal = document.querySelector('.affinity-text-final');
       
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      const size = Math.random() * 3 + 1;
-      const duration = Math.random() * 20 + 10;
-      const delay = Math.random() * 5;
-      const color = colors[Math.floor(Math.random() * colors.length)];
+      if (!banner) return;
       
-      particle.style.left = `${x}%`;
-      particle.style.top = `${y}%`;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.background = color;
-      particle.style.animationDuration = `${duration}s`;
-      particle.style.animationDelay = `${delay}s`;
-      particle.style.animation = `floatParticle ${duration}s ease-in-out infinite ${delay}s`;
-      
-      particlesContainer.appendChild(particle);
-    }
-  }
-  
-  function animateCounter(element) {
-    const target = parseInt(element.getAttribute('data-target'));
-    const suffix = element.getAttribute('data-suffix') || '';
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-      current += increment;
-      if (current >= target) {
-        element.textContent = formatNumber(target) + suffix;
-      } else {
-        element.textContent = formatNumber(Math.floor(current));
-        requestAnimationFrame(updateCounter);
-      }
-    };
-    
-    requestAnimationFrame(updateCounter);
-  }
-  
-  function formatNumber(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, index * 100);
+      function handleAffinityScroll() {
+        const scrollY = window.scrollY;
+        const bannerHeight = banner.offsetHeight;
+        const bannerTop = banner.offsetTop;
+        const bannerBottom = bannerTop + bannerHeight;
         
-        const numberElement = entry.target.querySelector('.stat-counter-number');
-        if (numberElement) {
-          setTimeout(() => {
-            entry.target.classList.add('counted');
-            animateCounter(numberElement);
-          }, index * 100 + 200);
-        }
-      }
-    });
-  }, { threshold: 0.3 });
-  
-  counterCards.forEach(card => {
-    observer.observe(card);
-  });
-  
-  createFloatingParticles();
-  
-})();
-
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes floatParticle {
-    0% {
-      transform: translateY(0) scale(0);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(-100px) scale(1);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-200px) scale(0);
-      opacity: 0;
-    }
-  }
-`;
-document.head.appendChild(style);
-
-// ============================================
-// PROGRAM CARDS STAGGER ANIMATION
-// ============================================
-const programCards = document.querySelectorAll('.program-card');
-programCards.forEach((card, index) => {
-  card.style.animationDelay = `${index * 0.1}s`;
-});
-
-// ============================================
-// CARRUSEL DE TESTIMONIOS - VERSIÓN CORREGIDA
-// ============================================
-(function() {
-  'use strict';
-  
-  const testimonialsData = [
-    {
-      quote: "Emprende Tu Carrera transformó completamente mi trayectoria profesional. Las mentorías personalizadas me dieron las herramientas exactas que necesitaba para dar el salto a liderazgo.",
-      name: "María González",
-      role: "Senior Product Manager",
-      company: "Tech Innovators",
-      color: "#FF1970"
-    },
-    {
-      quote: "Los programas de emprendimiento digital son excepcionales. En 6 meses lancé mi startup y conseguí mis primeros clientes. La comunidad es increíblemente valiosa.",
-      name: "Carlos Ramírez",
-      role: "Founder & CEO",
-      company: "StartUp Digital",
-      color: "#BF09D5"
-    },
-    {
-      quote: "La formación técnica es de primer nivel. Pasé de conocimientos básicos a dominar tecnologías avanzadas. Ahora trabajo en proyectos que antes consideraba imposibles.",
-      name: "Ana Martínez",
-      role: "Full Stack Developer",
-      company: "Global Tech Solutions",
-      color: "#6500E9"
-    },
-    {
-      quote: "El acompañamiento fue clave en mi proceso. Me ayudaron a encontrar la carrera perfecta y ahora estoy trabajando en lo que siempre soñé.",
-      name: "Diego Morales",
-      role: "UX Designer",
-      company: "Creative Studios",
-      color: "#FF1970"
-    },
-    {
-      quote: "Gracias a las becas y el financiamiento sin intereses, pude estudiar sin preocupaciones económicas. Totalmente recomendado.",
-      name: "Laura Pérez",
-      role: "Data Analyst",
-      company: "Analytics Pro",
-      color: "#BF09D5"
-    },
-    {
-      quote: "La orientación 24/7 fue increíble. Siempre que tuve dudas, estuvieron ahí para apoyarme. Una experiencia transformadora.",
-      name: "Juan Torres",
-      role: "Marketing Manager",
-      company: "Digital Growth",
-      color: "#6500E9"
-    }
-  ];
-
-  let animationFrameId = null;
-  let currentPosition = 0;
-  let isPaused = false;
-  const SPEED = 0.5;
-
-  function initTestimonialsCarousel() {
-    const track = document.getElementById('testimonialsTrack');
-    
-    if (!track) {
-      console.error('❌ No se encontró testimonialsTrack');
-      return;
-    }
-    
-    console.log('🔵 Iniciando carrusel...');
-    
-    // Limpiar
-    track.innerHTML = '';
-    
-    // Crear copias
-    const allTestimonials = [...testimonialsData, ...testimonialsData, ...testimonialsData];
-    
-    // Crear tarjetas
-    allTestimonials.forEach((testimonial, index) => {
-      const card = document.createElement('div');
-      card.className = 'testimonial-card';
-      card.setAttribute('data-card-id', index);
-      
-      card.innerHTML = `
-        <div class="quote-icon">
-          <i class="fas fa-quote-left" style="font-size: 40px; color: ${testimonial.color};"></i>
-        </div>
-        <div class="rating">
-          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-          <i class="fas fa-star" style="color: ${testimonial.color};"></i>
-        </div>
-        <p class="testimonial-text">${testimonial.quote}</p>
-        <div class="testimonial-author">
-          <div class="author-name">${testimonial.name}</div>
-          <div class="author-role">${testimonial.role}</div>
-          <div class="author-company" style="color: ${testimonial.color};">${testimonial.company}</div>
-        </div>
-      `;
-      
-      track.appendChild(card);
-    });
-
-    console.log('✅ Tarjetas creadas:', allTestimonials.length);
-    
-    // Calcular ancho
-    const cardWidth = 420;
-    const gap = 32;
-    const cardsPerCopy = testimonialsData.length;
-    const copyWidth = (cardWidth + gap) * cardsPerCopy;
-    
-    // Función de animación
-    function animate() {
-      if (!isPaused) {
-        currentPosition -= SPEED;
-        
-        if (Math.abs(currentPosition) >= copyWidth) {
-          currentPosition = 0;
+        if (scrollY < bannerTop || scrollY > bannerBottom + 200) {
+          return;
         }
         
-        track.style.transform = `translateX(${currentPosition}px)`;
+        const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
+        
+        // FASE 1: Título inicial (0% - 12%)
+        if (progress < 0.12) {
+          textInitial.classList.remove('hidden');
+          imagesContainer.classList.remove('visible');
+          imagesContainer.classList.remove('fade-out');
+          imageWrappers.forEach(img => {
+            img.classList.remove('active');
+            img.classList.remove('fade-out');
+          });
+          textFinal.classList.remove('visible');
+          textFinal.classList.remove('fade-out');
+        }
+        else if (progress >= 0.12 && progress < 0.18) {
+          textInitial.classList.add('hidden');
+        }
+        
+        // FASE 2: Imágenes (18% - 58%)
+        if (progress >= 0.18 && progress < 0.58) {
+          imagesContainer.classList.add('visible');
+          imagesContainer.classList.remove('fade-out');
+          
+          if (progress >= 0.20) {
+            imageWrappers.forEach((img) => {
+              img.classList.add('active');
+              img.classList.remove('fade-out');
+            });
+          }
+        }
+        
+        // FASE 3: Texto final (55% - 78%)
+        if (progress >= 0.55 && progress < 0.78) {
+          textFinal.classList.add('visible');
+          textFinal.classList.remove('fade-out');
+        }
+        
+        // FASE 4: Desaparecer todo (78% - 95%)
+        if (progress >= 0.78) {
+          const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
+          
+          if (fadeProgress > 0.15) {
+            imageWrappers.forEach((img) => {
+              img.classList.add('fade-out');
+            });
+            imagesContainer.classList.add('fade-out');
+          }
+          
+          if (fadeProgress > 0.40) {
+            textFinal.classList.add('fade-out');
+          }
+        }
       }
       
-      animationFrameId = requestAnimationFrame(animate);
-    }
-    
-    // ⭐ EVENTOS CORREGIDOS
-    const cards = track.querySelectorAll('.testimonial-card');
-    
-    cards.forEach((card, index) => {
-      card.addEventListener('mouseenter', function() {
-        isPaused = true;
-        console.log('🔴 PAUSADO - Tarjeta:', index);
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        isPaused = false;
-        console.log('🟢 REANUDADO - Tarjeta:', index);
-      });
-    });
-    
-    // Iniciar
-    animate();
-    
-    console.log('✅ Carrusel iniciado');
-    console.log('⚙️ Velocidad:', SPEED, 'px/frame');
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTestimonialsCarousel);
-  } else {
-    initTestimonialsCarousel();
-  }
-  
-  console.log('✅ Script cargado');
-})();
-
-// ============================================
-// CTA BUTTONS - ABRIR MODAL
-// ============================================
-document.getElementById('ctaPrimaryBtn').addEventListener('click', () => {
-  document.getElementById('modal').style.display = 'flex';
-});
-
-document.getElementById('ctaSecondaryBtn').addEventListener('click', () => {
-  document.getElementById('modal').style.display = 'flex';
-});
-
-// ============================================
-// FOOTER ACCORDIONS (MOBILE)
-// ============================================
-document.addEventListener('DOMContentLoaded', function() {
-  const accordionButtons = document.querySelectorAll('.accordion-button');
-  
-  accordionButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const targetId = this.getAttribute('data-accordion');
-      const content = document.getElementById(targetId);
-      const isActive = this.classList.contains('active');
-      
-      document.querySelectorAll('.accordion-button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.querySelectorAll('.accordion-content').forEach(cnt => {
-        cnt.classList.remove('active');
-      });
-      
-      if (!isActive) {
-        this.classList.add('active');
-        content.classList.add('active');
-      }
-    });
-  });
-});
-
-// ============================================
-// ANIMACIÓN AFFINITY
-// ============================================
-(function() {
-  const banner = document.getElementById('affinity-banner');
-  const textInitial = document.querySelector('.affinity-text-initial');
-  const imagesContainer = document.querySelector('.affinity-images-container');
-  const imageWrappers = document.querySelectorAll('.affinity-image-wrapper');
-  const textFinal = document.querySelector('.affinity-text-final');
-  
-  if (!banner) return;
-  
-  function handleAffinityScroll() {
-    const scrollY = window.scrollY;
-    const bannerHeight = banner.offsetHeight;
-    const bannerTop = banner.offsetTop;
-    const bannerBottom = bannerTop + bannerHeight;
-    
-    if (scrollY < bannerTop || scrollY > bannerBottom + 200) {
-      return;
-    }
-    
-    const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
-    
-    if (progress < 0.12) {
-      textInitial.classList.remove('hidden');
-      imagesContainer.classList.remove('visible');
-      imagesContainer.classList.remove('fade-out');
-      imageWrappers.forEach(img => {
-        img.classList.remove('active');
-        img.classList.remove('fade-out');
-      });
-      textFinal.classList.remove('visible');
-      textFinal.classList.remove('fade-out');
-    }
-    else if (progress >= 0.12 && progress < 0.18) {
-      textInitial.classList.add('hidden');
-    }
-    
-    if (progress >= 0.18 && progress < 0.58) {
-      imagesContainer.classList.add('visible');
-      imagesContainer.classList.remove('fade-out');
-      
-      if (progress >= 0.20) {
-        imageWrappers.forEach((img) => {
-          img.classList.add('active');
-          img.classList.remove('fade-out');
-        });
-      }
-    }
-    
-    if (progress >= 0.55 && progress < 0.78) {
-      textFinal.classList.add('visible');
-      textFinal.classList.remove('fade-out');
-    }
-    
-    if (progress >= 0.78) {
-      const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
-      
-      if (fadeProgress > 0.15) {
-        imageWrappers.forEach((img) => {
-          img.classList.add('fade-out');
-        });
-        imagesContainer.classList.add('fade-out');
+      let ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            handleAffinityScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
       }
       
-      if (fadeProgress > 0.40) {
-        textFinal.classList.add('fade-out');
-      }
-    }
-  }
-  
-  let ticking = false;
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        handleAffinityScroll();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-  
-  window.addEventListener('scroll', onScroll, { passive: true });
-  handleAffinityScroll();
-})();
-</script>
+      window.addEventListener('scroll', onScroll, { passive: true });
+      handleAffinityScroll();
+    })();
+
+    console.log('✅ Script principal cargado correctamente');
+
+  </script>
 </body>
 </html>

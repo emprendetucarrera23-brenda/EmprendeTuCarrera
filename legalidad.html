@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legalidad y Aclaraciones - Emprende Tu Carrera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="politicas.css">
+  <link rel="stylesheet" href="legalidad.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="programas.html">Programas</a></li>
+          <li><a href="directorio.html">Directorio</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Inicio</a>
+      <a href="conocenos.html">Conócenos</a>
+      <a href="programas.html">Programas</a>
+      <a href="directorio.html">Directorio</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       MODAL 
+       ============================================ -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+        <div class="modal-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" placeholder="tu@mail.com" required>
+          </div>
+          <div>
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" required>
+          </div>
+        </div>
+        <div class="modal-row">
+          <div>
+            <label>Profesión actual *</label>
+            <input type="text" placeholder="Ej: Desarrollador" required>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required>
+              <option value="">Selecciona un programa</option>
+              <option>Transformación Profesional</option>
+              <option>Programas de liderazgo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================
+       PARTÍCULAS DE FONDO FLOTANTES
+       ============================================ -->
+  <div class="particles-background" id="particlesContainer"></div>
+
+  <main class="container">
+    <!-- HEADER CON TÍTULO Y DESCRIPCIÓN -->
+    <header class="legal-header">
+      <h1>Legalidad y Aclaraciones</h1>
+      <p>
+        En Emprende Tu Carrera operamos con total transparencia y en estricto cumplimiento 
+        de la legislación colombiana. A continuación, te explicamos los fundamentos legales 
+        de nuestros servicios y aclaramos aspectos importantes sobre tu relación con nosotros.
+      </p>
+    </header>
+
+    <div class="layout-grid">
+      <!-- ================= ASIDE / ÍNDICE LEGAL ================= -->
+      <aside class="sidebar">
+        <div class="glass-card sticky-nav">
+          <h3>Índice Legal</h3>
+          <nav class="side-links">
+            <a href="#validez-legal" class="active">Validez Legal</a>
+            <a href="#cumplimiento">Cumplimiento de Leyes</a>
+            <a href="#cobro">Cobro de Asesoramiento</a>
+            <a href="#aclaraciones">Aclaraciones Importantes</a>
+          </nav>
+          <a href="politicas.html" class="back-to-policies-btn">
+            <i class="fas fa-arrow-left"></i>
+            <span>Volver a Políticas</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ================= CONTENIDO PRINCIPAL ================= -->
+      <div class="content-body">
+
+        <!-- ===== 1. VALIDEZ LEGAL ===== -->
+        <section id="validez-legal" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-balance-scale"></i></div>
+          <h2>1. Validez Legal</h2>
+          <p>
+            Nuestras políticas y servicios cumplen con todas las normativas legales 
+            vigentes en Colombia, garantizando un marco de confianza y protección 
+            para todos nuestros usuarios.
+          </p>
+        </section>
+
+        <!-- ===== 2. CUMPLIMIENTO DE LEYES Y REGULACIONES ===== -->
+        <section id="cumplimiento" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-gavel"></i></div>
+          <h2>2. Cumplimiento de Leyes y Regulaciones</h2>
+          <p>
+            Estas políticas cumplen con la legislación colombiana relacionada con la 
+            protección de datos personales y la prestación de servicios educativos, incluyendo:
+          </p>
+
+          <div class="law-cards">
+            <div class="law-card">
+              <div class="law-icon">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <h4>Ley 1581 de 2012</h4>
+              <p>
+                Establece la obligación de proteger y gestionar de manera responsable el uso 
+                de los datos personales. Nuestra Política de Privacidad y Tratamiento de Datos 
+                garantiza el manejo adecuado de la información de los aspirantes.
+              </p>
+            </div>
+
+            <div class="law-card">
+              <div class="law-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h4>Decreto 1377 de 2013</h4>
+              <p>
+                Regula aspectos específicos sobre la autorización, uso y tratamiento de datos 
+                personales, asegurando que los aspirantes conserven derechos claros y efectivos 
+                sobre su información.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3. COBRO DE ASESORAMIENTO ===== -->
+        <section id="cobro" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-hand-holding-dollar"></i></div>
+          <h2>3. Cobro de Asesoramiento</h2>
+          
+          <div class="highlight-box">
+            <div class="highlight-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="highlight-content">
+              <h3>Cobro Legal y Válido</h3>
+              <p>
+                El cobro de <strong>$320.000 COP</strong> por concepto de asesoramiento es legal 
+                y válido bajo las leyes colombianas, dado que corresponde a un servicio de valor 
+                agregado que incluye:
+              </p>
+            </div>
+          </div>
+
+          <ul class="check-list">
+            <li>Orientación académica personalizada</li>
+            <li>Gestión del proceso de inscripción y matrícula</li>
+            <li>Soporte y acompañamiento continuo</li>
+          </ul>
+
+          <div class="legal-note">
+            <i class="fas fa-info-circle"></i>
+            <div>
+              <p>
+                Según la legislación vigente, las empresas tienen derecho a cobrar por los 
+                servicios prestados, siempre que:
+              </p>
+              <ul class="inline-checks">
+                <li><i class="fas fa-check"></i> Se informe de manera clara, suficiente y oportuna al consumidor</li>
+                <li><i class="fas fa-check"></i> El consumidor acepte expresamente las condiciones del servicio</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="law-reference">
+            La <strong>Ley 1480 de 2011 (Estatuto del Consumidor)</strong> exige a las empresas 
+            actuar con transparencia y buena fe, garantizando información clara y veraz respecto 
+            a los costos y términos del servicio. <span class="highlight-text">ETC cumple estrictamente 
+            con estas disposiciones.</span>
+          </p>
+        </section>
+
+        <!-- ===== 4. ACLARACIONES IMPORTANTES ===== -->
+        <section id="aclaraciones" class="glass-card policy-block">
+          <div class="icon-wrap"><i class="fas fa-lightbulb"></i></div>
+          <h2>4. Aclaraciones Importantes</h2>
+
+          <div class="clarification-grid">
+            <!-- Transparencia -->
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-eye"></i>
+                <h4>Transparencia y Buena Fe</h4>
+              </div>
+              <p>
+                En ETC actuamos siempre con transparencia y buena fe, proporcionando información 
+                clara, veraz y suficiente sobre los costos y términos de nuestros servicios.
+              </p>
+              <div class="clarification-footer">
+                <i class="fas fa-star"></i>
+                <span>Recomendamos a los aspirantes leer y comprender en su totalidad estas 
+                políticas antes de formalizar su suscripción.</span>
+              </div>
+            </div>
+
+            <!-- Intermediación -->
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-handshake"></i>
+                <h4>Intermediación</h4>
+              </div>
+              <p>
+                ETC actúa exclusivamente como intermediario y gestor entre el aspirante y las 
+                universidades aliadas, facilitando un proceso de inscripción y matrícula más eficiente.
+              </p>
+              <div class="clarification-footer">
+                <i class="fas fa-university"></i>
+                <span>Los pagos de mensualidades, matrículas y demás costos académicos adicionales 
+                serán gestionados directamente entre el aspirante y la universidad seleccionada.</span>
+              </div>
+            </div>
+
+            <!-- Modificaciones -->
+            <div class="clarification-card">
+              <div class="clarification-header">
+                <i class="fas fa-rotate"></i>
+                <h4>Modificaciones</h4>
+              </div>
+              <p>
+                ETC se reserva el derecho de modificar estas políticas en cualquier momento.
+              </p>
+              <div class="clarification-footer">
+                <i class="fas fa-bell"></i>
+                <span>Cualquier cambio será comunicado de manera oportuna a los aspirantes a través 
+                de nuestra página web o por correo electrónico.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Sección de CTA adicional -->
+  <section class="policies-cta-section">
+    <div class="cta-container">
+      <div class="cta-icon-large">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <h2 class="cta-title">¿Tienes dudas sobre nuestras políticas?</h2>
+      <p class="cta-text">
+        Nuestro equipo legal está disponible para resolver cualquier inquietud que tengas sobre nuestros términos y condiciones.
+      </p>
+      <button class="cta-btn" id="ctaContactBtn">
+        <span>Contactar al equipo legal</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER - MANTIENE EL ESTILO ORIGINAL
+       ============================================ -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <!-- Versión Desktop -->
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="programas.html">Programas</a></li>
+            <li><a href="directorio.html">Directorio</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-heading">Marco Legal</h4>
+          <ul class="footer-links">
+            <li><a href="politicas.html">Políticas</a></li>
+            <li><a href="#">PQRS</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Correo corporativo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Versión Mobile con Acordeones -->
+      <div class="footer-mobile mobile-footer">
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="empresa">
+            <span>Empresa</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="empresa">
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="conocenos.html">Conócenos</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="directorio.html">Directorio</a></li>
+              <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="legal">
+            <span>Marco Legal</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="legal">
+            <ul class="footer-links">
+              <li><a href="politicas.html">Políticas</a></li>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+              <li><a href="#">Correo corporativo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Central (Mobile) -->
+      <div class="footer-logo-mobile mobile-only">
+        <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom-section">
+        <div class="social-links-footer">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        
+        <div class="footer-legal">
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    console.log('✅ Legalidad y Aclaraciones - Inicializando...');
+
+        // ============================================
+        // 1. NAVBAR SCROLL EFFECT
+        // ============================================
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        });
+
+        // ============================================
+        // 2. MODAL - ABRIR Y CERRAR
+        // ============================================
+        const modal = document.getElementById("modal");
+        const openModalButtons = document.querySelectorAll("#openModal, #ctaContactBtn");
+        const closeModal = document.querySelector(".custom-close");
+
+        // Abrir modal desde cualquier botón
+        openModalButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "flex";
+            document.body.style.overflow = 'hidden';
+            console.log('✅ Modal abierto');
+        });
+        });
+
+        // Cerrar modal con X
+        if (closeModal) {
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+            document.body.style.overflow = '';
+            console.log('❌ Modal cerrado');
+        });
+        }
+
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = '';
+        }
+        });
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+            modal.style.display = "none";
+            document.body.style.overflow = '';
+        }
+        });
+
+        // Submit del formulario
+        const modalForm = document.querySelector(".modal-form");
+        if (modalForm) {
+        modalForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("¡Formulario enviado! Un especialista te contactará pronto.");
+            modal.style.display = "none";
+            document.body.style.overflow = '';
+            modalForm.reset();
+        });
+        }
+
+        // ============================================
+        // 3. MOBILE MENU TOGGLE
+        // ============================================
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            document.body.style.overflow = '';
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            document.body.style.overflow = '';
+            });
+        });
+        }
+
+        // ============================================
+        // 4. FOOTER ACCORDIONS (MOBILE)
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-accordion');
+            const content = document.getElementById(targetId);
+            const isActive = this.classList.contains('active');
+            
+            // Cerrar todos
+            document.querySelectorAll('.accordion-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.accordion-content').forEach(cnt => {
+                cnt.classList.remove('active');
+            });
+            
+            // Abrir el clickeado
+            if (!isActive) {
+                this.classList.add('active');
+                content.classList.add('active');
+            }
+            });
+        });
+        });
+
+        // ============================================
+        // 5. PARTÍCULAS FLOTANTES DE FONDO
+        // ============================================
+        (function initParticles() {
+        const container = document.getElementById('particlesContainer');
+        if (!container) return;
+
+        const particleCount = 25;
+        const colors = [
+            'rgba(255, 25, 112, 0.8)',
+            'rgba(219, 18, 175, 0.6)',
+            'rgba(162, 0, 250, 0.5)',
+            'rgba(60, 23, 219, 0.4)'
+        ];
+
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'light-particle';
+            
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            const yPosition = Math.random() * 100;
+            particle.style.top = `${yPosition}%`;
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.background = `radial-gradient(circle, ${color}, transparent)`;
+            
+            const duration = Math.random() * 15 + 10;
+            particle.style.animationDuration = `${duration}s`;
+            
+            const delay = Math.random() * 5;
+            particle.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(particle);
+            
+            particle.addEventListener('animationiteration', () => {
+            particle.remove();
+            createParticle();
+            });
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            setTimeout(() => createParticle(), i * 200);
+        }
+
+        console.log('✨ Partículas flotantes inicializadas');
+        })();
+
+        // ============================================
+        // 6. ANIMACIONES DE SCROLL PARA CARDS
+        // ============================================
+        (function initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        }, observerOptions);
+
+        const policyCards = document.querySelectorAll('.glass-card');
+        policyCards.forEach(card => {
+            observer.observe(card);
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+
+        // Aplicar clase visible cuando se observe
+        const style = document.createElement('style');
+        style.textContent = `
+            .glass-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            }
+        `;
+        document.head.appendChild(style);
+
+        console.log('👁️ Observer de scroll inicializado para', policyCards.length, 'cards');
+        })();
+
+        // ============================================
+        // 7. SMOOTH SCROLL PARA NAVEGACIÓN
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+            const navbarHeight = navbar.offsetHeight;
+            const targetPosition = target.offsetTop - navbarHeight - 20;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Actualizar enlace activo en el sidebar
+            document.querySelectorAll('.side-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            }
+        });
+        });
+
+        // ============================================
+        // 8. ACTIVE LINK EN SCROLL
+        // ============================================
+        (function initActiveLinks() {
+        const sections = document.querySelectorAll('.policy-block');
+        const navLinks = document.querySelectorAll('.side-links a');
+
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '-100px 0px -60% 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+                });
+            }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+        })();
+
+        // ============================================
+        // 9. PERFORMANCE: REDUCIR ANIMACIONES EN MOBILE
+        // ============================================
+        (function optimizeForMobile() {
+        if (window.innerWidth <= 768) {
+            const particles = document.querySelectorAll('.light-particle');
+            particles.forEach((particle, index) => {
+            if (index % 2 === 0) {
+                particle.style.animationDuration = '20s';
+            } else {
+                particle.remove();
+            }
+            });
+            console.log('📱 Optimizaciones para móvil aplicadas');
+        }
+        })();
+
+        console.log('✅ Todos los scripts inicializados correctamente');
+
+  </script>
+
+</body>
+</html>
