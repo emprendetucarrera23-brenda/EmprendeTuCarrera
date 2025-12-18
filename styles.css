@@ -6018,6 +6018,481 @@ button:focus {
   }
 }
 
+/* ============================================
+   RESPONSIVE TESTIMONIOS
+   ============================================ */
+
+/* Tablets grandes */
+@media (max-width: 1200px) {
+    .carousel-btn-prev {
+        left: -2.5rem;
+    }
+    
+    .carousel-btn-next {
+        right: -2.5rem;
+    }
+    
+    .carousel-btn {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .slide-content {
+        padding: 2rem 2.5rem;
+        gap: 1.75rem;
+    }
+    
+    .profile-image {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .testimonials-content {
+        padding: 4rem 1.5rem;
+    }
+    
+    .carousel-btn-prev {
+        left: -2rem;
+    }
+    
+    .carousel-btn-next {
+        right: -2rem;
+    }
+    
+    .carousel-slides {
+        height: 550px;
+    }
+    
+    .slide-content {
+        padding: 1.75rem 2rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1.05rem;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+    .testimonials-wrapper {
+        min-height: auto;
+    }
+    
+    .testimonials-content {
+        padding: 3rem 1.25rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .header-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .testimonials-title {
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .testimonials-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Ocultar botones de navegación en móvil */
+    .carousel-btn {
+        display: none;
+    }
+
+    .main-carousel-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .carousel-slides {
+        height: auto;
+        min-height: 550px;
+    }
+
+    /* Layout vertical en móvil */
+    .slide-content {
+        flex-direction: column;
+        padding: 1.75rem 1.25rem;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-section {
+        margin: 0 auto;
+    }
+
+    .profile-image {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .profile-badge {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .profile-badge svg {
+        width: 1.35rem;
+        height: 1.35rem;
+    }
+
+    .testimonial-content {
+        text-align: center;
+    }
+
+    .stars-rating {
+        justify-content: center;
+        margin-bottom: 1.25rem;
+    }
+
+    .stars-rating svg {
+        width: 1.15rem;
+        height: 1.15rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+    }
+
+    .author-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .author-name {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    .author-role {
+        text-align: center;
+    }
+
+    .author-badges {
+        justify-content: center;
+        gap: 0.65rem;
+    }
+
+    .badge {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    /* Ajustar elementos decorativos */
+    .floating-quote svg {
+        width: 6rem;
+        height: 6rem;
+        opacity: 0.08;
+    }
+
+    .corner-accent {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    /* Dots más grandes en móvil */
+    .carousel-dots {
+        gap: 0.65rem;
+        margin-top: 1.75rem;
+    }
+
+    .dot {
+        height: 0.6rem;
+        width: 0.6rem;
+    }
+
+    .dot.active {
+        width: 2.5rem;
+    }
+
+    /* Grid de testimonios */
+    .testimonials-grid-section {
+        margin-top: 3.5rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .grid-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .grid-card-content {
+        padding: 1.35rem;
+    }
+
+    /* CTA Section */
+    .cta-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-description {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        padding: 0.9rem 1.75rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .testimonials-content {
+        padding: 2.5rem 1rem;
+    }
+
+    .testimonials-header {
+        margin-bottom: 3rem;
+    }
+
+    .header-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .testimonials-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonials-subtitle {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .carousel-slides {
+        min-height: 520px;
+    }
+
+    .slide-card {
+        border-radius: 1.25rem;
+    }
+
+    .slide-content {
+        padding: 1.5rem 1rem;
+        gap: 1.25rem;
+    }
+
+    .profile-image {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-width: 3px;
+    }
+
+    .profile-badge {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-width: 3px;
+    }
+
+    .profile-badge svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .stars-rating {
+        margin-bottom: 1rem;
+    }
+
+    .stars-rating svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .author-name {
+        font-size: 1.05rem;
+    }
+
+    .author-role {
+        font-size: 0.85rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .badge svg {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .floating-quote svg {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .corner-accent {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .carousel-dots {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .dot {
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+
+    .dot.active {
+        width: 2rem;
+    }
+
+    /* Grid cards más compactas */
+    .grid-title {
+        font-size: 1.35rem;
+    }
+
+    .grid-card-content {
+        padding: 1.15rem;
+    }
+
+    .grid-card-image {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .grid-card-name {
+        font-size: 0.95rem;
+    }
+
+    .grid-card-role {
+        font-size: 0.8rem;
+    }
+
+    .grid-card-text {
+        font-size: 0.85rem;
+    }
+
+    .grid-card-badge {
+        padding: 0.2rem 0.65rem;
+        font-size: 0.7rem;
+    }
+
+    /* CTA más compacta */
+    .cta-content {
+        padding: 1.75rem 1.25rem;
+        border-radius: 1.25rem;
+    }
+
+    .cta-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .cta-title {
+        font-size: 1.35rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .cta-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles extra pequeños */
+@media (max-width: 360px) {
+    .testimonials-title {
+        font-size: 1.5rem;
+    }
+
+    .carousel-slides {
+        min-height: 500px;
+    }
+
+    .profile-image {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .profile-badge {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .floating-quote {
+        display: none;
+    }
+}
+
+/* Optimización de rendimiento en móviles */
+@media (max-width: 768px) {
+    /* Reducir blur effects para mejor rendimiento */
+    .slide-glow {
+        filter: blur(1rem);
+    }
+
+    .profile-glow {
+        filter: blur(0.75rem);
+    }
+
+    .icon-glow {
+        filter: blur(0.75rem);
+    }
+
+    .dot-glow {
+        filter: blur(0.5rem);
+    }
+
+    /* Simplificar animaciones */
+    .gradient-orb {
+        filter: blur(80px);
+        animation-duration: 15s;
+    }
+
+    /* Reducir complejidad de fondos */
+    .grid-pattern {
+        background-size: 80px 80px;
+        opacity: 0.5;
+    }
+}
+
 
 
 
