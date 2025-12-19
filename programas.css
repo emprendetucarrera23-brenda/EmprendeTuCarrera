@@ -430,10 +430,10 @@ nav.scrolled {
 .programs-section {
   position: relative;
   min-height: 100vh;
-  padding: 80px 24px;
-  display: flex;
-  align-items: center;
+  padding: 80px 0 400px;
+  display: block;
   background: #000;
+  overflow: visible !important;
 }
 
 .programs-container {
@@ -442,6 +442,9 @@ nav.scrolled {
   width: 100%;
   display: flex;
   gap: 80px;
+  padding: 0 24px;
+  overflow: visible !important;
+  position: relative;
 }
 
 /* ==========================================
@@ -453,6 +456,7 @@ nav.scrolled {
   height: fit-content;
   width: 280px;
   flex-shrink: 0;
+  overflow: visible !important;
 }
 
 .sidebar-line {
@@ -536,8 +540,9 @@ nav.scrolled {
 .programs-content {
   flex: 1;
   min-width: 0;
+  overflow: visible !important;
+  position: relative;
 }
-
 .content-header {
   margin-bottom: 48px;
   opacity: 0;
@@ -576,33 +581,46 @@ nav.scrolled {
    ========================================== */
 .programs-slider-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
+  margin: 150px 0;
+  padding: 0;
 }
 
 .programs-slider {
   display: flex;
   gap: 32px;
   overflow-x: auto;
+  overflow-y: visible !important;
   scroll-behavior: smooth;
-  padding: 20px 0;
+  padding: 0;
+  margin: 0;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
 }
-
 .programs-slider::-webkit-scrollbar {
   display: none;
 }
 
+
 .program-card {
   min-width: 360px;
+  max-width: 360px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 40px;
+  margin: 80px 0;
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateX(60px);
   animation: slideIn 0.6s ease-out forwards;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  will-change: transform;
 }
+
 
 @keyframes slideIn {
   to {
@@ -620,9 +638,10 @@ nav.scrolled {
 .program-card:nth-child(7) { animation-delay: 0.7s; }
 
 .program-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255, 25, 112, 0.3);
-  box-shadow: 0 20px 60px rgba(255, 25, 112, 0.2);
+  transform: translateY(-20px) scale(1.03);
+  border-color: rgba(255, 25, 112, 0.5);
+  box-shadow: 0 40px 100px rgba(255, 25, 112, 0.4);
+  z-index: 100;
 }
 
 .program-icon {

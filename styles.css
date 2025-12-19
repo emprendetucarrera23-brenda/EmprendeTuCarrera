@@ -1496,9 +1496,9 @@ section {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(255, 25, 112, 0.15),
-    rgba(219, 18, 175, 0.1),
-    rgba(162, 0, 250, 0.08),
+    rgba(255, 25, 113, 0.527),
+    rgba(219, 18, 175, 0.521),
+    rgba(162, 0, 250, 0.39),
     transparent 65%
   );
   opacity: 0;
@@ -2434,12 +2434,6 @@ section {
   color: #9ca3af;
 }
 
-/* ============================================
-   TESTIMONIALS SECTION - ESTILOS COMPLETOS
-   ============================================ */
-
-/* IMPORTANTE: Estos estilos deben añadirse al archivo styles.css principal
-   NO crear un archivo separado testimonials.css */
 
 /* ============================================
    VARIABLES DE TESTIMONIOS
@@ -3583,18 +3577,6 @@ section {
 /* ============================================
    INSTRUCCIONES DE INTEGRACIÓN
    ============================================ */
-
-/* COPIAR TODO ESTE CONTENIDO AL FINAL DE styles.css
-   
-   NO crear archivo testimonials.css separado
-   
-   Los estilos están encapsulados con:
-   - .testimonials-wrapper
-   - .carousel-* (para el carrusel de logos)
-   - Variables CSS con prefijo --testimonials-*
-   
-   Esto evita conflictos con otros estilos del sitio.
-*/
 
 /* ============================================
    RESET Y BASE PARA LA SECCIÓN
