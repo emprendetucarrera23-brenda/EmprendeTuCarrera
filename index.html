@@ -142,20 +142,26 @@
     </div>
   </section>
 
-  <!-- MODAL DE VIDEO - CORREGIDO -->
-  <div id="videoModal" class="video-modal">
-    <div class="video-modal-content">
-      <button class="video-close" id="closeVideoModal">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="video-container">
-        <video id="demoVideo" controls>
-          <source src="https://ik.imagekit.io/v3kitfabd/Final%20Final%20No%20Va%20Mas.mp4" type="video/mp4">
-          Tu navegador no soporta el elemento de video.
-        </video>
+    <!-- MODAL DE VIDEO - VERSIÓN CORREGIDA -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-modal-content">
+        <button class="video-close" id="closeVideoModal" aria-label="Cerrar video">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="video-container">
+          <video 
+            id="demoVideo" 
+            controls 
+            preload="metadata" 
+            playsinline
+            controlsList="nodownload"
+            style="width: 100%; height: 100%;">
+            <source src="https://ik.imagekit.io/vlolpiyza/Final%20Final%20No%20Va%20Mas.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
       </div>
     </div>
-  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -304,77 +310,46 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE TESTIMONIOS -->
-  <section id="testimonials-section" class="testimonials-wrapper">
-    <!-- Fondo animado -->
-    <div class="testimonials-bg">
-      <!-- Orbes de gradiente -->
-      <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
+   <!-- SECCIÓN DE TESTIMONIOS MINIMALISTA -->
+  <section class="testimonials-minimal">
+    <div class="testimonials-container-minimal">
       
-      <!-- Grid -->
-      <div class="grid-pattern"></div>
-      
-      <!-- Partículas flotantes -->
-      <div class="particles-container"></div>
-      
-      <!-- Línea animada -->
-      <div class="animated-line"></div>
-    </div>
+      <!-- Header -->
+      <header class="testimonials-header-minimal">
+        <div class="testimonials-badge-minimal">Recomendaciones y reseñas</div>
+        <h1 class="testimonials-title-minimal">
+          Inspírate<span class="gradient">con sus historias</span>
+        </h1>
+        <p class="testimonials-subtitle-minimal">
+          "Nada nos satisface más que ver a nuestros aspirantes alcanzar sus metas. Aquí compartimos algunas de sus historias, un verdadero testimonio del compromiso y la calidad que nos definen."
+        </p>
+      </header>
 
-    <!-- Contenido -->
-    <div class="testimonials-content">
-      <div class="testimonials-container">
-        <!-- Header -->
-        <header class="testimonials-header">
-          <div class="header-icon-wrapper">
-            <div class="icon-glow"></div>
-            <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-            </svg>
-          </div>
-
-          <h1 class="testimonials-title">
-            <span class="title-white">Historias de </span>
-            <span class="title-gradient">Éxito</span>
-          </h1>
-
-          <p class="testimonials-subtitle">
-            Conoce las experiencias de quienes transformaron su futuro con Emprende Tu Carrera
-          </p>
-        </header>
-
-        <!-- Carousel Principal -->
-        <div class="main-carousel-wrapper">
-          <div class="carousel-navigation">
-            <!-- Botón Anterior -->
-            <button class="carousel-btn carousel-btn-prev" id="prevBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m15 18-6-6 6-6"/>
-              </svg>
-              <div class="btn-glow"></div>
-            </button>
-
-            <!-- Botón Siguiente -->
-            <button class="carousel-btn carousel-btn-next" id="nextBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-              <div class="btn-glow"></div>
-            </button>
-          </div>
-
-          <!-- Slides Container -->
-          <div class="carousel-slides" id="carouselSlides">
-            <!-- Los slides se generarán dinámicamente con JS -->
-          </div>
-
-          <!-- Dots Navigation -->
-          <div class="carousel-dots" id="carouselDots">
-            <!-- Los dots se generarán dinámicamente con JS -->
-          </div>
+      <!-- Carrusel -->
+      <div class="carousel-wrapper-minimal">
+        
+        <!-- Navegación -->
+        <div class="carousel-nav-minimal">
+          <button class="carousel-btn-minimal prev" id="prevBtnMinimal" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn-minimal next" id="nextBtnMinimal" aria-label="Siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+
+        <!-- Slides -->
+        <div class="carousel-slides-minimal" id="carouselSlidesMinimal">
+          <!-- Los slides se generarán dinámicamente con JavaScript -->
+        </div>
+
+        <!-- Dots -->
+        <div class="carousel-dots-minimal" id="carouselDotsMinimal">
+          <!-- Los dots se generarán dinámicamente con JavaScript -->
+        </div>
+        
       </div>
+
     </div>
   </section>
 
@@ -631,349 +606,410 @@
       </div>
     </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+
 
   <script>
 
+     // ============================================
+    // ESPERAR A QUE EL DOM ESTÉ COMPLETAMENTE CARGADO
     // ============================================
-    // NAVBAR SCROLL EFFECT
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('✅ DOM cargado - Inicializando scripts...');
+      
     // ============================================
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
+    // MODAL DE VIDEO 
+    // ============================================
+    const videoModal = document.getElementById('videoModal');
+    const openVideoModal = document.getElementById('openVideoModal');
+    const closeVideoModal = document.getElementById('closeVideoModal');
+    const demoVideo = document.getElementById('demoVideo');
 
-    // ============================================
-    // MODAL MAS INFORMACION
-    // ============================================
-    const modal = document.getElementById("modal");
-    const openModal = document.getElementById("openModal");
-    const closeModal = document.querySelector(".custom-close");
+    if (!videoModal || !openVideoModal || !closeVideoModal || !demoVideo) {
+      console.error('❌ Elementos del modal de video no encontrados');
+      console.log('videoModal:', videoModal);
+      console.log('openVideoModal:', openVideoModal);
+      console.log('closeVideoModal:', closeVideoModal);
+      console.log('demoVideo:', demoVideo);
+    } else {
+      console.log('✅ Todos los elementos del modal encontrados');
+      console.log('🔹 Video URL:', demoVideo.querySelector('source')?.src);
 
-    if (openModal) {
-      openModal.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.style.display = "flex";
+      // Event listeners para debugging del video
+      demoVideo.addEventListener('loadstart', () => console.log('🔥 Video: Iniciando carga...'));
+      demoVideo.addEventListener('loadedmetadata', () => console.log('✅ Video: Metadata cargada'));
+      demoVideo.addEventListener('loadeddata', () => console.log('✅ Video: Datos cargados'));
+      demoVideo.addEventListener('canplay', () => console.log('✅ Video: Listo para reproducir'));
+      demoVideo.addEventListener('playing', () => console.log('▶️ Video: Reproduciendo'));
+      demoVideo.addEventListener('pause', () => console.log('⏸️ Video: Pausado'));
+      demoVideo.addEventListener('ended', () => console.log('⏹️ Video: Terminado'));
+      demoVideo.addEventListener('error', (e) => {
+        console.error('❌ Video ERROR:', e);
+        console.error('Error code:', demoVideo.error?.code);
+        console.error('Error message:', demoVideo.error?.message);
+        
+        // Mostrar mensaje al usuario
+        const videoContainer = document.querySelector('.video-container');
+        if (videoContainer) {
+          videoContainer.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; flex-direction: column; gap: 20px;">
+              <i class="fas fa-exclamation-triangle" style="font-size: 48px; color: #FF1970;"></i>
+              <p style="font-size: 18px; text-align: center;">No se pudo cargar el video.<br>Por favor, intenta nuevamente.</p>
+            </div>
+          `;
+        }
       });
-    }
-
-    if (closeModal) {
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-    }
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    });
-
-    // ============================================
-    // MODAL DE VIDEO - CORREGIDO
-    // ============================================
-    function initVideoModal() {
-      const videoModal = document.getElementById('videoModal');
-      const openVideoModal = document.getElementById('openVideoModal');
-      const closeVideoModal = document.getElementById('closeVideoModal');
-      const demoVideo = document.getElementById('demoVideo');
-
-      if (!videoModal || !openVideoModal || !closeVideoModal || !demoVideo) {
-        console.error('❌ Elementos del modal de video no encontrados');
-        return;
-      }
-
-      console.log('✅ Modal de video inicializado');
 
       function closeVideo() {
+        console.log('🔴 Cerrando modal...');
+        
+        // Remover clase active primero
         videoModal.classList.remove('active');
+        
+        // Pausar y resetear video
         demoVideo.pause();
         demoVideo.currentTime = 0;
-        document.body.style.overflow = 'auto';
+        
+        // Remover scroll lock
+        document.body.style.overflow = '';
+        
+        // Esperar a que termine la animación antes de ocultar
+        setTimeout(() => {
+          videoModal.style.display = 'none';
+        }, 300);
+        
+        console.log('✅ Modal cerrado');
       }
 
-      openVideoModal.addEventListener('click', (e) => {
+      openVideoModal.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log('🎬 Abriendo modal de video');
-        videoModal.classList.add('active');
-        demoVideo.play().catch(err => {
-          console.error('Error al reproducir video:', err);
-        });
-        document.body.style.overflow = 'hidden';
+        e.stopPropagation();
+        console.log('🎬 Abriendo modal de video...');
+        
+        // Forzar display primero
+        videoModal.style.display = 'flex';
+        
+        // Agregar clase active después de un pequeño delay
+        setTimeout(() => {
+          videoModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          
+          console.log('Modal classes:', videoModal.className);
+          console.log('Modal display:', window.getComputedStyle(videoModal).display);
+          console.log('Modal opacity:', window.getComputedStyle(videoModal).opacity);
+          
+          // Intentar reproducir el video después de que sea visible
+          setTimeout(() => {
+            console.log('🎯 Intentando reproducir video...');
+            demoVideo.load(); // Forzar recarga
+            
+            // Intentar reproducir
+            const playPromise = demoVideo.play();
+            
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  console.log('✅ Video reproduciendo exitosamente');
+                })
+                .catch(err => {
+                  console.warn('⚠️ Autoplay bloqueado:', err.name, err.message);
+                  console.log('ℹ️ El usuario debe dar play manualmente');
+                  
+                  // Mostrar controles prominentemente
+                  demoVideo.controls = true;
+                });
+            }
+          }, 300);
+        }, 50);
       });
 
-      closeVideoModal.addEventListener('click', (e) => {
+      closeVideoModal.addEventListener('click', function(e) {
         e.preventDefault();
-        console.log('❌ Cerrando modal de video');
+        e.stopPropagation();
+        console.log('❌ Click en botón cerrar');
         closeVideo();
       });
 
-      videoModal.addEventListener('click', (e) => {
+      videoModal.addEventListener('click', function(e) {
         if (e.target === videoModal) {
+          console.log('❌ Click fuera del contenido - cerrando');
           closeVideo();
         }
       });
 
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+          console.log('⌨️ ESC presionado - cerrando modal');
           closeVideo();
         }
       });
     }
 
-    // Inicializar cuando el DOM esté listo
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initVideoModal);
-    } else {
-      initVideoModal();
-    }
-
-    // ============================================
-    // MOBILE MENU TOGGLE
-    // ============================================
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        
-        if (mobileMenu.classList.contains('active')) {
-          menuIcon.style.display = 'none';
-          closeIcon.style.display = 'block';
+      // ============================================
+      // NAVBAR SCROLL EFFECT
+      // ============================================
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
         } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // ============================================
+      // MODAL MAS INFORMACION
+      // ============================================
+      const modal = document.getElementById("modal");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.querySelector(".custom-close");
+
+      if (openModal) {
+        openModal.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.style.display = "flex";
+        });
+      }
+
+      if (closeModal) {
+        closeModal.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+      }
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+
+      // ============================================
+      // MOBILE MENU TOGGLE
+      // ============================================
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      const closeIcon = document.getElementById('closeIcon');
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          
+          if (mobileMenu.classList.contains('active')) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+          } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+          }
+        });
+      }
+
+      const mobileLinks = mobileMenu?.querySelectorAll('a');
+      mobileLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
           menuIcon.style.display = 'block';
           closeIcon.style.display = 'none';
-        }
+        });
       });
-    }
 
-    const mobileLinks = mobileMenu?.querySelectorAll('a');
-    mobileLinks?.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+      // ============================================
+      // SMOOTH SCROLL
+      // ============================================
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
       });
-    });
 
-    // ============================================
-    // SMOOTH SCROLL
-    // ============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+      // ============================================
+      // PARALLAX EFFECT WITH MOUSE
+      // ============================================
+      document.addEventListener('mousemove', (e) => {
+        const floatingElements = document.querySelectorAll('.floating-element');
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
+        
+        floatingElements.forEach((element, index) => {
+          const speed = (index + 1) * 20;
+          const x = (mouseX - 0.5) * speed;
+          const y = (mouseY - 0.5) * speed;
+          element.style.transform = `translate(${x}px, ${y}px)`;
+        });
       });
-    });
 
-    // ============================================
-    // PARALLAX EFFECT WITH MOUSE
-    // ============================================
-    document.addEventListener('mousemove', (e) => {
-      const floatingElements = document.querySelectorAll('.floating-element');
-      const mouseX = e.clientX / window.innerWidth;
-      const mouseY = e.clientY / window.innerHeight;
-      
-      floatingElements.forEach((element, index) => {
-        const speed = (index + 1) * 20;
-        const x = (mouseX - 0.5) * speed;
-        const y = (mouseY - 0.5) * speed;
-        element.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    });
+      // ============================================
+      // SCROLL ANIMATIONS FOR SECTIONS
+      // ============================================
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
 
-    // ============================================
-    // SCROLL ANIMATIONS FOR SECTIONS
-    // ============================================
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.metric-card, .program-card, .testimonial-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(40px)';
-      el.style.transition = 'all 0.6s ease';
-      observer.observe(el);
-    });
-
-    // ============================================
-    // CONTADOR DE CIFRAS CON PARTÍCULAS
-    // ============================================
-    (function() {
-      const section = document.querySelector('.stats-counter-section');
-      const particlesContainer = document.querySelector('.stats-particles-container');
-      const counterCards = document.querySelectorAll('.stat-counter-card');
-      const counterNumbers = document.querySelectorAll('.stat-counter-number');
-      const header = document.querySelector('.stats-counter-header'); 
-      
-      if (!section || !particlesContainer) return;
-
-      const headerObserver = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
           }
         });
-      }, { threshold: 0.3 });
-      
-      if (header) {
-        headerObserver.observe(header);
-      }
-      
-      function createFloatingParticles() {
-        const colors = [
-          'rgba(255, 25, 112, 0.2)',
-          'rgba(219, 18, 175, 0.2)',
-          'rgba(162, 0, 250, 0.2)',
-          'rgba(60, 23, 219, 0.2)'
-        ];
-        
-        const particleCount = 30;
-        
-        for (let i = 0; i < particleCount; i++) {
-          const particle = document.createElement('div');
-          particle.className = 'floating-stat-particle';
-          
-          const x = Math.random() * 100;
-          const y = Math.random() * 100;
-          const size = Math.random() * 3 + 1;
-          const duration = Math.random() * 20 + 10;
-          const delay = Math.random() * 5;
-          const color = colors[Math.floor(Math.random() * colors.length)];
-          
-          particle.style.left = `${x}%`;
-          particle.style.top = `${y}%`;
-          particle.style.width = `${size}px`;
-          particle.style.height = `${size}px`;
-          particle.style.background = color;
-          particle.style.animationDuration = `${duration}s`;
-          particle.style.animationDelay = `${delay}s`;
-          particle.style.animation = `floatParticle ${duration}s ease-in-out infinite ${delay}s`;
-          
-          particlesContainer.appendChild(particle);
-        }
-      }
-      
-      function animateCounter(element) {
-        const target = parseInt(element.getAttribute('data-target'));
-        const suffix = element.getAttribute('data-suffix') || '';
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-          current += increment;
-          if (current >= target) {
-            element.textContent = formatNumber(target) + suffix;
-          } else {
-            element.textContent = formatNumber(Math.floor(current));
-            requestAnimationFrame(updateCounter);
-          }
-        };
-        
-        requestAnimationFrame(updateCounter);
-      }
-      
-      function formatNumber(num) {
-        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      }
-      
-      const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 100);
-            
-            const numberElement = entry.target.querySelector('.stat-counter-number');
-            if (numberElement) {
-              setTimeout(() => {
-                entry.target.classList.add('counted');
-                animateCounter(numberElement);
-              }, index * 100 + 200);
-            }
-          }
-        });
-      }, { threshold: 0.3 });
-      
-      counterCards.forEach(card => {
-        counterObserver.observe(card);
+      }, observerOptions);
+
+      document.querySelectorAll('.metric-card, .program-card, .testimonial-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
       });
-      
-      createFloatingParticles();
-    })();
 
-    // ============================================
-    // PROGRAM CARDS STAGGER ANIMATION
-    // ============================================
-    const programCards = document.querySelectorAll('.program-card');
-    programCards.forEach((card, index) => {
-      card.style.animationDelay = `${index * 0.1}s`;
-    });
+      // ============================================
+      // CONTADOR DE CIFRAS CON PARTÍCULAS
+      // ============================================
+      (function() {
+        const section = document.querySelector('.stats-counter-section');
+        const particlesContainer = document.querySelector('.stats-particles-container');
+        const counterCards = document.querySelectorAll('.stat-counter-card');
+        const counterNumbers = document.querySelectorAll('.stat-counter-number');
+        const header = document.querySelector('.stats-counter-header'); 
+        
+        if (!section || !particlesContainer) return;
 
-    // ============================================
-    // CARRUSEL DE LOGOS - CORREGIDO
-    // ============================================
-    (function() {
-      'use strict';
-      
-      const logosData = [
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo%20unimeta.png?updatedAt=1765399946908', alt: 'Unimeta' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/LOGO%20CORPESV%201.png?updatedAt=1765399297749', alt: 'corpes' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/577e6684-58d8-4dc0-89b0-5c39b2d43a8b-removebg-preview.png?updatedAt=1765399215535', alt: 'Sumate si puedes' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/0567e5e2-3ed3-4fe4-85ad-0c01c53f2841-removebg-preview.png?updatedAt=1765399215332', alt: 'lonja' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview-removebg-preview.png?updatedAt=1765399215248', alt: 'F.I.T' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/images__1_-removebg-preview.png', alt: 'Interamericana' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview%20(2).png?updatedAt=1765399166754', alt: 'cenproef' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/file-removebg-preview.png?updatedAt=1765399166705', alt: 'coontradecun' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/d306cfbe-38da-4119-a84d-3fdb39474eb9-removebg-preview.png?updatedAt=1765399166775', alt: 'cedutec' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo_CENACAP-removebg-preview.png?updatedAt=1765399166636', alt: 'cenacap' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
-        { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' }
-      ];
+        const headerObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.3 });
+        
+        if (header) {
+          headerObserver.observe(header);
+        }
+        
+        function createFloatingParticles() {
+          const colors = [
+            'rgba(255, 25, 112, 0.2)',
+            'rgba(219, 18, 175, 0.2)',
+            'rgba(162, 0, 250, 0.2)',
+            'rgba(60, 23, 219, 0.2)'
+          ];
+          
+          const particleCount = 30;
+          
+          for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-stat-particle';
+            
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const size = Math.random() * 3 + 1;
+            const duration = Math.random() * 20 + 10;
+            const delay = Math.random() * 5;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            particle.style.left = `${x}%`;
+            particle.style.top = `${y}%`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.background = color;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+            particle.style.animation = `floatParticle ${duration}s ease-in-out infinite ${delay}s`;
+            
+            particlesContainer.appendChild(particle);
+          }
+        }
+        
+        function animateCounter(element) {
+          const target = parseInt(element.getAttribute('data-target'));
+          const suffix = element.getAttribute('data-suffix') || '';
+          const duration = 2000;
+          const increment = target / (duration / 16);
+          let current = 0;
+          
+          const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+              element.textContent = formatNumber(target) + suffix;
+            } else {
+              element.textContent = formatNumber(Math.floor(current));
+              requestAnimationFrame(updateCounter);
+            }
+          };
+          
+          requestAnimationFrame(updateCounter);
+        }
+        
+        function formatNumber(num) {
+          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, index * 100);
+              
+              const numberElement = entry.target.querySelector('.stat-counter-number');
+              if (numberElement) {
+                setTimeout(() => {
+                  entry.target.classList.add('counted');
+                  animateCounter(numberElement);
+                }, index * 100 + 200);
+              }
+            }
+          });
+        }, { threshold: 0.3 });
+        
+        counterCards.forEach(card => {
+          counterObserver.observe(card);
+        });
+        
+        createFloatingParticles();
+      })();
 
-      function initCarousel() {
+      // ============================================
+      // PROGRAM CARDS STAGGER ANIMATION
+      // ============================================
+      const programCards = document.querySelectorAll('.program-card');
+      programCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // ============================================
+      // CARRUSEL DE LOGOS
+      // ============================================
+      (function() {
+        const logosData = [
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo%20unimeta.png?updatedAt=1765399946908', alt: 'Unimeta' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/LOGO%20CORPESV%201.png?updatedAt=1765399297749', alt: 'corpes' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/577e6684-58d8-4dc0-89b0-5c39b2d43a8b-removebg-preview.png?updatedAt=1765399215535', alt: 'Sumate si puedes' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/0567e5e2-3ed3-4fe4-85ad-0c01c53f2841-removebg-preview.png?updatedAt=1765399215332', alt: 'lonja' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview-removebg-preview.png?updatedAt=1765399215248', alt: 'F.I.T' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/images__1_-removebg-preview.png', alt: 'Interamericana' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/download-removebg-preview%20(2).png?updatedAt=1765399166754', alt: 'cenproef' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/file-removebg-preview.png?updatedAt=1765399166705', alt: 'coontradecun' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/d306cfbe-38da-4119-a84d-3fdb39474eb9-removebg-preview.png?updatedAt=1765399166775', alt: 'cedutec' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/logo_CENACAP-removebg-preview.png?updatedAt=1765399166636', alt: 'cenacap' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/ba19e8_22edc069cd2641558a2f70e0c5401712~mv2.png?updatedAt=1765399243738', alt: 'Fundetec' },
+          { src: 'https://ik.imagekit.io/v3kitfabd/convenios/Imagen_de_WhatsApp_2025-08-29_a_las_14.51.04_2529e177-removebg-preview.png?updatedAt=1765386959023', alt: 'Americana' }
+        ];
+
         const track = document.getElementById('carouselTrack');
         
-        if (!track) {
-          console.error('❌ No se encontró carouselTrack');
-          return;
-        }
+        if (!track) return;
         
-        console.log('🔵 Iniciando carrusel de logos...');
-        
-        // Limpiar contenido previo
         track.innerHTML = '';
-        
-        // Crear 3 copias para loop infinito
         const allLogos = [...logosData, ...logosData, ...logosData];
         
-        // Crear items del carrusel
-        allLogos.forEach((logo, index) => {
+        allLogos.forEach((logo) => {
           const item = document.createElement('div');
           item.className = 'carousel-item';
           
@@ -986,325 +1022,250 @@
           track.appendChild(item);
         });
 
-        console.log('✅ Carrusel creado con', allLogos.length, 'logos');
-        
-        // Eventos de pausa
         const items = track.querySelectorAll('.carousel-item');
-        
-        items.forEach((item, index) => {
+        items.forEach((item) => {
           item.addEventListener('mouseenter', function() {
             track.classList.add('paused');
-            console.log('🔴 PAUSADO - Logo:', index);
           });
           
           item.addEventListener('mouseleave', function() {
             track.classList.remove('paused');
-            console.log('🟢 REANUDADO - Logo:', index);
           });
         });
-        
-        console.log('✅ Carrusel de logos iniciado correctamente');
-      }
-
-      // Inicializar cuando el DOM esté listo
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCarousel);
-      } else {
-        initCarousel();
-      }
-    })();
+      })();
 
     // ============================================
-    // CARRUSEL DE TESTIMONIOS
+    // CARRUSEL DE TESTIMONIOS MINIMALISTA
     // ============================================
-    const testimonials = [
-      {
-        id: 1,
-        name: 'Thomas Ojeda',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a-/ALV-UjUBmfbex3DuU1Y8C528AgB-Xt4_5KVUjN27FaaUe9ZgmEex_Rw4=w72-h72-p-rp-mo-br100',
-        testimonial: 'Me ayudaron mucho con mi proyecto de vida estoy muy agradecido definitivamente son los mejores',
-        rating: 5,
-        achievement: 'Graduado en 18 meses'
-      },
-      {
-        id: 2,
-        name: 'Diana',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a-/ALV-UjVUr8Gad2_QXUe5_5gGQuTNl0nW2LjofdhxEFdtW7gHGulc0q8R=w72-h72-p-rp-mo-br100',
-        testimonial: 'ÉSTE MENSAJE ES CON TODO EL CORAZÓN, DISCULPEN SI LO ESCRIBO EN MAYÚSCULA PERO ES QUE QUIERO RESALTAR ÉSTE COMENTARIO, NO SE CÓMO AGRADECERLES SU AYUDA Y COMPROMISO CON NUESTRO PROYECTO DE VIDA!! GRACIAS A USTEDES MI VIDA CAMBIÓ, GRACIAS POR AYUDARNOS A CONSTRUIR UUN MEJOR FUTURO PARA NUESTRAS VIDAS Y FAMILIAS, GRACIAS INFINITAS.. FAMILIA EMPRENDE TU CARRERA!',
-        rating: 5,
-        achievement: 'Ascenso laboral 3 meses después'
-      },
-      {
-        id: 3,
-        name: 'Alvaro Orjuela Guerrero',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a/ACg8ocIOFXA52V6zT_xy88a5Ad3w5EligHu7ZHGMZu9T_1I3_ZoC1Q=w72-h72-p-rp-mo-br100',
-        testimonial: 'Mi experiencia con la señorita Yuli Andrea Hernández ha sido, no solamente grata sino, de una eficiencia ponderable. Muy contento y agradecido por su gestión, don de gentes y profesionalismo❗.',
-        rating: 5,
-        achievement: 'Consultorio propio'
-      },
-      {
-        id: 4,
-        name: 'Carolina Consuegra',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a-/ALV-UjVCJc86xFLaOP8XT8xekpJ5N5QVmw1RN1yopRnuyRqJaFffEoM=w72-h72-p-rp-mo-br100',
-        testimonial: 'He tenido hasta el momento una muy buena experiencia, estamos cumpliendo con las expectativas de formación académica y muy importante saber bien muy bien el proceso para luego si calificar el servicio y lo que en realidad se apunta con esta oferta de formación, las personas suelen de manera muy rápida sin dar lugar a profundizar el tema y manifiestan en comentarios palabras equivocadas. Yo estoy en este proceso y ha sido muy valioso para mi estoy muy feliz de porder continuar con mis estudios y saber que en poco tiempo todo se hará realidad. Los invito a no desistir y continuar adelante.',
-        rating: 5,
-        achievement: 'Ahorro del 70%'
-      },
-      {
-        id: 5,
-        name: 'Hamilton Arredondo',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a-/ALV-UjX25SLcE1ylzBHgVgT36Ni8JcRG1KJJf5TLp3hD12O9w8q3drc=w72-h72-p-rp-mo-br100',
-        testimonial: 'SON LOS MEJORES, GRACIAS GRACIAS GRACIAS ESTOY FELIZ',
-        rating: 5,
-        achievement: 'Graduado en tiempo récord'
-      },
-      {
-        id: 6,
-        name: 'Viviana Pita',
-        role: 'Estudiante',
-        image: 'https://lh3.googleusercontent.com/a-/ALV-UjWgQbZr31BSVhvDKH6zYDMfdSawiRdY2MDNpYP9ZLC9_6-ipql7Iw=w72-h72-p-rp-mo-br100',
-        testimonial: 'La mejor decisión, darme la oportunidad de retomar estudios, no pude haber elegido un mejor aliado que “Emprende Tu Carrera” sin contar que el talento humano que tienen es súper amable, mi orientadora Yohandra es la mejor, siempre pendiente de todo y con la mejor disposición, es un acompañamiento constante, cualquier duda, inquietud u apoyo ella siempre está con la mejor actitud. Gracias por ser parte de esta nueva meta ✨.',
-        rating: 5,
-        achievement: 'Trabajo en sector público'
-      }
-    ];
+    (function() {
+      const testimonials = [
+        {
+          id: 1,
+          name: 'Thomas Ojeda',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a-/ALV-UjUBmfbex3DuU1Y8C528AgB-Xt4_5KVUjN27FaaUe9ZgmEex_Rw4=w72-h72-p-rp-mo-br100',
+          text: 'Me ayudaron mucho con mi proyecto de vida estoy muy agradecido definitivamente son los mejores',
+          rating: 5,
+          achievement: 'Graduado en 18 meses'
+        },
+        {
+          id: 2,
+          name: 'Diana',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a-/ALV-UjVUr8Gad2_QXUe5_5gGQuTNl0nW2LjofdhxEFdtW7gHGulc0q8R=w72-h72-p-rp-mo-br100',
+          text: 'No se cómo agradecerles su ayuda y compromiso con nuestro proyecto de vida. Gracias a ustedes mi vida cambió, gracias por ayudarnos a construir un mejor futuro para nuestras vidas y familias.',
+          rating: 5,
+          achievement: 'Ascenso laboral 3 meses después'
+        },
+        {
+          id: 3,
+          name: 'Alvaro Orjuela',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a/ACg8ocIOFXA52V6zT_xy88a5Ad3w5EligHu7ZHGMZu9T_1I3_ZoC1Q=w72-h72-p-rp-mo-br100',
+          text: 'Mi experiencia con la señorita Yuli Andrea Hernández ha sido, no solamente grata sino, de una eficiencia ponderable. Muy contento y agradecido por su gestión, don de gentes y profesionalismo.',
+          rating: 5,
+          achievement: 'Consultorio propio'
+        },
+        {
+          id: 4,
+          name: 'Carolina Consuegra',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a-/ALV-UjVCJc86xFLaOP8XT8xekpJ5N5QVmw1RN1yopRnuyRqJaFffEoM=w72-h72-p-rp-mo-br100',
+          text: 'He tenido hasta el momento una muy buena experiencia, estamos cumpliendo con las expectativas de formación académica. Estoy muy feliz de poder continuar con mis estudios y saber que en poco tiempo todo se hará realidad.',
+          rating: 5,
+          achievement: 'Ahorro del 70%'
+        },
+        {
+          id: 5,
+          name: 'Hamilton Arredondo',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a-/ALV-UjX25SLcE1ylzBHgVgT36Ni8JcRG1KJJf5TLp3hD12O9w8q3drc=w72-h72-p-rp-mo-br100',
+          text: 'SON LOS MEJORES, GRACIAS GRACIAS GRACIAS ESTOY FELIZ',
+          rating: 5,
+          achievement: 'Graduado en tiempo récord'
+        },
+        {
+          id: 6,
+          name: 'Viviana Pita',
+          role: 'Estudiante',
+          image: 'https://lh3.googleusercontent.com/a-/ALV-UjWgQbZr31BSVhvDKH6zYDMfdSawiRdY2MDNpYP9ZLC9_6-ipql7Iw=w72-h72-p-rp-mo-br100',
+          text: 'La mejor decisión, darme la oportunidad de retomar estudios. No pude haber elegido un mejor aliado que "Emprende Tu Carrera". Mi orientadora Yohandra es la mejor, siempre pendiente de todo y con la mejor disposición.',
+          rating: 5,
+          achievement: 'Trabajo en sector público'
+        }
+      ];
 
-    let currentIndex = 0;
-    let autoPlayInterval = null;
-    let isTransitioning = false;
+      let currentIndex = 0;
+      let autoPlayInterval = null;
+      let isTransitioning = false;
 
-    // Inicialización
-    document.addEventListener('DOMContentLoaded', function() {
-      initTestimonialsParticles();
-      initTestimonialsCarousel();
-      startAutoPlay();
-    });
+      // Renderizar slides
+      function renderSlides() {
+        const container = document.getElementById('carouselSlidesMinimal');
+        if (!container) {
+          console.error('❌ No se encontró el contenedor carouselSlidesMinimal');
+          return;
+        }
 
-    // Partículas flotantes
-    function initTestimonialsParticles() {
-      const container = document.querySelector('.testimonials-wrapper .particles-container');
-      if (!container) return;
-
-      for (let i = 0; i < 30; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 3 + 's';
-        particle.style.animationDuration = (3 + Math.random() * 3) + 's';
-        container.appendChild(particle);
-      }
-    }
-
-    // Carousel de testimonios
-    function initTestimonialsCarousel() {
-      renderSlides();
-      renderDots();
-      updateCarousel();
-      
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          if (!isTransitioning) {
-            navigate(-1);
-          }
-        });
-      }
-      
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          if (!isTransitioning) {
-            navigate(1);
-          }
-        });
-      }
-
-      const carouselWrapper = document.querySelector('.main-carousel-wrapper');
-      if (carouselWrapper) {
-        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
-        carouselWrapper.addEventListener('mouseleave', startAutoPlay);
-      }
-    }
-
-    function renderSlides() {
-      const container = document.getElementById('carouselSlides');
-      if (!container) return;
-      
-      container.innerHTML = testimonials.map((testimonial, index) => `
-        <div class="carousel-slide" data-index="${index}">
-          <div class="slide-glow"></div>
-          <div class="slide-card">
-            <div class="corner-accent corner-top-left"></div>
-            <div class="corner-accent corner-bottom-right"></div>
-            
-            <div class="floating-quote">
-              <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
-                <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/>
-              </svg>
-            </div>
-
-            <div class="slide-content">
-              <div class="profile-section">
-                <div class="profile-glow"></div>
-                <div class="profile-image">
-                  <img src="${testimonial.image}" alt="${testimonial.name}">
+        container.innerHTML = testimonials.map((t, index) => `
+          <div class="carousel-slide-minimal ${index === 0 ? 'active' : ''}" data-index="${index}">
+            <div class="testimonial-card-minimal">
+              <div class="profile-minimal">
+                <div class="profile-image-minimal">
+                  <img src="${t.image}" alt="${t.name}">
                 </div>
-                <div class="profile-badge">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                    <path d="m9 12 2 2 4-4"/>
-                  </svg>
-                </div>
+                <h3 class="profile-name-minimal">${t.name}</h3>
+                <p class="profile-role-minimal">${t.role}</p>
               </div>
-
-              <div class="testimonial-content">
-                <div class="stars-rating">
-                  ${generateStars(testimonial.rating)}
+              <div class="testimonial-content-minimal">
+                <div class="stars-minimal">
+                  ${'<i class="fas fa-star"></i>'.repeat(t.rating)}
                 </div>
-
-                <p class="testimonial-text">
-                  "${testimonial.testimonial}"
-                </p>
-
-                <div class="testimonial-divider"></div>
-
-                <div class="author-info">
-                  <h3 class="author-name">${testimonial.name}</h3>
-                  <p class="author-role">${testimonial.role}</p>
-
-                  <div class="author-badges">
-                    <span class="badge badge-achievement">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
-                        <path d="M12 9v4"/>
-                        <path d="M12 17h.01"/>
-                      </svg>
-                      ${testimonial.achievement}
-                    </span>
-                  </div>
-                </div>
+                <p class="testimonial-text-minimal">"${t.text}"</p>
+                <span class="testimonial-achievement-minimal">
+                  <i class="fas fa-trophy"></i> ${t.achievement}
+                </span>
               </div>
             </div>
           </div>
-        </div>
-      `).join('');
-    }
-
-    function generateStars(rating) {
-      let stars = '';
-      for (let i = 0; i < rating; i++) {
-        stars += `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-        `;
+        `).join('');
+        
+        console.log('✅ Slides renderizados:', container.children.length);
       }
-      return stars;
-    }
 
-    function renderDots() {
-      const container = document.getElementById('carouselDots');
-      if (!container) return;
-      
-      container.innerHTML = testimonials.map((_, index) => `
-        <button class="dot" data-index="${index}" aria-label="Ir al testimonio ${index + 1}">
-          <div class="dot-glow"></div>
-        </button>
-      `).join('');
+      // Renderizar dots
+      function renderDots() {
+        const container = document.getElementById('carouselDotsMinimal');
+        if (!container) {
+          console.error('❌ No se encontró el contenedor carouselDotsMinimal');
+          return;
+        }
 
-      const dots = container.querySelectorAll('.dot');
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          if (!isTransitioning && index !== currentIndex) {
-            currentIndex = index;
-            updateCarousel();
-            stopAutoPlay();
+        container.innerHTML = testimonials.map((_, index) => `
+          <button class="dot-minimal ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ir al testimonio ${index + 1}"></button>
+        `).join('');
+
+        // Event listeners para dots
+        container.querySelectorAll('.dot-minimal').forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            if (!isTransitioning && index !== currentIndex) {
+              currentIndex = index;
+              updateCarousel();
+              stopAutoPlay();
+              startAutoPlay();
+            }
+          });
+        });
+        
+        console.log('✅ Dots renderizados:', container.children.length);
+      }
+
+      // Actualizar carrusel
+      function updateCarousel() {
+        const slides = document.querySelectorAll('.carousel-slide-minimal');
+        const dots = document.querySelectorAll('.dot-minimal');
+
+        slides.forEach((slide, index) => {
+          slide.classList.remove('active', 'prev');
+          if (index === currentIndex) {
+            slide.classList.add('active');
+          } else if (index < currentIndex) {
+            slide.classList.add('prev');
           }
         });
-      });
-    }
 
-    function updateCarousel() {
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots = document.querySelectorAll('.dot');
-
-      slides.forEach((slide, index) => {
-        slide.classList.remove('active', 'prev', 'next');
-        
-        if (index === currentIndex) {
-          slide.classList.add('active');
-        } else if (index === (currentIndex - 1 + testimonials.length) % testimonials.length) {
-          slide.classList.add('prev');
-        } else if (index === (currentIndex + 1) % testimonials.length) {
-          slide.classList.add('next');
-        }
-      });
-
-      dots.forEach((dot, index) => {
-        if (index === currentIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    }
-
-    function navigate(direction) {
-      isTransitioning = true;
-      currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
-      updateCarousel();
-      
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 600);
-    }
-
-    function startAutoPlay() {
-      stopAutoPlay();
-      autoPlayInterval = setInterval(() => {
-        if (!isTransitioning) {
-          navigate(1);
-        }
-      }, 3000);
-    }
-
-    function stopAutoPlay() {
-      if (autoPlayInterval) {
-        clearInterval(autoPlayInterval);
-        autoPlayInterval = null;
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
       }
-    }
 
-    // ============================================
-    // CTA BUTTONS - ABRIR MODAL
-    // ============================================
-    const ctaPrimaryBtn = document.getElementById('ctaPrimaryBtn');
-    const ctaSecondaryBtn = document.getElementById('ctaSecondaryBtn');
+      // Navegar
+      function navigate(direction) {
+        if (isTransitioning) return;
+        
+        isTransitioning = true;
+        currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+        updateCarousel();
 
-    if (ctaPrimaryBtn) {
-      ctaPrimaryBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-      });
-    }
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 600);
+      }
 
-    if (ctaSecondaryBtn) {
-      ctaSecondaryBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-      });
-    }
+      // AutoPlay
+      function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
+          if (!isTransitioning) navigate(1);
+        }, 5000);
+      }
 
-    // ============================================
-    // FOOTER ACCORDIONS (MOBILE)
-    // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
+      function stopAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
+        }
+      }
+
+      // Inicializar carrusel
+      function initCarousel() {
+        console.log('🎠 Inicializando carrusel de testimonios...');
+        
+        renderSlides();
+        renderDots();
+        updateCarousel();
+        startAutoPlay();
+
+        // Event listeners para navegación
+        const prevBtn = document.getElementById('prevBtnMinimal');
+        const nextBtn = document.getElementById('nextBtnMinimal');
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => navigate(-1));
+          console.log('✅ Botón anterior conectado');
+        }
+        
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => navigate(1));
+          console.log('✅ Botón siguiente conectado');
+        }
+
+        // Pausar autoplay al hover
+        const wrapper = document.querySelector('.carousel-wrapper-minimal');
+        if (wrapper) {
+          wrapper.addEventListener('mouseenter', stopAutoPlay);
+          wrapper.addEventListener('mouseleave', startAutoPlay);
+          console.log('✅ Eventos de hover configurados');
+        }
+        
+        console.log('✅ Carrusel de testimonios inicializado');
+      }
+
+      // Inicializar
+      initCarousel();
+    })();
+  
+      // ============================================
+      // CTA BUTTONS - ABRIR MODAL
+      // ============================================
+      const ctaPrimaryBtn = document.getElementById('ctaPrimaryBtn');
+      const ctaSecondaryBtn = document.getElementById('ctaSecondaryBtn');
+
+      if (ctaPrimaryBtn) {
+        ctaPrimaryBtn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      }
+
+      if (ctaSecondaryBtn) {
+        ctaSecondaryBtn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      }
+
+      // ============================================
+      // FOOTER ACCORDIONS (MOBILE)
+      // ============================================
       const accordionButtons = document.querySelectorAll('.accordion-button');
       
       accordionButtons.forEach(button => {
@@ -1313,7 +1274,6 @@
           const content = document.getElementById(targetId);
           const isActive = this.classList.contains('active');
           
-          // Cerrar todos los acordeones
           document.querySelectorAll('.accordion-button').forEach(btn => {
             btn.classList.remove('active');
           });
@@ -1321,107 +1281,103 @@
             cnt.classList.remove('active');
           });
           
-          // Abrir el acordeón clickeado si no estaba activo
           if (!isActive) {
             this.classList.add('active');
             content.classList.add('active');
           }
         });
       });
-    });
 
-    // ============================================
-    // ANIMACIÓN AFFINITY
-    // ============================================
-    (function() {
-      const banner = document.getElementById('affinity-banner');
-      const textInitial = document.querySelector('.affinity-text-initial');
-      const imagesContainer = document.querySelector('.affinity-images-container');
-      const imageWrappers = document.querySelectorAll('.affinity-image-wrapper');
-      const textFinal = document.querySelector('.affinity-text-final');
-      
-      if (!banner) return;
-      
-      function handleAffinityScroll() {
-        const scrollY = window.scrollY;
-        const bannerHeight = banner.offsetHeight;
-        const bannerTop = banner.offsetTop;
-        const bannerBottom = bannerTop + bannerHeight;
+      // ============================================
+      // ANIMACIÓN AFFINITY
+      // ============================================
+      (function() {
+        const banner = document.getElementById('affinity-banner');
+        const textInitial = document.querySelector('.affinity-text-initial');
+        const imagesContainer = document.querySelector('.affinity-images-container');
+        const imageWrappers = document.querySelectorAll('.affinity-image-wrapper');
+        const textFinal = document.querySelector('.affinity-text-final');
         
-        if (scrollY < bannerTop || scrollY > bannerBottom + 200) {
-          return;
-        }
+        if (!banner) return;
         
-        const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
-        
-        // FASE 1: Título inicial (0% - 12%)
-        if (progress < 0.12) {
-          textInitial.classList.remove('hidden');
-          imagesContainer.classList.remove('visible');
-          imagesContainer.classList.remove('fade-out');
-          imageWrappers.forEach(img => {
-            img.classList.remove('active');
-            img.classList.remove('fade-out');
-          });
-          textFinal.classList.remove('visible');
-          textFinal.classList.remove('fade-out');
-        }
-        else if (progress >= 0.12 && progress < 0.18) {
-          textInitial.classList.add('hidden');
-        }
-        
-        // FASE 2: Imágenes (18% - 58%)
-        if (progress >= 0.18 && progress < 0.58) {
-          imagesContainer.classList.add('visible');
-          imagesContainer.classList.remove('fade-out');
+        function handleAffinityScroll() {
+          const scrollY = window.scrollY;
+          const bannerHeight = banner.offsetHeight;
+          const bannerTop = banner.offsetTop;
+          const bannerBottom = bannerTop + bannerHeight;
           
-          if (progress >= 0.20) {
-            imageWrappers.forEach((img) => {
-              img.classList.add('active');
+          if (scrollY < bannerTop || scrollY > bannerBottom + 200) {
+            return;
+          }
+          
+          const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
+          
+          if (progress < 0.12) {
+            textInitial.classList.remove('hidden');
+            imagesContainer.classList.remove('visible');
+            imagesContainer.classList.remove('fade-out');
+            imageWrappers.forEach(img => {
+              img.classList.remove('active');
               img.classList.remove('fade-out');
             });
+            textFinal.classList.remove('visible');
+            textFinal.classList.remove('fade-out');
+          }
+          else if (progress >= 0.12 && progress < 0.18) {
+            textInitial.classList.add('hidden');
+          }
+          
+          if (progress >= 0.18 && progress < 0.58) {
+            imagesContainer.classList.add('visible');
+            imagesContainer.classList.remove('fade-out');
+            
+            if (progress >= 0.20) {
+              imageWrappers.forEach((img) => {
+                img.classList.add('active');
+                img.classList.remove('fade-out');
+              });
+            }
+          }
+          
+          if (progress >= 0.55 && progress < 0.78) {
+            textFinal.classList.add('visible');
+            textFinal.classList.remove('fade-out');
+          }
+          
+          if (progress >= 0.78) {
+            const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
+            
+            if (fadeProgress > 0.15) {
+              imageWrappers.forEach((img) => {
+                img.classList.add('fade-out');
+              });
+              imagesContainer.classList.add('fade-out');
+            }
+            
+            if (fadeProgress > 0.40) {
+              textFinal.classList.add('fade-out');
+            }
           }
         }
         
-        // FASE 3: Texto final (55% - 78%)
-        if (progress >= 0.55 && progress < 0.78) {
-          textFinal.classList.add('visible');
-          textFinal.classList.remove('fade-out');
-        }
-        
-        // FASE 4: Desaparecer todo (78% - 95%)
-        if (progress >= 0.78) {
-          const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
-          
-          if (fadeProgress > 0.15) {
-            imageWrappers.forEach((img) => {
-              img.classList.add('fade-out');
+        let ticking = false;
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              handleAffinityScroll();
+              ticking = false;
             });
-            imagesContainer.classList.add('fade-out');
-          }
-          
-          if (fadeProgress > 0.40) {
-            textFinal.classList.add('fade-out');
+            ticking = true;
           }
         }
-      }
-      
-      let ticking = false;
-      function onScroll() {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            handleAffinityScroll();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }
-      
-      window.addEventListener('scroll', onScroll, { passive: true });
-      handleAffinityScroll();
-    })();
+        
+        window.addEventListener('scroll', onScroll, { passive: true });
+        handleAffinityScroll();
+      })();
 
-    console.log('✅ Script principal cargado correctamente');
+      console.log('✅ Todos los scripts inicializados correctamente');
+    });
+
 
   </script>
 </body>
