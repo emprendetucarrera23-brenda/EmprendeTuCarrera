@@ -576,6 +576,31 @@
     </div>
   </section>
 
+  <section class="map-section reveal-on-scroll">
+    <div class="section-container">
+      <div class="section-header-conocenos">
+        <div class="section-badge-conocenos">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Encuéntranos</span>
+        </div>
+        <h2 class="section-title-conocenos">
+          Nuestra <span class="highlight-text">Sede Central</span>
+        </h2>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6772703071883!2d-74.06180582417106!3d4.651525195323298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b811f6acfa1%3A0x307478636c72463a!2sEmprende%20Tu%20Carrera!5e0!3m2!1ses-419!2sco!4v1766427457744!5m2!1ses-419!2sco" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- ============================================
        CTA FINAL - Llamado a la Acción
        ============================================ -->
@@ -601,16 +626,11 @@
       </p>
 
       <div class="cta-final-buttons reveal-on-scroll">
-        <a href="#" class="btn btn-primary btn-large">
+        <a href="#" id="ctaFinalBtn" class="btn btn-primary btn-large">
           <span>Solicitar Información</span>
           <i class="fas fa-arrow-right"></i>
         </a>
-        <a href="#" class="btn btn-secondary btn-large">
-          <i class="fas fa-calendar-alt"></i>
-          <span>Agendar Consulta</span>
-        </a>
       </div>
-
       <div class="cta-final-trust reveal-on-scroll">
         <div class="trust-item">
           <i class="fas fa-shield-alt"></i>
@@ -776,6 +796,15 @@
   openModal.addEventListener("click", () => {
     modal.style.display = "flex";
   });
+
+  const ctaFinalBtn = document.getElementById("ctaFinalBtn");
+if (ctaFinalBtn) {
+  ctaFinalBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+  });
+}
+
 
   closeModal.addEventListener("click", () => {
     modal.style.display = "none";

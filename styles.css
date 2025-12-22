@@ -345,6 +345,7 @@ nav.scrolled {
   font-family: inherit;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .btn-primary {

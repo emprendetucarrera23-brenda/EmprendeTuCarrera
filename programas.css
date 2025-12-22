@@ -1081,6 +1081,7 @@ footer {
   padding-left: 8px;
 }
 
+
 /* ==========================================
    RESPONSIVE
    ========================================== */
@@ -1166,6 +1167,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+  
   .hero-programas {
     padding: 100px 20px 60px;
   }

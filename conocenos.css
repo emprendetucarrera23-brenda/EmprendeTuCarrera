@@ -214,14 +214,17 @@
 }
 
 .scroll-indicator {
-  position: absolute;
+position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 5vw; /* 5vw lo separa un poco del borde derecho. Puedes subirlo a 10vw si lo quieres más adentro */
+  left: auto; 
+  transform: none; 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
 }
 
 .scroll-mouse {
@@ -619,6 +622,56 @@
   margin-bottom: 32px;
 }
 
+/* SECCIÓN DE MAPA  */
+
+.map-section {
+  padding: 60px 0 100px 0; /* Espaciado equilibrado */
+  background: #000;
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 25, 112, 0.2); /* Neon Pink sutil */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease;
+}
+
+.map-wrapper:hover {
+  border-color: #FF1970; /* Brillo al pasar el mouse */
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(255, 25, 112, 0.1);
+}
+
+/* Filtro Estilo Dark Mode para el Mapa */
+.map-wrapper iframe {
+  filter: grayscale(1) invert(0.92) contrast(1.2) hue-rotate(180deg);
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.map-wrapper:hover iframe {
+  opacity: 1;
+}
+.map-wrapper iframe {
+  /* Eliminamos filtros complejos temporalmente para descartar errores */
+  display: block;
+  width: 100%;
+  background: #1a1a1a; /* Fondo oscuro mientras carga */
+}
+
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .map-section {
+    padding: 40px 0 60px 0;
+  }
+  .map-wrapper iframe {
+    height: 350px;
+  }
+}
 /* CTA FINAL */
 .cta-final-section {
   padding: 140px min(120px, 5vw);
