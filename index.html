@@ -6,7 +6,7 @@
   <title>Inicio - Emprende Tu Carrera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="whatsapp-button.css">
+  <link rel="stylesheet" href="./../componentes/whatsapp-button.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -99,7 +99,7 @@
   <section id="affinity-banner" class="affinity-banner">
     <div class="affinity-banner-container">
       <div class="affinity-text-initial">
-        <h1 class="affinity-title">Emprende tu carrera</h1>
+        <h1 class="affinity-title">Emprende Tu Carrera</h1>
       </div>
       <div class="affinity-images-container">
         <div class="affinity-image-wrapper" data-index="0">
@@ -1195,7 +1195,7 @@
         stopAutoPlay();
         autoPlayInterval = setInterval(() => {
           if (!isTransitioning) navigate(1);
-        }, 5000);
+        }, 3000);
       }
 
       function stopAutoPlay() {
@@ -1207,7 +1207,7 @@
 
       // Inicializar carrusel
       function initCarousel() {
-        console.log('🎠 Inicializando carrusel de testimonios...');
+        console.log(' Inicializando carrusel de testimonios...');
         
         renderSlides();
         renderDots();
@@ -1310,7 +1310,7 @@
           
           const progress = Math.min(Math.max((scrollY - bannerTop) / bannerHeight, 0), 1);
           
-          if (progress < 0.12) {
+          if (progress < 0.15) {
             textInitial.classList.remove('hidden');
             imagesContainer.classList.remove('visible');
             imagesContainer.classList.remove('fade-out');
@@ -1321,15 +1321,15 @@
             textFinal.classList.remove('visible');
             textFinal.classList.remove('fade-out');
           }
-          else if (progress >= 0.12 && progress < 0.18) {
+          else if (progress >= 0.15 && progress < 0.20) {
             textInitial.classList.add('hidden');
           }
           
-          if (progress >= 0.18 && progress < 0.58) {
+          if (progress >= 0.16 && progress < 0.56) {
             imagesContainer.classList.add('visible');
             imagesContainer.classList.remove('fade-out');
             
-            if (progress >= 0.20) {
+            if (progress >= 0.18) {
               imageWrappers.forEach((img) => {
                 img.classList.add('active');
                 img.classList.remove('fade-out');
@@ -1337,12 +1337,12 @@
             }
           }
           
-          if (progress >= 0.55 && progress < 0.78) {
+          if (progress >= 0.55 && progress < 0.76) {
             textFinal.classList.add('visible');
             textFinal.classList.remove('fade-out');
           }
           
-          if (progress >= 0.78) {
+          if (progress >= 0.76) {
             const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
             
             if (fadeProgress > 0.15) {
@@ -1377,7 +1377,7 @@
     });
 
   </script>
-  <script src="whatsapp-button.js"></script>
+  <script src="./../componentes/whatsapp-button.js"></script>
 
 </body>
 </html>

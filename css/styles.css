@@ -445,7 +445,7 @@ nav.scrolled {
 
 .affinity-banner {
   position: relative;
-  min-height: 380vh; /* ← Aumentado para más tiempo */
+  min-height: 300vh; /* ← Aumentado para más tiempo */
   background: #000;
   overflow: hidden;
 }
@@ -470,6 +470,7 @@ nav.scrolled {
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
 }
 
 .affinity-text-initial.hidden {
@@ -2669,6 +2670,7 @@ section {
       border-radius: 20px;
       font-size: 13px;
       color: #FF1970;
+      width: fit-content;
     }
 
     /* Dots de navegación */
