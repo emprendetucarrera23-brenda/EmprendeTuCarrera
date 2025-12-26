@@ -764,6 +764,114 @@ position: absolute;
   color: #FF1970;
 }
 
+/* ============================================
+   AJUSTE PARA IGUALAR TAMAÑO DE LAS 4 CARDS DEL EQUIPO
+   ============================================ */
+
+/* Modificar el grid del equipo para 4 columnas iguales */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+/* Asegurar que las cards de equipo y las CTA tengan la misma altura */
+.team-card,
+.join-team-cta {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupar toda la altura disponible */
+  min-height: 520px; /* Altura mínima consistente */
+}
+
+/* Ajustar el contenido de las CTA para que coincida con las team-card */
+.join-team-cta {
+  padding: 0; 
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.join-team-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 40px 28px; 
+  text-align: center;
+}
+
+/* Ajustar ícono para que ocupe espacio similar a la imagen */
+.join-team-icon {
+  width: 100%;
+  aspect-ratio: 1 / 1.2; 
+  max-width: 120px;
+  height: auto;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #FF1970, #A200FA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.join-team-icon i {
+  font-size: 48px;
+  color: #fff;
+}
+
+/* Ajustar tamaños de texto para consistencia */
+.join-team-title {
+  font-size: 20px; 
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.join-team-description {
+  font-size: 14px; 
+  color: #9ca3af;
+  margin-bottom: 24px;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+/* Ajustar el botón */
+.join-team-cta .btn {
+  margin-top: auto; 
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE - Mantener consistencia en mobile
+   ============================================ */
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  .team-card,
+  .join-team-cta {
+    min-height: auto; 
+  }
+  
+  .join-team-icon {
+    max-width: 80px;
+  }
+  
+  .join-team-icon i {
+    font-size: 36px;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-stats-conocenos {

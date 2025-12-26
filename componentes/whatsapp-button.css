@@ -1,15 +1,15 @@
 /* Botón flotante de WhatsApp mejorado */
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     bottom: 30px;
     right: 30px;
     background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
     color: #FFF;
     border-radius: 50%;
     text-align: center;
-    font-size: 32px;
+    font-size: 26px;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 1000;
     display: flex;
@@ -67,7 +67,7 @@
 .whatsapp-float::after {
     content: '¿Necesitas ayuda?';
     position: absolute;
-    right: 70px;
+    right: 60px;
     top: 50%;
     transform: translateY(-50%);
     background: #fff;
@@ -85,17 +85,17 @@
 
 .whatsapp-float:hover::after {
     opacity: 1;
-    right: 75px;
+    right: 65px;
 }
 
 /* Versión responsive para móviles */
 @media screen and (max-width: 768px) {
     .whatsapp-float {
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
         bottom: 20px;
         right: 20px;
-        font-size: 28px;
+        font-size: 22px;
     }
     
     .whatsapp-float::after {

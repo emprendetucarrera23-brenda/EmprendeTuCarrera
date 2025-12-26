@@ -1,6 +1,5 @@
 /* ==========================================
    PROGRAMAS.CSS - ESTILOS COMPACTOS
-   Versión con espaciado reducido y elementos agrupados
    ========================================== */
 
 /* ==========================================
@@ -598,6 +597,14 @@ nav.scrolled {
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   position: relative;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: flex-end;
+  padding-right: 8px;
 }
 
 .programs-slider::-webkit-scrollbar {

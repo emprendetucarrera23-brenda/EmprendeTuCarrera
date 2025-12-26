@@ -790,9 +790,9 @@ nav.scrolled {
   align-items: center;
   gap: 12px;
   padding: 16px 40px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 0, 85, 0.116);
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 0, 140, 0.247);
   backdrop-filter: blur(10px);
   color: #fff;
   font-size: 18px;
