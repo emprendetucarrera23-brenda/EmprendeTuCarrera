@@ -47,55 +47,70 @@
     </div>
   </nav>
 
-  <!-- ============================================
-       MODAL 
-       ============================================ -->
-  <div id="modal" class="custom-modal">
-    <div class="custom-modal-content">
-      <span class="custom-close">&times;</span>
-      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-      <h1 class="modal-title">Inicia tu viaje profesional</h1>
-      <p class="modal-text">
-        Completa el formulario y un especialista se pondrá en contacto
-        contigo en menos de 24 horas.
-      </p>
-      <form class="modal-form">
-        <label>Nombre completo *</label>
-        <input type="text" placeholder="Tu nombre completo" required>
-        <div class="modal-row">
-          <div>
-            <label>Email *</label>
-            <input type="email" placeholder="tu@mail.com" required>
-          </div>
-          <div>
-            <label>Teléfono *</label>
-            <input type="tel" placeholder="+57 300 000 0000" required>
-          </div>
-        </div>
-        <div class="modal-row">
-          <div>
-            <label>Profesión actual *</label>
-            <input type="text" placeholder="Ej: Desarrollador" required>
-          </div>
-          <div>
-            <label>Programa de interés *</label>
-            <select required>
-              <option value="">Selecciona un programa</option>
-              <option>Transformación Profesional</option>
-              <option>Programas de liderazgo</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        </div>
-        <label>Cuéntanos sobre tus objetivos</label>
-        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-        <p class="modal-footer">
-          Al enviar este formulario, aceptas nuestra política de privacidad.
+  <!-- Modal -->
+    <div id="modal" class="custom-modal">
+      <div class="custom-modal-content">
+        <span class="custom-close">&times;</span>
+        <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+        <h1 class="modal-title">Inicia tu viaje profesional</h1>
+        <p class="modal-text">
+          Completa el formulario y un especialista se pondrá en contacto
+          contigo en menos de 24 horas.
         </p>
-      </form>
+        <form class="modal-form">
+          <label>Nombre completo *</label>
+          <input type="text" placeholder="Tu nombre completo" required>
+          
+          <div class="modal-row">
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="tu@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido">
+            </div>
+            <div>
+              <label>Celular *</label>
+              <input type="tel" placeholder="3001234567" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" title="Ingresa un número de celular válido de 10 dígitos" required>
+            </div>
+          </div>
+          
+          <div class="modal-row">
+            <div>
+              <label>Último título alcanzado *</label>
+              <select required>
+                <option value="">Selecciona tu nivel educativo</option>
+                <option value="grado9">Grado 9°</option>
+                <option value="bachiller">Bachiller</option>
+                <option value="tecnico_laboral">Técnico Laboral</option>
+                <option value="normal_superior">Normal Superior</option>
+                <option value="semestres">Semestres cursados</option>
+                <option value="tecnico_profesional">Técnico Profesional</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="profesional">Profesional</option>
+                <option value="especializacion">Especialización</option>
+                <option value="maestria">Maestría</option>
+              </select>
+            </div>
+            <div>
+              <label>Programa de interés *</label>
+              <select required>
+                <option value="">Selecciona un programa</option>
+                <option value="transformacion">Transformación Profesional</option>
+                <option value="liderazgo">Programas de liderazgo</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+          
+          <label>Cuéntanos sobre tus objetivos</label>
+          <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+          
+          <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+          
+          <p class="modal-footer">
+            Al enviar este formulario, aceptas nuestra política de privacidad.
+          </p>
+        </form>
+      </div>
     </div>
-  </div>
 
   <!-- ============================================
        PARTÍCULAS DE FONDO FLOTANTES

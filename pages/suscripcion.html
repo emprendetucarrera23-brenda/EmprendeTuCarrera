@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestiona tu Suscripción - Emprende Tu Carrera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./../css/politicas.css">
+  <link rel="stylesheet" href="./../css/suscripcion.css">
+  <link rel="stylesheet" href="./../componentes/whatsapp-button.css">
+  <link rel="stylesheet" href="./../componentes/scroll-top-button.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="https://ik.imagekit.io/v3kitfabd/fotos/fotos/logoetcwhite.png?updatedAt=1755186693733" alt="Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-menu">
+          <li><a href="./../index.html">Inicio</a></li>
+          <li><a href="./../pages/conocenos.html">Conócenos</a></li>
+          <li><a href="./../pages/programas.html">Programas</a></li>
+          <li><a href="./../pages/directorio.html">Directorio</a></li>
+          <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a class="btn btn-primary" id="openModal"><span>Más Información</span></a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="./../index.html">Inicio</a>
+      <a href="./../pages/conocenos.html">Conócenos</a>
+      <a href="./../pages/programas.html">Programas</a>
+      <a href="./../pages/directorio.html">Directorio</a>
+      <a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn-primary"><span>Más Información</span></a>
+    </div>
+  </nav>
+
+  <!-- MODAL -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">🔴 Comienza tu transformación</p>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form">
+        <label>Nombre completo *</label>
+        <input type="text" placeholder="Tu nombre completo" required>
+        
+        <div class="modal-row">
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="tu@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido">
+          </div>
+          <div>
+            <label>Celular *</label>
+            <input type="tel" placeholder="3001234567" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" title="Ingresa un número de celular válido de 10 dígitos" required>
+          </div>
+        </div>
+        
+        <div class="modal-row">
+          <div>
+            <label>Último título alcanzado *</label>
+            <select required>
+              <option value="">Selecciona tu nivel educativo</option>
+              <option value="grado9">Grado 9°</option>
+              <option value="bachiller">Bachiller</option>
+              <option value="tecnico_laboral">Técnico Laboral</option>
+              <option value="normal_superior">Normal Superior</option>
+              <option value="semestres">Semestres cursados</option>
+              <option value="tecnico_profesional">Técnico Profesional</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="profesional">Profesional</option>
+              <option value="especializacion">Especialización</option>
+              <option value="maestria">Maestría</option>
+            </select>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select required>
+              <option value="">Selecciona un programa</option>
+              <option value="transformacion">Transformación Profesional</option>
+              <option value="liderazgo">Programas de liderazgo</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- PARTÍCULAS DE FONDO -->
+  <div class="particles-background" id="particlesContainer"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="policies-main">
+    
+    <!-- Hero Section -->
+    <section class="policies-hero">
+      <div class="hero-content">
+        <div class="policies-badge">
+          <div class="badge-dot"></div>
+          <span>Panel de Control</span>
+        </div>
+
+        <h1 class="policies-title">
+          <span class="title-line gradient-text">Gestiona tu suscripción</span>
+        </h1>
+
+        <p class="policies-description">
+          La sección <strong>Gestiona tu suscripción</strong> permite realizar y validar pagos de forma rápida y segura, 
+          ingresando los datos necesarios y verificando transacciones mediante referencia, ID o correo electrónico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Acordeones -->
+    <section class="policies-grid-section">
+      <div class="subscription-management-container">
+        
+        <!-- Acordeón 1: Realiza tu suscripción (pagos-aval) -->
+        <article class="accordion-card">
+          <button class="accordion-header" data-target="accordion1">
+            <div class="accordion-header-content">
+              <i class="fas fa-chevron-right accordion-icon"></i>
+              <span class="accordion-title">Realiza tu suscripción (pagos-aval)</span>
+            </div>
+          </button>
+          
+          <div class="accordion-body" id="accordion1">
+            <div class="accordion-inner">
+              <p class="accordion-intro">Ingresa a la opción <strong><a href="https://www.avalpaycenter.com/wps/portal/portal-de-pagos/web/pagos-aval/resultado-busqueda/realizar-pago?idConv=00011845&origen=buscar" target="_blank" rel="noopener noreferrer" class="payment-link">Realiza tu pago</a></strong> en Aval Pay Center.</p>
+              
+              <ol class="instruction-list">
+                <li>Verifica que el servicio a pagar corresponda a <strong>Emprende Tu Carrera SAS</strong>.</li>
+                <li>Ingresa tu número de identificación.</li>
+                <li>Digita el valor a pagar según la información suministrada.</li>
+                <li>(Opcional) Activa "Agregar detalle del pago" si necesitas incluir una observación.</li>
+                <li>Lee y acepta los términos y condiciones.</li>
+                <li>Marca la casilla "No soy un robot".</li>
+                <li>Haz clic en <strong>Pagar</strong>.</li>
+                <li>Completa el pago a través del medio disponible (PSE u otro).</li>
+                <li>Al finalizar, guarda el comprobante de pago.</li>
+                <li>Envía el comprobante a tu coordinador para la validación del pago.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Acordeón 2: Realiza tu suscripción (código QR o B-bre) -->
+        <article class="accordion-card">
+          <button class="accordion-header" data-target="accordion2">
+            <div class="accordion-header-content">
+              <i class="fas fa-chevron-right accordion-icon"></i>
+              <span class="accordion-title">Realiza tu suscripción (código QR o B-bre)</span>
+            </div>
+          </button>
+          
+          <div class="accordion-body" id="accordion2">
+            <div class="accordion-inner">
+              <p class="accordion-step"><strong>1.</strong> Abre la <strong>aplicación bancaria</strong> o billetera digital de tu preferencia que tenga habilitado <strong>Bre-B</strong>.</p>
+              
+              <p class="accordion-step"><strong>2.</strong> Selecciona la opción <strong>Pagar con QR o Bre-B</strong>.</p>
+              
+              <div class="qr-code-section">
+                <p class="qr-label"><strong>Bre-B:</strong> 0059220418</p>
+                <p class="qr-instruction">Escanea el código QR generado a nombre de <strong>Emprende Tu Carrera SAS</strong>.</p>
+                
+                <div class="qr-code-wrapper">
+                  <img src="https://ik.imagekit.io/fh0aexvy1/Captura%20de%20pantalla%202025-12-26%20210510.png" alt="Código QR Emprende Tu Carrera" class="qr-code-image">
+                </div>
+              </div>
+
+              <ol class="instruction-list" start="3">
+                <li>Verifica que los datos del comercio sean correctos.</li>
+                <li>Ingresa el valor a pagar según la información suministrada.</li>
+                <li>Confirma la transacción desde tu aplicación.</li>
+                <li>Al finalizar, guarda el comprobante de pago.</li>
+                <li>Envía el comprobante a tu coordinador para la validación correspondiente.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Acordeón 3: Validar mi suscripción -->
+        <article class="accordion-card">
+          <button class="accordion-header" data-target="accordion3">
+            <div class="accordion-header-content">
+              <i class="fas fa-chevron-right accordion-icon"></i>
+              <span class="accordion-title">Validar mi suscripción</span>
+            </div>
+          </button>
+          
+          <div class="accordion-body" id="accordion3">
+            <div class="accordion-inner">
+              <p class="accordion-intro">Ingresa a la opción <strong><a href="https://www.avalpaycenter.com/wps/portal/portal-de-pagos/web/pagos-aval/consulta-pagos" target="_blank" rel="noopener noreferrer" class="payment-link">Validar mi pago</a></strong> en Aval Pay Center.</p>
+              
+              <ol class="instruction-list">
+                <li>Selecciona una de las opciones de búsqueda: Referencia de pago, ID de transacción o Correo electrónico.</li>
+                <li>Diligencia los datos solicitados según la opción elegida.</li>
+                <li>Marca la casilla "No soy un robot".</li>
+                <li>Haz clic en <strong>Consultar</strong>.</li>
+                <li>Revisa el estado de tu pago que aparece en pantalla.</li>
+                <li>Guarda el comprobante o la información del pago.</li>
+                <li>Envía el comprobante a tu coordinador para la validación.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="policies-cta-section">
+      <div class="cta-container">
+        <div class="cta-icon-large">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h2 class="cta-title">¿Necesitas ayuda?</h2>
+        <p class="cta-text">
+          Nuestro equipo de soporte está disponible 24/7 para resolver cualquier duda sobre tu suscripción.
+        </p>
+        <button class="cta-btn" id="ctaSupportBtn">
+          <span>Contactar Soporte</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="./../index.html">Inicio</a></li>
+            <li><a href="./../pages/conocenos.html">Conócenos</a></li>
+            <li><a href="./../pages/programas.html">Programas</a></li>
+            <li><a href="./../pages/directorio.html">Directorio</a></li>
+            <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Marco Legal</h4>
+          <ul class="footer-links">
+            <li><a href="./../pages/politicas.html">Políticas</a></li>
+            <li><a href="./../pages/pqrs.html">PQRS</a></li>
+            <li><a href="./../pages/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+            <li>
+              <a href="https://mail.hostinger.com/v2/auth/login" target="_blank" rel="noopener noreferrer">
+                Correo corporativo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-mobile mobile-footer">
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="empresa">
+            <span>Empresa</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="empresa">
+            <ul class="footer-links">
+              <li><a href="./../index.html">Inicio</a></li>
+              <li><a href="./../pages/conocenos.html">Conócenos</a></li>
+              <li><a href="./../pages/programas.html">Programas</a></li>
+              <li><a href="./../pages/directorio.html">Directorio</a></li>
+              <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="legal">
+            <span>Marco Legal</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="legal">
+            <ul class="footer-links">
+              <li><a href="./../pages/politicas.html">Políticas</a></li>
+              <li><a href="./../pages/pqrs.html">PQRS</a></li>
+              <li><a href="./../pages/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+              <li>
+                <a href="https://mail.hostinger.com/v2/auth/login" target="_blank" rel="noopener noreferrer">
+                  Correo corporativo
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-logo-mobile mobile-only">
+        <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom-section">
+        <div class="social-links-footer">
+          <a href="https://www.instagram.com/emprendetucarrera/?hl=es"
+            class="social-icon"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/EmprendeTuCarrera/"
+            class="social-icon"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@emprendetucarrera"
+            class="social-icon"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@EMPRENDETUCARRERA-COL"
+            class="social-icon"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+          <a href="https://www.twitch.tv/emprendetucarrera"
+            class="social-icon"
+            aria-label="Twitch"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-twitch"></i>
+          </a>
+        </div>
+
+        <div class="footer-legal">
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    console.log('✅ Gestión de Suscripción - Inicializando...');
+
+    // 1. NAVBAR SCROLL
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // 2. MODAL
+    const modal = document.getElementById("modal");
+    const openModalButtons = document.querySelectorAll("#openModal, #ctaSupportBtn");
+    const closeModalBtn = document.querySelector(".custom-close");
+
+    openModalButtons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "flex";
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = '';
+      });
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display === "flex") {
+        modal.style.display = "none";
+        document.body.style.overflow = '';
+      }
+    });
+
+    const modalForm = document.querySelector(".modal-form");
+    if (modalForm) {
+      modalForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("¡Formulario enviado! Un especialista te contactará pronto.");
+        modal.style.display = "none";
+        document.body.style.overflow = '';
+        modalForm.reset();
+      });
+    }
+
+    // 3. MOBILE MENU
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          menuIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+        } else {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // 4. FOOTER ACCORDIONS (MOBILE)
+    document.addEventListener('DOMContentLoaded', function() {
+      const footerAccordionButtons = document.querySelectorAll('.accordion-button[data-accordion]');
+      
+      footerAccordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-accordion');
+          const content = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          footerAccordionButtons.forEach(btn => btn.classList.remove('active'));
+          document.querySelectorAll('.accordion-content').forEach(cnt => cnt.classList.remove('active'));
+          
+          if (!isActive) {
+            this.classList.add('active');
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // 5. ACORDEONES DE SUSCRIPCIÓN
+    (function initAccordions() {
+      const accordionHeaders = document.querySelectorAll('.accordion-header[data-target]');
+      
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const targetBody = document.getElementById(targetId);
+          const isActive = this.classList.contains('active');
+          
+          accordionHeaders.forEach(h => h.classList.remove('active'));
+          document.querySelectorAll('.accordion-body').forEach(body => body.classList.remove('active'));
+          
+          if (!isActive) {
+            this.classList.add('active');
+            targetBody.classList.add('active');
+            setTimeout(() => {
+              this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+          }
+        });
+      });
+      
+      console.log('🎵 Acordeones inicializados:', accordionHeaders.length);
+    })();
+
+    // 6. PARTÍCULAS
+    (function initParticles() {
+      const container = document.getElementById('particlesContainer');
+      if (!container) return;
+
+      const particleCount = 25;
+      const colors = ['rgba(255, 25, 112, 0.8)', 'rgba(219, 18, 175, 0.6)', 'rgba(162, 0, 250, 0.5)', 'rgba(60, 23, 219, 0.4)'];
+
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'light-particle';
+        particle.style.width = particle.style.height = `${Math.random() * 4 + 2}px`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.background = `radial-gradient(circle, ${colors[Math.floor(Math.random() * colors.length)]}, transparent)`;
+        particle.style.animationDuration = `${Math.random() * 15 + 10}s`;
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(particle);
+        particle.addEventListener('animationiteration', () => {
+          particle.remove();
+          createParticle();
+        });
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        setTimeout(() => createParticle(), i * 200);
+      }
+    })();
+
+    // 7. SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // 8. OPTIMIZACIÓN MÓVIL
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.light-particle').forEach((particle, index) => {
+        if (index % 2 === 0) particle.style.animationDuration = '20s';
+        else particle.remove();
+      });
+    }
+
+    console.log('✅ Scripts inicializados correctamente');
+  </script>
+  
+  <script src="./../componentes/whatsapp-button.js"></script>
+  <script src="./../componentes/scroll-top-button.js"></script>
+</body>
+</html>

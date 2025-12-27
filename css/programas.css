@@ -1,5 +1,5 @@
 /* ==========================================
-   PROGRAMAS.CSS - ESTILOS COMPACTOS
+   PROGRAMAS.CSS 
    ========================================== */
 
 /* ==========================================
@@ -232,7 +232,23 @@ nav.scrolled {
 .mobile-menu a.active {
   color: #FF1970;
 }
+/* Mejorar contraste del select para legibilidad del texto blanco */
+.modal-form select {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+.modal-form select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 25, 112, 0.5);
+  outline: none;
+}
+
+.modal-form select option {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 10px;
+}
 /* ==========================================
    HERO SECTION - MÁS COMPACTO
    ========================================== */

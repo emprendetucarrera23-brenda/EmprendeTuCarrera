@@ -1,6 +1,5 @@
 /* ============================================
-   POLÍTICAS LANDING - EMPRENDE TU CARRERA
-   Diseño futurista minimalista con glassmorphism
+   POLÍTICAS 
    ============================================ */
 
 /* ==========================================
@@ -224,9 +223,8 @@ html {
 }
 
 /* ==========================================
-   MODAL - MANTIENE ESTILO ORIGINAL
+   MODAL 
    ========================================== */
-/* ===== MODAL DARK GLASSMORPHISM ===== */
 .custom-modal {
   display: none;
   position: fixed;
@@ -454,6 +452,23 @@ html {
   width: 100%;
   margin-top: 24px;
   justify-content: center;
+}
+/* Mejorar contraste del select para legibilidad del texto blanco */
+.modal-form select {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-form select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 25, 112, 0.5);
+  outline: none;
+}
+
+.modal-form select option {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 10px;
 }
 
 /* ==========================================
