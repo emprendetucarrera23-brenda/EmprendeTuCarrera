@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./../css/programas.css">
   <link rel="stylesheet" href="./../componentes/whatsapp-button.css">
   <link rel="stylesheet" href="./../componentes/scroll-top-button.css">
+  <link rel="stylesheet" href="./../componentes/subscription-button.css">
+  <link rel="stylesheet" href="./../componentes/pde-button.css">
 </head>
 <body>
   <nav id="navbar">
@@ -66,20 +68,14 @@
       <h1 class="hero-title">Descubre Tu Camino Profesional</h1>
 
       <p class="hero-description">
-        Explora nuestra oferta académica diseñada para transformar tu carrera. 
-        Desde técnicos laborales hasta posgrados, encuentra el programa perfecto para alcanzar tus metas.
+        Explora nuestra oferta académica diseñada para transformar tu carrera, 
+        desde técnicos laborales hasta posgrados. Encuentra el programa perfecto para alcanzar tus metas.
       </p>
 
       <button class="hero-button" onclick="document.querySelector('.programs-section').scrollIntoView({behavior: 'smooth'})">
         <span>Explorar Programas</span>
         <i class="fas fa-arrow-down"></i>
       </button>
-    </div>
-
-    <div class="scroll-indicator">
-      <div class="scroll-arrow">
-        <div class="scroll-wheel"></div>
-      </div>
     </div>
   </section>
 
@@ -163,82 +159,119 @@
     </div>
   </section>
 
- <!-- Modal -->
-<div id="modal" class="custom-modal">
-  <div class="custom-modal-content">
-    <span class="custom-close">&times;</span>
-    <p class="modal-subtitle">🔴 Comienza tu transformación</p>
-    <h1 class="modal-title">Inicia tu viaje profesional</h1>
-    <p class="modal-text">
-      Completa el formulario y un especialista se pondrá en contacto
-      contigo en menos de 24 horas.
-    </p>
-    <form class="modal-form">
-      <label>Nombre completo *</label>
-      <input type="text" placeholder="Tu nombre completo" required>
-      
-      <div class="modal-row">
-        <div>
-          <label>Email</label>
-          <input type="email" placeholder="tu@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido">
-        </div>
-        <div>
-          <label>Celular *</label>
-          <input type="tel" placeholder="3001234567" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" title="Ingresa un número de celular válido de 10 dígitos" required>
-        </div>
-      </div>
-      
-      <div class="modal-row">
-        <div>
-          <label>Último título alcanzado *</label>
-          <select required>
-            <option value="">Selecciona tu nivel educativo</option>
-            <option value="grado9">Grado 9°</option>
-            <option value="bachiller">Bachiller</option>
-            <option value="tecnico_laboral">Técnico Laboral</option>
-            <option value="normal_superior">Normal Superior</option>
-            <option value="semestres">Semestres cursados</option>
-            <option value="tecnico_profesional">Técnico Profesional</option>
-            <option value="tecnologia">Tecnología</option>
-            <option value="profesional">Profesional</option>
-            <option value="especializacion">Especialización</option>
-            <option value="maestria">Maestría</option>
-          </select>
-        </div>
-        <div>
-          <label>Programa de interés *</label>
-          <select required>
-            <option value="">Selecciona un programa</option>
-            <option value="transformacion">Transformación Profesional</option>
-            <option value="liderazgo">Programas de liderazgo</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-      </div>
-      
-      <label>Cuéntanos sobre tus objetivos</label>
-      <textarea placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
-      
-      <button type="submit" class="modal-btn">Comenzar mi transformación</button>
-      
-      <p class="modal-footer">
-        Al enviar este formulario, aceptas nuestra política de privacidad.
+  <!-- ========================================
+       MODAL
+       ======================================== -->
+  <div id="modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <span class="custom-close">&times;</span>
+      <p class="modal-subtitle">
+        <i class="fas fa-circle" style="color: #ef4444; font-size: 8px; margin-right: 8px;"></i>
+        Comienza tu transformación
       </p>
-    </form>
-  </div>
-</div>
-
-    <!-- Footer -->
-    <footer id="comunidad">
-      <div class="footer-wrapper">
-        <div class="footer-content desktop-footer">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
-            </div>
+      <h1 class="modal-title">Inicia tu viaje profesional</h1>
+      <p class="modal-text">
+        Completa el formulario y un especialista se pondrá en contacto
+        contigo en menos de 24 horas.
+      </p>
+      <form class="modal-form" id="contactForm">
+        <label>Nombre completo *</label>
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+        
+        <div class="modal-row">
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tu@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido">
           </div>
-          <div class="footer-column">
-            <h4 class="footer-heading">Empresa</h4>
+          <div>
+            <label>Celular *</label>
+            <input type="tel" name="celular" placeholder="3001234567" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" title="Ingresa un número de celular válido de 10 dígitos" required>
+          </div>
+        </div>
+        
+        <div class="modal-row">
+          <div>
+            <label>Último título alcanzado *</label>
+            <select name="titulo" required>
+              <option value="">Selecciona tu nivel educativo</option>
+              <option value="grado9">Grado 9°</option>
+              <option value="bachiller">Bachiller</option>
+              <option value="tecnico_laboral">Técnico Laboral</option>
+              <option value="normal_superior">Normal Superior</option>
+              <option value="semestres">Semestres cursados</option>
+              <option value="tecnico_profesional">Técnico Profesional</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="profesional">Profesional</option>
+              <option value="especializacion">Especialización</option>
+              <option value="maestria">Maestría</option>
+            </select>
+          </div>
+          <div>
+            <label>Programa de interés *</label>
+            <select id="programSelect" name="programa" required>
+              <option value="">Selecciona un programa</option>
+              <option value="transformacion">Transformación Profesional</option>
+              <option value="liderazgo">Programas de liderazgo</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        
+        <label>Cuéntanos sobre tus objetivos</label>
+        <textarea name="objetivos" placeholder="¿Qué te gustaría lograr? ¿Qué desafíos enfrentas actualmente?"></textarea>
+        
+        <button type="submit" class="modal-btn">Comenzar mi transformación</button>
+        
+        <p class="modal-footer">
+          Al enviar este formulario, aceptas nuestra política de privacidad.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer id="comunidad">
+    <div class="footer-wrapper">
+      <div class="footer-content desktop-footer">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span style="font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #e5e7eb;">Emprende Tu Carrera</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="./../index.html">Inicio</a></li>
+            <li><a href="./../pages/conocenos.html">Conócenos</a></li>
+            <li><a href="./../pages/programas.html">Programas</a></li>
+            <li><a href="./../pages/directorio.html">Directorio</a></li>
+            <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Marco Legal</h4>
+          <ul class="footer-links">
+            <li><a href="./../pages/politicas.html">Políticas</a></li>
+            <li><a href="./../pages/pqrs.html">PQRS</a></li>
+            <li><a href="./../pages/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+            <li>
+              <a href="https://mail.hostinger.com/v2/auth/login" target="_blank" rel="noopener noreferrer">
+                Correo corporativo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-mobile mobile-footer">
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="empresa">
+            <span>Empresa</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="empresa">
             <ul class="footer-links">
               <li><a href="./../index.html">Inicio</a></li>
               <li><a href="./../pages/conocenos.html">Conócenos</a></li>
@@ -247,8 +280,13 @@
               <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h4 class="footer-heading">Marco Legal</h4>
+        </div>
+        <div class="footer-accordion">
+          <button class="accordion-button" data-accordion="legal">
+            <span>Marco Legal</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content" id="legal">
             <ul class="footer-links">
               <li><a href="./../pages/politicas.html">Políticas</a></li>
               <li><a href="./../pages/pqrs.html">PQRS</a></li>
@@ -258,108 +296,71 @@
                   Correo corporativo
                 </a>
               </li>
-
             </ul>
           </div>
         </div>
+      </div>
 
-        <div class="footer-mobile mobile-footer">
-          <div class="footer-accordion">
-            <button class="accordion-button" data-accordion="empresa">
-              <span>Empresa</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content" id="empresa">
-              <ul class="footer-links">
-                <li><a href="./../index.html">Inicio</a></li>
-                <li><a href="./../pages/conocenos.html">Conócenos</a></li>
-                <li><a href="./../pages/programas.html">Programas</a></li>
-                <li><a href="./../pages/directorio.html">Directorio</a></li>
-                <li><a href="./../pages/preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-accordion">
-            <button class="accordion-button" data-accordion="legal">
-              <span>Marco Legal</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="accordion-content" id="legal">
-              <ul class="footer-links">
-                <li><a href="./../pages/politicas.html">Políticas</a></li>
-                <li><a href="./../pages/pqrs.html">PQRS</a></li>
-                <li><a href="./../pages/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
-                <li>
-                  <a href="https://mail.hostinger.com/v2/auth/login" target="_blank" rel="noopener noreferrer">
-                    Correo corporativo
-                  </a>
-                </li>
+      <div class="footer-logo-mobile mobile-only">
+        <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom-section">
+        <div class="social-links-footer">
+          <a href="https://www.instagram.com/emprendetucarrera/?hl=es"
+            class="social-icon"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-              </ul>
-            </div>
-          </div>
+          <a href="https://www.facebook.com/EmprendeTuCarrera/"
+            class="social-icon"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@emprendetucarrera"
+            class="social-icon"
+            aria-label="TikTok"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+          <a href="https://www.youtube.com/@EMPRENDETUCARRERA-COL"
+            class="social-icon"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+          <a href="https://www.twitch.tv/emprendetucarrera"
+            class="social-icon"
+            aria-label="Twitch"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-twitch"></i>
+          </a>
         </div>
 
-        <div class="footer-logo-mobile mobile-only">
-          <span style="font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #e5e7eb;">Emprende Tu Carrera</span>
-        </div>
-        
-        <div class="footer-divider"></div>
-        
-        <div class="footer-bottom-section">
-          <div class="social-links-footer">
-            <a href="https://www.instagram.com/emprendetucarrera/?hl=es"
-              class="social-icon"
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="https://www.facebook.com/EmprendeTuCarrera/"
-              class="social-icon"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="https://www.tiktok.com/@emprendetucarrera"
-              class="social-icon"
-              aria-label="TikTok"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-tiktok"></i>
-            </a>
-
-            <a href="https://www.youtube.com/@EMPRENDETUCARRERA-COL"
-              class="social-icon"
-              aria-label="YouTube"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-youtube"></i>
-            </a>
-
-            <a href="https://www.twitch.tv/emprendetucarrera"
-              class="social-icon"
-              aria-label="Twitch"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-twitch"></i>
-            </a>
-          </div>
-
-          <div class="footer-legal">
-            <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
-          </div>
+        <div class="footer-legal">
+          <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
+
 
   <script>
-
     // ==========================================
-    // PROGRAMS DATA - TODOS LOS PROGRAMAS SEGÚN IMÁGENES
+    // PROGRAMS DATA
     // ==========================================
     const programsData = {
       'tecnicos-laborales': {
@@ -475,6 +476,12 @@
             features: ['Evaluación e intervención clínica', 'Psicología organizacional y del trabajo', 'Neuropsicología y procesos cognitivos', 'Intervención social y comunitaria']
           },
           {
+            icon: 'fa-child',
+            name: 'Licenciatura en Educación Infantil',
+            description: 'Forma docentes comprometidos con el desarrollo integral de la primera infancia, aplicando pedagogías innovadoras e inclusivas. Promueve el aprendizaje significativo, el desarrollo cognitivo y el bienestar emocional en los primeros años.',
+            features: ['Pedagogía y desarrollo infantil', 'Procesos cognitivos y emocionales', 'Didáctica y estrategias de enseñanza', 'Inclusión y atención a la diversidad']
+          },
+          {
             icon: 'fa-city',
             name: 'Administración Pública',
             description: 'Prepara profesionales para liderar y fortalecer la gestión del Estado, mediante la formulación, ejecución y evaluación de políticas públicas. Contribuye al desarrollo social y económico con enfoque ético, estratégico y participativo.',
@@ -521,12 +528,6 @@
             name: 'Negocios Internacionales',
             description: 'Forma profesionales con visión global para gestionar operaciones comerciales en mercados internacionales. Desarrolla competencias en negociación, logística y análisis de entornos económicos globales.',
             features: ['Comercio exterior y aduanas', 'Negociación internacional', 'Logística y operaciones globales', 'Análisis de mercados emergentes']
-          },
-          {
-            icon: 'fa-child',
-            name: 'Licenciatura en Educación Infantil',
-            description: 'Forma docentes comprometidos con el desarrollo integral de la primera infancia, aplicando pedagogías innovadoras e inclusivas. Promueve el aprendizaje significativo, el desarrollo cognitivo y el bienestar emocional en los primeros años.',
-            features: ['Pedagogía y desarrollo infantil', 'Procesos cognitivos y emocionales', 'Didáctica y estrategias de enseñanza', 'Inclusión y atención a la diversidad']
           }
         ]
       },
@@ -581,13 +582,13 @@
     };
 
     // ==========================================
-    // STATE
+    // STATE VARIABLES
     // ==========================================
     let currentCategory = 'tecnicos-laborales';
     let currentSlideIndex = 0;
 
     // ==========================================
-    // ELEMENTS
+    // DOM ELEMENTS
     // ==========================================
     const navItems = document.querySelectorAll('.nav-item');
     const programsSlider = document.getElementById('programsSlider');
@@ -598,10 +599,10 @@
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const modal = document.getElementById('modal');
-    const closeModal = document.querySelector('.custom-close');
-    const programSelect = document.getElementById('programSelect');
+    const closeModalBtn = document.querySelector('.custom-close');
     const openModalBtn = document.getElementById('openModal');
     const openModalMobileBtn = document.getElementById('openModalMobile');
+    const contactForm = document.getElementById('contactForm');
 
     // ==========================================
     // NAVBAR SCROLL EFFECT
@@ -623,27 +624,29 @@
     const menuIcon = document.getElementById('menuIcon');
     const closeIcon = document.getElementById('closeIcon');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-      
-      if (mobileMenu.classList.contains('active')) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-      } else {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-      }
-    });
-
-    // Cerrar menú al hacer clic en un enlace
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        
+        if (mobileMenu.classList.contains('active')) {
+          menuIcon.style.display = 'none';
+          closeIcon.style.display = 'block';
+        } else {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
       });
-    });
+
+      // Cerrar menú al hacer clic en un enlace
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        });
+      });
+    }
 
     // ==========================================
     // RENDER PROGRAMS
@@ -653,7 +656,9 @@
       currentSlideIndex = 0;
 
       // Update header
-      categoryBadge.textContent = navItems[Object.keys(programsData).indexOf(category)].querySelector('.nav-label').childNodes[0].textContent.trim();
+      const categoryIndex = Object.keys(programsData).indexOf(category);
+      const navLabel = navItems[categoryIndex].querySelector('.nav-label');
+      categoryBadge.textContent = navLabel.childNodes[0].textContent.trim();
       categoryTitle.textContent = data.title;
       categoryDescription.textContent = data.description;
 
@@ -674,11 +679,18 @@
           <ul class="program-features">
             ${program.features.map(feature => `<li>${feature}</li>`).join('')}
           </ul>
-          <button class="program-cta" onclick="openModal('${program.name}')">
+          <button class="program-cta" data-program-name="${program.name}">
             Solicitar información
           </button>
         </div>
       `).join('');
+
+      // Agregar event listeners a los botones CTA
+      document.querySelectorAll('.program-cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+          openModal(btn.dataset.programName);
+        });
+      });
 
       // Scroll slider to start
       programsSlider.scrollLeft = 0;
@@ -713,12 +725,20 @@
     // UPDATE PROGRAM SELECT
     // ==========================================
     function updateProgramSelect() {
+      const programSelect = document.getElementById('programSelect');
+      
+      if (!programSelect) {
+        console.warn('⚠️ El elemento programSelect no existe en el DOM');
+        return;
+      }
+
       const allPrograms = [];
       Object.keys(programsData).forEach(category => {
         programsData[category].programs.forEach(program => {
           allPrograms.push(program.name);
         });
       });
+      
       programSelect.innerHTML = '<option value="">Selecciona un programa</option>' +
         allPrograms.map(name => `<option value="${name}">${name}</option>`).join('');
     }
@@ -728,9 +748,90 @@
     // ==========================================
     function openModal(programName = '') {
       modal.style.display = 'flex';
-      if (programName) {
-        programSelect.value = programName;
+      const programSelect = document.getElementById('programSelect');
+      
+      if (programSelect && programName) {
+        // Buscar si el programa está en las opciones
+        const options = Array.from(programSelect.options);
+        const option = options.find(opt => opt.value === programName || opt.text === programName);
+        
+        if (option) {
+          programSelect.value = option.value;
+        } else {
+          // Si no existe, agregarlo temporalmente
+          const newOption = document.createElement('option');
+          newOption.value = programName;
+          newOption.text = programName;
+          newOption.selected = true;
+          programSelect.appendChild(newOption);
+        }
       }
+    }
+
+    // Hacer la función global
+    window.openModal = openModal;
+
+    // ==========================================
+    // CLOSE MODAL
+    // ==========================================
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // ==========================================
+    // FORM VALIDATION AND SUBMIT
+    // ==========================================
+    function setupFormValidation() {
+      if (!contactForm) {
+        console.warn('⚠️ El formulario de contacto no existe');
+        return;
+      }
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Obtener valores del formulario
+        const formData = new FormData(contactForm);
+        const nombre = formData.get('nombre');
+        const email = formData.get('email');
+        const celular = formData.get('celular');
+        const titulo = formData.get('titulo');
+        const programa = formData.get('programa');
+        
+        // Validaciones adicionales
+        if (!nombre || nombre.trim().length < 3) {
+          alert('Por favor ingresa tu nombre completo');
+          return;
+        }
+        
+        if (celular && celular.length !== 10) {
+          alert('El número de celular debe tener 10 dígitos');
+          return;
+        }
+        
+        if (email && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+          alert('Por favor ingresa un email válido');
+          return;
+        }
+        
+        if (!titulo) {
+          alert('Por favor selecciona tu último título alcanzado');
+          return;
+        }
+        
+        if (!programa) {
+          alert('Por favor selecciona un programa de interés');
+          return;
+        }
+        
+        // Si todo está bien, mostrar mensaje de éxito
+        console.log('Formulario válido:', Object.fromEntries(formData));
+        alert('¡Gracias! Un especialista se pondrá en contacto contigo pronto.');
+        
+        // Cerrar modal y resetear formulario
+        closeModal();
+        contactForm.reset();
+      });
     }
 
     // ==========================================
@@ -748,13 +849,17 @@
       });
 
       // Slider controls
-      prevBtn.addEventListener('click', () => slidePrograms('prev'));
-      nextBtn.addEventListener('click', () => slidePrograms('next'));
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => slidePrograms('prev'));
+        nextBtn.addEventListener('click', () => slidePrograms('next'));
+      }
 
       // Slider scroll
-      programsSlider.addEventListener('scroll', updateSliderControls);
+      if (programsSlider) {
+        programsSlider.addEventListener('scroll', updateSliderControls);
+      }
 
-      // Modal open
+      // Modal open buttons
       if (openModalBtn) {
         openModalBtn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -770,21 +875,22 @@
       }
 
       // Modal close
-      closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+      }
 
+      // Close modal on outside click
       window.addEventListener('click', (e) => {
         if (e.target === modal) {
-          modal.style.display = 'none';
+          closeModal();
         }
       });
 
-      // Form submit
-      document.querySelector('.modal-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('¡Gracias! Un especialista se pondrá en contacto contigo pronto.');
-        modal.style.display = 'none';
+      // Close modal on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          closeModal();
+        }
       });
     }
 
@@ -820,25 +926,51 @@
     }
 
     // ==========================================
-    // INITIALIZE
+    // INITIALIZE APPLICATION
     // ==========================================
     function init() {
-      renderPrograms(currentCategory);
-      updateProgramSelect();
-      setupEventListeners();
-      initFooterAccordions();
+      try {
+        console.log('🚀 Iniciando aplicación Programas...');
+        
+        // Verificar elementos críticos
+        if (!programsSlider) {
+          console.error('❌ No se encontró el elemento programsSlider');
+          return;
+        }
+        
+        if (!modal) {
+          console.error('❌ No se encontró el elemento modal');
+          return;
+        }
+        
+        // Inicializar componentes
+        renderPrograms(currentCategory);
+        updateProgramSelect();
+        setupEventListeners();
+        setupFormValidation();
+        initFooterAccordions();
+        
+        console.log('✅ Página Programas cargada correctamente');
+      } catch (error) {
+        console.error('❌ Error al inicializar la página:', error);
+      }
     }
 
     // ==========================================
-    // INIT ON LOAD
+    // START APPLICATION
     // ==========================================
-    document.addEventListener('DOMContentLoaded', () => {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
       init();
-      console.log('✅ Página Programas cargada correctamente');
-    });
+    }
 
   </script>
   <script src="./../componentes/whatsapp-button.js"></script>
   <script src="./../componentes/scroll-top-button.js"></script>
+  <script src="./../componentes/subscription-button.js"></script>
+  <script src="./../componentes/pde-button.js"></script>
 </body>
 </html>
+
+ 

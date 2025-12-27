@@ -1,7 +1,7 @@
 // whatsapp-button.js
 document.addEventListener('DOMContentLoaded', function() {
     const whatsappHTML = `
-        <a href="https://wa.me/573001234567?text=Hola,%20tengo%20una%20consulta" 
+        <a href="https://wa.me/573172708353?text=Hola,%20tengo%20una%20consulta" 
            class="whatsapp-float" 
            target="_blank"
            rel="noopener noreferrer">

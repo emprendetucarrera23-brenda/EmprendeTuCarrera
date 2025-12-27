@@ -4,7 +4,7 @@
     width: 50px;
     height: 50px;
     bottom: 30px;
-    right: 30px;
+    left: 30px; /* Cambiado a la izquierda */
     background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
     color: #FFF;
     border-radius: 50%;
@@ -67,7 +67,7 @@
 .whatsapp-float::after {
     content: '¿Necesitas ayuda?';
     position: absolute;
-    right: 60px;
+    left: 60px; /* Cambiado a la izquierda para que aparezca a la derecha del botón */
     top: 50%;
     transform: translateY(-50%);
     background: #fff;
@@ -85,7 +85,7 @@
 
 .whatsapp-float:hover::after {
     opacity: 1;
-    right: 65px;
+    left: 65px; /* Cambiado a la izquierda */
 }
 
 /* Versión responsive para móviles */
@@ -94,7 +94,7 @@
         width: 45px;
         height: 45px;
         bottom: 20px;
-        right: 20px;
+        left: 20px; /* Cambiado a la izquierda */
         font-size: 22px;
     }
     
