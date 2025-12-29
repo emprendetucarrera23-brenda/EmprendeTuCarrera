@@ -10,6 +10,103 @@
   <link rel="stylesheet" href="./../componentes/scroll-top-button.css">
   <link rel="stylesheet" href="./../componentes/subscription-button.css">
   <link rel="stylesheet" href="./../componentes/pde-button.css">
+  <style>
+    /* MEJORAS AL FORMULARIO MODAL - MOBILE */
+    @media (max-width: 768px) {
+      .custom-modal {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+      }
+      
+      .custom-modal-content {
+        padding: 24px 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 16px;
+      }
+      
+      .custom-close {
+        top: 12px;
+        right: 12px;
+        font-size: 24px;
+      }
+      
+      .modal-subtitle {
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+      
+      .modal-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+        line-height: 1.2;
+      }
+      
+      .modal-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      .modal-form label {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      
+      .modal-form input,
+      .modal-form select,
+      .modal-form textarea {
+        padding: 12px;
+        font-size: 15px;
+        margin-bottom: 14px;
+        border-radius: 10px;
+      }
+      
+      .modal-form textarea {
+        min-height: 80px;
+      }
+      
+      .modal-row {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .modal-row > div {
+        width: 100%;
+      }
+      
+      .modal-btn {
+        padding: 14px;
+        font-size: 15px;
+        margin-top: 8px;
+        border-radius: 10px;
+      }
+      
+      .modal-footer {
+        font-size: 11px;
+        margin-top: 12px;
+        line-height: 1.4;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .custom-modal-content {
+        padding: 20px 16px;
+      }
+      
+      .modal-title {
+        font-size: 24px;
+      }
+      
+      .modal-form input,
+      .modal-form select,
+      .modal-form textarea {
+        padding: 11px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -617,16 +714,13 @@
           </div>
 
           <div class="footer-legal">
-            <p>© 2025 Todos los derechos reservados – Emprende Tu Carrera</p>
+            <p>© 2025 Todos los derechos reservados — Emprende Tu Carrera</p>
           </div>
         </div>
       </div>
     </footer>
 
-
-
   <script>
-
      // ============================================
     // ESPERAR A QUE EL DOM ESTÉ COMPLETAMENTE CARGADO
     // ============================================
@@ -643,28 +737,11 @@
 
     if (!videoModal || !openVideoModal || !closeVideoModal || !demoVideo) {
       console.error('❌ Elementos del modal de video no encontrados');
-      console.log('videoModal:', videoModal);
-      console.log('openVideoModal:', openVideoModal);
-      console.log('closeVideoModal:', closeVideoModal);
-      console.log('demoVideo:', demoVideo);
     } else {
       console.log('✅ Todos los elementos del modal encontrados');
-      console.log('🔹 Video URL:', demoVideo.querySelector('source')?.src);
 
-      // Event listeners para debugging del video
-      demoVideo.addEventListener('loadstart', () => console.log('🔥 Video: Iniciando carga...'));
-      demoVideo.addEventListener('loadedmetadata', () => console.log('✅ Video: Metadata cargada'));
-      demoVideo.addEventListener('loadeddata', () => console.log('✅ Video: Datos cargados'));
-      demoVideo.addEventListener('canplay', () => console.log('✅ Video: Listo para reproducir'));
-      demoVideo.addEventListener('playing', () => console.log('▶️ Video: Reproduciendo'));
-      demoVideo.addEventListener('pause', () => console.log('⏸️ Video: Pausado'));
-      demoVideo.addEventListener('ended', () => console.log('⏹️ Video: Terminado'));
       demoVideo.addEventListener('error', (e) => {
         console.error('❌ Video ERROR:', e);
-        console.error('Error code:', demoVideo.error?.code);
-        console.error('Error message:', demoVideo.error?.message);
-        
-        // Mostrar mensaje al usuario
         const videoContainer = document.querySelector('.video-container');
         if (videoContainer) {
           videoContainer.innerHTML = `
@@ -677,63 +754,30 @@
       });
 
       function closeVideo() {
-        console.log('🔴 Cerrando modal...');
-        
-        // Remover clase active primero
         videoModal.classList.remove('active');
-        
-        // Pausar y resetear video
         demoVideo.pause();
         demoVideo.currentTime = 0;
-        
-        // Remover scroll lock
         document.body.style.overflow = '';
-        
-        // Esperar a que termine la animación antes de ocultar
         setTimeout(() => {
           videoModal.style.display = 'none';
         }, 300);
-        
-        console.log('✅ Modal cerrado');
       }
 
       openVideoModal.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('🎬 Abriendo modal de video...');
-        
-        // Forzar display primero
         videoModal.style.display = 'flex';
-        
-        // Agregar clase active después de un pequeño delay
         setTimeout(() => {
           videoModal.classList.add('active');
           document.body.style.overflow = 'hidden';
-          
-          console.log('Modal classes:', videoModal.className);
-          console.log('Modal display:', window.getComputedStyle(videoModal).display);
-          console.log('Modal opacity:', window.getComputedStyle(videoModal).opacity);
-          
-          // Intentar reproducir el video después de que sea visible
           setTimeout(() => {
-            console.log('🎯 Intentando reproducir video...');
-            demoVideo.load(); // Forzar recarga
-            
-            // Intentar reproducir
+            demoVideo.load();
             const playPromise = demoVideo.play();
-            
             if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  console.log('✅ Video reproduciendo exitosamente');
-                })
-                .catch(err => {
-                  console.warn('⚠️ Autoplay bloqueado:', err.name, err.message);
-                  console.log('ℹ️ El usuario debe dar play manualmente');
-                  
-                  // Mostrar controles prominentemente
-                  demoVideo.controls = true;
-                });
+              playPromise.catch(err => {
+                console.warn('⚠️ Autoplay bloqueado:', err.name);
+                demoVideo.controls = true;
+              });
             }
           }, 300);
         }, 50);
@@ -742,20 +786,17 @@
       closeVideoModal.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('❌ Click en botón cerrar');
         closeVideo();
       });
 
       videoModal.addEventListener('click', function(e) {
         if (e.target === videoModal) {
-          console.log('❌ Click fuera del contenido - cerrando');
           closeVideo();
         }
       });
 
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && videoModal.classList.contains('active')) {
-          console.log('⌨️ ESC presionado - cerrando modal');
           closeVideo();
         }
       });
@@ -778,10 +819,18 @@
       // ============================================
       const modal = document.getElementById("modal");
       const openModal = document.getElementById("openModal");
+      const openModalMobile = document.getElementById("openModalMobile");
       const closeModal = document.querySelector(".custom-close");
 
       if (openModal) {
         openModal.addEventListener("click", (e) => {
+          e.preventDefault();
+          modal.style.display = "flex";
+        });
+      }
+
+      if (openModalMobile) {
+        openModalMobile.addEventListener("click", (e) => {
           e.preventDefault();
           modal.style.display = "flex";
         });
@@ -882,7 +931,7 @@
       });
 
       // ============================================
-      // CONTADOR DE CIFRAS CON PARTÍCULAS
+      // CONTADOR DE CIFRAS CON PARTÍCULAS - ACELERADO
       // ============================================
       (function() {
         const section = document.querySelector('.stats-counter-section');
@@ -939,10 +988,11 @@
           }
         }
         
+        // CONTADOR MÁS RÁPIDO: Duración reducida de 2000ms a 1400ms
         function animateCounter(element) {
           const target = parseInt(element.getAttribute('data-target'));
           const suffix = element.getAttribute('data-suffix') || '';
-          const duration = 2000;
+          const duration = 1400; // ← CAMBIADO: 2000 → 1400ms (30% más rápido)
           const increment = target / (duration / 16);
           let current = 0;
           
@@ -1052,7 +1102,7 @@
       })();
 
     // ============================================
-    // CARRUSEL DE TESTIMONIOS MINIMALISTA
+    // CARRUSEL DE TESTIMONIOS CON SWIPE TOUCH
     // ============================================
     (function() {
       const testimonials = [
@@ -1115,14 +1165,16 @@
       let currentIndex = 0;
       let autoPlayInterval = null;
       let isTransitioning = false;
+      
+      // Variables para touch/swipe
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let isDragging = false;
 
       // Renderizar slides
       function renderSlides() {
         const container = document.getElementById('carouselSlidesMinimal');
-        if (!container) {
-          console.error('❌ No se encontró el contenedor carouselSlidesMinimal');
-          return;
-        }
+        if (!container) return;
 
         container.innerHTML = testimonials.map((t, index) => `
           <div class="carousel-slide-minimal ${index === 0 ? 'active' : ''}" data-index="${index}">
@@ -1146,23 +1198,17 @@
             </div>
           </div>
         `).join('');
-        
-        console.log('✅ Slides renderizados:', container.children.length);
       }
 
       // Renderizar dots
       function renderDots() {
         const container = document.getElementById('carouselDotsMinimal');
-        if (!container) {
-          console.error('❌ No se encontró el contenedor carouselDotsMinimal');
-          return;
-        }
+        if (!container) return;
 
         container.innerHTML = testimonials.map((_, index) => `
           <button class="dot-minimal ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ir al testimonio ${index + 1}"></button>
         `).join('');
 
-        // Event listeners para dots
         container.querySelectorAll('.dot-minimal').forEach((dot, index) => {
           dot.addEventListener('click', () => {
             if (!isTransitioning && index !== currentIndex) {
@@ -1173,8 +1219,6 @@
             }
           });
         });
-        
-        console.log('✅ Dots renderizados:', container.children.length);
       }
 
       // Actualizar carrusel
@@ -1214,7 +1258,7 @@
         stopAutoPlay();
         autoPlayInterval = setInterval(() => {
           if (!isTransitioning) navigate(1);
-        }, 3000);
+        }, 5000);
       }
 
       function stopAutoPlay() {
@@ -1224,38 +1268,82 @@
         }
       }
 
+      // ============================================
+      // TOUCH/SWIPE SUPPORT
+      // ============================================
+      function handleTouchStart(e) {
+        stopAutoPlay();
+        touchStartX = e.touches[0].clientX;
+        isDragging = true;
+      }
+
+      function handleTouchMove(e) {
+        if (!isDragging) return;
+        touchEndX = e.touches[0].clientX;
+      }
+
+      function handleTouchEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const swipeThreshold = 50; // mínimo de píxeles para considerar swipe
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            // Swipe left - siguiente
+            navigate(1);
+          } else {
+            // Swipe right - anterior
+            navigate(-1);
+          }
+        }
+        
+        startAutoPlay();
+      }
+
       // Inicializar carrusel
       function initCarousel() {
-        console.log(' Inicializando carrusel de testimonios...');
-        
         renderSlides();
         renderDots();
         updateCarousel();
         startAutoPlay();
 
-        // Event listeners para navegación
+        // Botones de navegación
         const prevBtn = document.getElementById('prevBtnMinimal');
         const nextBtn = document.getElementById('nextBtnMinimal');
         
         if (prevBtn) {
-          prevBtn.addEventListener('click', () => navigate(-1));
-          console.log('✅ Botón anterior conectado');
+          prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            navigate(-1);
+            startAutoPlay();
+          });
         }
         
         if (nextBtn) {
-          nextBtn.addEventListener('click', () => navigate(1));
-          console.log('✅ Botón siguiente conectado');
+          nextBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            navigate(1);
+            startAutoPlay();
+          });
         }
 
-        // Pausar autoplay al hover
+        // Touch events para swipe
         const wrapper = document.querySelector('.carousel-wrapper-minimal');
-        if (wrapper) {
+        const slidesContainer = document.getElementById('carouselSlidesMinimal');
+        
+        if (slidesContainer) {
+          slidesContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+          slidesContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
+          slidesContainer.addEventListener('touchend', handleTouchEnd);
+        }
+
+        // Pausar autoplay al hover (solo desktop)
+        if (wrapper && window.matchMedia('(hover: hover)').matches) {
           wrapper.addEventListener('mouseenter', stopAutoPlay);
           wrapper.addEventListener('mouseleave', startAutoPlay);
-          console.log('✅ Eventos de hover configurados');
         }
-        
-        console.log('✅ Carrusel de testimonios inicializado');
       }
 
       // Inicializar
@@ -1266,16 +1354,9 @@
       // CTA BUTTONS - ABRIR MODAL
       // ============================================
       const ctaPrimaryBtn = document.getElementById('ctaPrimaryBtn');
-      const ctaSecondaryBtn = document.getElementById('ctaSecondaryBtn');
 
       if (ctaPrimaryBtn) {
         ctaPrimaryBtn.addEventListener('click', () => {
-          modal.style.display = 'flex';
-        });
-      }
-
-      if (ctaSecondaryBtn) {
-        ctaSecondaryBtn.addEventListener('click', () => {
           modal.style.display = 'flex';
         });
       }
@@ -1356,12 +1437,11 @@
             }
           }
           
-          if (progress >= 0.76) {
-if (progress >= 0.55 && progress < 0.76) {
-  textFinal.classList.add('visible');
-  textFinal.classList.remove('fade-out');
-  textFinal.style.display = 'flex'; // ← Asegurar que esté visible
-}
+          if (progress >= 0.55 && progress < 0.76) {
+            textFinal.classList.add('visible');
+            textFinal.classList.remove('fade-out');
+            textFinal.style.display = 'flex';
+          }
 
           if (progress >= 0.76) {
             const fadeProgress = Math.min((progress - 0.78) / 0.17, 1);
@@ -1381,9 +1461,8 @@ if (progress >= 0.55 && progress < 0.76) {
               textFinal.style.display = 'none';
             }
           }
-
         }
-      }
+        
         let ticking = false;
         function onScroll() {
           if (!ticking) {
