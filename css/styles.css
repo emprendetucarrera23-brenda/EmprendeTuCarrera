@@ -815,13 +815,19 @@ nav.scrolled {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-  pointer-events: auto !important;
+  pointer-events: auto;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   z-index: 20;
   overflow: hidden;
   font-family: inherit;
+}
+/* Desactivar el botón cuando el texto final desaparece */
+.affinity-text-final.fade-out .btn-video-demo {
+  pointer-events: none !important;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .btn-video-demo::before {

@@ -1119,6 +1119,10 @@ footer {
     display: block;
   }
 
+   .sidebar-line {
+    display: none;  
+  }
+
   .programs-container {
     flex-direction: column;
     gap: 32px;

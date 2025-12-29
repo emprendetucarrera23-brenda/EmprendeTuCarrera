@@ -522,3 +522,47 @@
     transform: translateX(2px);
   }
 }
+
+/* ============================================
+   BOTÓN PAGUE AQUÍ EN HERO
+   ============================================ */
+.payment-hero-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, #FF1970, #A200FA);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 25, 112, 0.3);
+}
+
+.payment-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 25, 112, 0.5);
+}
+
+.payment-hero-btn i {
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-hero-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-hero-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}
